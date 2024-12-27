@@ -11,7 +11,7 @@ namespace YG.Insides
         public const string logoImageFormat = "Формат логотипа, который отображается при загрузке игры.\n\nAssets/WebGLTemplates/YandexGames/Images/logo.format";
         public const string backgroundImgFormat = "Формат изображения на заднем плане при загрузке игры.\n\nAssets/WebGLTemplates/YandexGames/Images/background.format";
         public const string t_debugInEditor = "Запись лога в консоль в Unity Editor.";
-        public const string t_editEventSystem = "Деактивировать компонент EventSystem во время паузы?\nИногда из-за активного EventSystem во время паузы случаются баги, при нажатии на клавиши, например. Отключите эту поцию, если у вас баги наоборот из-за деактивации EventSystem.";
+        public const string t_editEventSystem = "Деактивировать компонент EventSystem во время паузы?\nИногда из-за активного EventSystem во время паузы случаются баги, при нажатии на клавиши, например. Отключите эту опцию, если у вас баги наоборот из-за деактивации EventSystem.";
         public const string t_autoGRA = "При запуске игры выполнять метод Game Ready API.\n\nМомент, когда игра загрузила все ресурсы и готова к взаимодействию с пользователем.\n\nЕсли данный параметр 'AutoGRA' включен, то плагин сам выполнит метод Game Ready API сразу после загрузки игры.\n\rЕсли в Вашей игре имеются свои реализации загрузки игры, например, загрузка первой сцены, то Вам необходимо снять галку 'AutoGRA' и самостоятельно выполнять этот метод, когда игра будет полностью загружена. Выполнение метода: `YG2.GameReadyAPI();`";
         public const string t_autoPauseGame = "При просмотре рекламы и при других ситуациях когда это необходимо - игра будет ставиться на паузу.";
         public const string t_archivingBuild = "Включить автоматическую архивацию билда?\n\n •  После успешного создания билда игры, папка с содержанием билда пакуется в zip архив. Подпись _b... это номер билда. Если архив с таким же номером билда уже есть, он перезапишется новым.";
@@ -36,7 +36,7 @@ namespace YG.Insides
         public const string t_advDurationAdv = "Длительность симуляции показа рекламы.";
         public const string t_loadAdv = "Задержка открытия рекламы. Может быть полезна для тестирования уведомления о том, что скоро откроется реклама, перед ёё показом (в момент ожидания рекламы).";
 
-        public const string switchLang = "on English";
+        public const string switchLang = "Русский";
         public const string documentation = "Документация";
         public const string helpChat = "Помощь в чате";
         public const string video = "Видео";
@@ -91,7 +91,7 @@ namespace YG.Insides
         public const string t_progressBar_width = "The width of the download bandwidth.";
         public const string t_progressBar_color1 = "The main color of the loading bar.";
         public const string t_progressBar_color2 = "The secondary color of the loading bar (along the edges). To get a uniform color for the entire loading strip, specify the same color for color 1 and color 2.";
-        public const string switchLang = "вкл Русский";
+        public const string switchLang = "English";
         public const string documentation = "Documentation";
         public const string helpChat = "Help in chat";
         public const string video = "Video";
