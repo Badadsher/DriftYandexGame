@@ -6,7 +6,10 @@ namespace YG
 {
     public partial class SavesYG
     {
-        // Ваши данные для сохранения
-        public int coins = 5; // Пример
+
+        public int _money;
+        public int _recordDrift;
+        public int _unlockedCarCount;
+
     }
 }
