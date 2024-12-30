@@ -8329,7 +8329,7 @@ GameObject:
   - component: {fileID: 95135716839004538}
   m_Layer: 0
   m_Name: Zombie_Father_Male_02
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8410,7 +8410,7 @@ Animator:
   m_GameObject: {fileID: 1991497748344218}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: b20a3c10714a6ac439af479e3273de65, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9e8bf41ddeb0c2b419e215964b018b3a, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
