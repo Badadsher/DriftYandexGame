@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,7 +11,7 @@ public class ZombieLogic : MonoBehaviour
     public Animator animator;
     private Rigidbody rb; // Rigidbody для физики
     private bool isAttacking = false; // Флаг для отслеживания состояния атаки
-
+    private ParticleSystem dyingPart;
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -33,65 +34,46 @@ public class ZombieLogic : MonoBehaviour
     {
         if (player == null) return; // Проверка на случай, если игрок не найден
 
-        void OnCollisionEnter(Collision collision)
-        {
-            // Проверка на столкновение с игроком
-            if (collision.gameObject.CompareTag("Player"))
-            {
-                PrometeoCarController carController = gameObject.GetComponent<PrometeoCarController>();
-                float carSpeed = carController.carSpeed;
-
-                if (carSpeed >= 30)
-                {
-                    Debug.Log("naam");
-                    // Отключаем анимацию
-                    animator.enabled = false;
-
-                    // Включаем физику: добавляем силу в сторону игрока
-                    Vector3 forceDirection = (transform.position - collision.transform.position).normalized; // Направление от игрока
-                    rb.isKinematic = false; // Убедитесь, что Rigidbody не кинематический
-                    rb.AddForce(forceDirection * 500f); // Применяем силу
-
-                    // Отключаем NavMeshAgent
-                    navMeshAgent.enabled = false; 
-                }
-               
-            }
-        }
+       
+        
         
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        if (distanceToPlayer > attackDistance)
+        if (  navMeshAgent.enabled = true)
         {
-            if (!isAttacking) // Проверяем, не атакует ли зомби в данный момент
+            if (distanceToPlayer > attackDistance)
             {
-                if (!navMeshAgent.pathPending && navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+                if (!isAttacking) // Проверяем, не атакует ли зомби в данный момент
                 {
-                    navMeshAgent.SetDestination(player.position);
-                }
+                    if (!navMeshAgent.pathPending && navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+                    {
+                        navMeshAgent.SetDestination(player.position);
+                    }
 
               
 
-                // Плавный поворот к игроку
-                Vector3 direction = (player.position - transform.position).normalized;
-                if (direction != Vector3.zero)
+                    // Плавный поворот к игроку
+                    Vector3 direction = (player.position - transform.position).normalized;
+                    if (direction != Vector3.zero)
+                    {
+                        Quaternion lookRotation = Quaternion.LookRotation(direction);
+                        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
+                    }
+                }
+            }
+            else
+            {
+                if (!isAttacking) // Проверка на состояние атаки
                 {
-                    Quaternion lookRotation = Quaternion.LookRotation(direction);
-                    transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
+                    isAttacking = true; // Устанавливаем флаг атаки
+                    navMeshAgent.isStopped = true; // Остановить зомби перед атакой
+                    animator.SetBool("Punching", true); // Запуск анимации удара
+                    navMeshAgent.ResetPath();
+                    StartCoroutine(AttackCooldown()); // Запускаем корутину атаки
                 }
             }
         }
-        else
-        {
-            if (!isAttacking) // Проверка на состояние атаки
-            {
-                isAttacking = true; // Устанавливаем флаг атаки
-                navMeshAgent.isStopped = true; // Остановить зомби перед атакой
-                animator.SetBool("Punching", true); // Запуск анимации удара
-                navMeshAgent.ResetPath();
-                StartCoroutine(AttackCooldown()); // Запускаем корутину атаки
-            }
-        }
+     
     }
 
     private System.Collections.IEnumerator AttackCooldown()
@@ -108,5 +90,30 @@ public class ZombieLogic : MonoBehaviour
         {
             navMeshAgent.isStopped = false; // Возобновить движение после атаки
         }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        PrometeoCarController prometeoCarController = other.GetComponent<PrometeoCarController>();
+        float carSpeed = prometeoCarController.carSpeed;
+        if (carSpeed >= 40)
+        {
+
+            if (other.CompareTag("Player"))
+            {
+                Vector3 forceDirection = (transform.position - other.transform.position).normalized; // Направление от автомобиля
+                rb.isKinematic = false; // Убедитесь, что Rigidbody не кинематический
+                rb.AddForce(forceDirection * 100000f); // Применяем силу (настройте значение по необходимости)
+                StartCoroutine(KillZombie());
+            }
+        }
+    }
+
+    private System.Collections.IEnumerator KillZombie()
+    {
+        dyingPart = transform.Find("DyingParticle").GetComponent<ParticleSystem>();
+        dyingPart.Play();
+        yield return new WaitForSeconds(1.5f);
+        Destroy(gameObject);
     }
 }
