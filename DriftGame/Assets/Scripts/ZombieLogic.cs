@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -8,10 +9,11 @@ public class ZombieLogic : MonoBehaviour
     private Transform player;
     public float attackDistance = 1.5f; // Расстояние для атаки
     public float rotationSpeed = 5f; // Скорость поворота
-    public Animator animator;
+    private Animator animator;
     private Rigidbody rb; // Rigidbody для физики
     private bool isAttacking = false; // Флаг для отслеживания состояния атаки
     private ParticleSystem dyingPart;
+    private TextMeshPro countZombie;
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -114,6 +116,7 @@ public class ZombieLogic : MonoBehaviour
         dyingPart = transform.Find("DyingParticle").GetComponent<ParticleSystem>();
         dyingPart.Play();
         yield return new WaitForSeconds(1.5f);
+       // countZombie.text = "фыв";
         Destroy(gameObject);
     }
 }

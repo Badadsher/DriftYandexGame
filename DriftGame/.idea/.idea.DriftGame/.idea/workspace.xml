@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="951a7324-e62c-4543-9d1b-05845eb6f6df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaterialsAndOther/ofont.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaterialsAndOther/ofont.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/HalloweenScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HalloweenScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PROMETEO - Car Controller/Effects/Particle Systems/Materials/RedMT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PROMETEO - Car Controller/Effects/Particle Systems/Materials/RedMT.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZombieLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ZombieLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +98,7 @@
       <workItem from="1735398397721" duration="3443000" />
       <workItem from="1735576066265" duration="22000" />
       <workItem from="1735576105225" duration="229000" />
-      <workItem from="1735576350231" duration="11704000" />
+      <workItem from="1735576350231" duration="14008000" />
     </task>
     <servers />
   </component>
@@ -111,6 +112,49 @@
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="newMechanicsAndMaps" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/newMechanicsAndMaps" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
