@@ -11,12 +11,20 @@ something useful for your game. Best regards, Mena.
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PrometeoCarController : MonoBehaviour
 {
-
+  [Space(20)]
+  //[Header("Camera")]
+  [Space(10)]
+  private CinemachineVirtualCamera cinemachineCamera; // Ваша Cinemachine камера
+  private float minOrthoSize = 8f;  // Минимальное значение размера
+  private float maxOrthoSize = 15f; // Максимальное значение размера
+  [SerializeField] private float zoomSpeed = 1f;     // Скорость изменения размера
+  private float targetOrthoSize;
     //CAR SETUP
 
       [Space(20)]
@@ -95,6 +103,8 @@ public class PrometeoCarController : MonoBehaviour
 
     //SOUNDS
 
+   
+    
       [Space(20)]
       //[Header("Sounds")]
       [Space(10)]
@@ -132,7 +142,8 @@ public class PrometeoCarController : MonoBehaviour
       public bool isTractionLocked; // Used to know whether the traction of the car is locked or not.
 
     //PRIVATE VARIABLES
-
+    [SerializeField] private CinemachineVirtualCamera virtualCamera;
+   
       /*
       IMPORTANT: The following variables should not be modified manually since their values are automatically given via script.
       */
@@ -161,6 +172,7 @@ public class PrometeoCarController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      cinemachineCamera = GameObject.Find("CarCamera").GetComponent< CinemachineVirtualCamera >();
       //In this part, we set the 'carRigidbody' value with the Rigidbody attached to this
       //gameObject. Also, we define the center of mass of the car with the Vector3 given
       //in the inspector.
@@ -275,11 +287,26 @@ public class PrometeoCarController : MonoBehaviour
       // Save the local velocity of the car in the z axis. Used to know if the car is going forward or backwards.
       localVelocityZ = transform.InverseTransformDirection(carRigidbody.velocity).z;
 
+      if (carSpeed > 65)
+      {
+        // Рассчитываем желаемое значение OrthoSize в зависимости от скорости
+        targetOrthoSize = Mathf.Lerp(minOrthoSize, maxOrthoSize, carSpeed / maxSpeed);
+
+        // Плавно изменяем OrthoSize с использованием Lerp
+        float currentOrthoSize = cinemachineCamera.m_Lens.OrthographicSize;
+        cinemachineCamera.m_Lens.OrthographicSize = Mathf.Lerp(currentOrthoSize, targetOrthoSize, Time.deltaTime * zoomSpeed);
+      }
+      else
+      {
+        float currentOrthoSize = cinemachineCamera.m_Lens.OrthographicSize;
+        cinemachineCamera.m_Lens.OrthographicSize = Mathf.Lerp(currentOrthoSize, 10, Time.deltaTime * zoomSpeed);
+      }
+     
       //CAR PHYSICS
 
       /*
       The next part is regarding to the car controller. First, it checks if the user wants to use touch controls (for
-      mobile devices) or analog input controls (WASD + Space).
+      mobile devices) or analog i nput controls (WASD + Space).
 
       The following methods are called whenever a certain key is pressed. For example, in the first 'if' we call the
       method GoForward() if the user has pressed W.
