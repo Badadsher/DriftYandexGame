@@ -9,12 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 54da409f1f536b140b8183ff7ff0dc06
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/LevelsDrift/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/WinterScene.unity
+    path: Assets/Scenes/LevelsDrift/WinterScene.unity
     guid: f7c22525d5b76c9428fe8348213cf21b
   - enabled: 1
-    path: Assets/Scenes/HalloweenScene.unity
+    path: Assets/Scenes/LevelsDrift/HalloweenScene.unity
     guid: a1d864caf6a677f48ac4669d09259e31
   m_configObjects: {}
