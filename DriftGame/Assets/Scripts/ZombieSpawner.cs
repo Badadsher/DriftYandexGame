@@ -24,7 +24,7 @@ public class ZombieSpawner : MonoBehaviour
         {
             if (currentZombieCount < maxZombiesAtOnce)
             {
-                Debug.Log("спавним");
+             
                 SpawnZombie();
                 yield return new WaitForSeconds(spawnInterval); // Ждем перед следующим спавном
             }
@@ -46,13 +46,13 @@ public class ZombieSpawner : MonoBehaviour
         currentZombieCount++;
         totalZombiesSpawned++;
 
-        Debug.Log("Зомби заспавнен. Всего: " + totalZombiesSpawned);
+      
     
         ZombieLogic zombieLogic = newZombie.GetComponent<ZombieLogic>();
         if (zombieLogic != null)
         {
             zombieLogic.OnZombieDestroyed += HandleZombieDestroyed; // Подписка на событие
-            Debug.Log("Подписались на событие уничтожения зомби."); // Лог для отладки
+
         }
     }
 

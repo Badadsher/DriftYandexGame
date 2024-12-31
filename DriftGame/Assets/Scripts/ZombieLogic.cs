@@ -135,7 +135,7 @@ public class ZombieLogic : MonoBehaviour
         // Постепенно уменьшаем альфа-канал
         Color color = material.color; // Получаем текущий цвет материала
         OnZombieDestroyed?.Invoke(); // Проверяем, есть ли подписчики и вызываем событие
-        Debug.Log("Событие уничтожения зомби вызвано."); // Лог для отладки
+       
         for (float t = 0; t < 1; t += Time.deltaTime / 2) // 2 секунды для исчезновения
         {
             color.a = Mathf.Lerp(1, 0, t); // Плавно уменьшаем альфа-канал от 1 до 0
