@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
     {
         if (type == LevelType.Zombie)
         {
-            Debug.Log("ura");
+         SaveManager.ResetKilledZombiesCount();
+        
         }
     }
 }

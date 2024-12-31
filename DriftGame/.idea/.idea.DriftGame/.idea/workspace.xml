@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="951a7324-e62c-4543-9d1b-05845eb6f6df" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/Prefabs/Rigged/ZombieController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/Prefabs/Rigged/ZombieController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaterialsAndOther/ofont.ru_CutOut SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaterialsAndOther/ofont.ru_CutOut SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/ServerInfoYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/ServerInfoYG2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/HalloweenScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/HalloweenScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZombieLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ZombieLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +110,7 @@
       <workItem from="1735576066265" duration="22000" />
       <workItem from="1735576105225" duration="229000" />
       <workItem from="1735576350231" duration="14008000" />
-      <workItem from="1735645799288" duration="1119000" />
+      <workItem from="1735645799288" duration="1281000" />
     </task>
     <servers />
   </component>
