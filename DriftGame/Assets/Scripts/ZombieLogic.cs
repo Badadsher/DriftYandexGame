@@ -16,6 +16,9 @@ public class ZombieLogic : MonoBehaviour
     private bool isAttacking = false; // Флаг для отслеживания состояния атаки
     private ParticleSystem dyingPart;
     private TextMeshProUGUI countZombie;
+    
+    public delegate void ZombieDestroyedHandler();
+    public event ZombieDestroyedHandler OnZombieDestroyed;
 
     void Start()
     {
@@ -45,7 +48,7 @@ public class ZombieLogic : MonoBehaviour
         
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        if (  navMeshAgent.enabled = true)
+        if (  navMeshAgent.enabled == true)
         {
             if (distanceToPlayer > attackDistance)
             {
@@ -107,6 +110,7 @@ public class ZombieLogic : MonoBehaviour
 
             if (other.CompareTag("Player"))
             {
+                
                 Vector3 forceDirection = (transform.position - other.transform.position).normalized; // Направление от автомобиля
                 rb.isKinematic = false; // Убедитесь, что Rigidbody не кинематический
                 rb.AddForce(forceDirection * 100000f); // Применяем силу (настройте значение по необходимости)
@@ -119,11 +123,34 @@ public class ZombieLogic : MonoBehaviour
     {
         dyingPart = transform.Find("DyingParticle").GetComponent<ParticleSystem>();
         dyingPart.Play();
+        ParticleSystem.MainModule mainModule = dyingPart.main;
+        float initialLifetime = mainModule.startLifetime.constant;
+        // Постепенно уменьшаем альфа-канал материала и lifetime частиц
         animator.Play("die");
-        yield return new WaitForSeconds(2f);
+
+        // Получаем компонент SkinnedMeshRenderer
+        SkinnedMeshRenderer skinnedMeshRenderer = transform.Find("zombie").GetComponent<SkinnedMeshRenderer>();
+        Material material = skinnedMeshRenderer.material; // Получаем материал
+         // Проверяем, есть ли подписчики и вызываем событие
+        // Постепенно уменьшаем альфа-канал
+        Color color = material.color; // Получаем текущий цвет материала
+        OnZombieDestroyed?.Invoke(); // Проверяем, есть ли подписчики и вызываем событие
+        Debug.Log("Событие уничтожения зомби вызвано."); // Лог для отладки
+        for (float t = 0; t < 1; t += Time.deltaTime / 2) // 2 секунды для исчезновения
+        {
+            color.a = Mathf.Lerp(1, 0, t); // Плавно уменьшаем альфа-канал от 1 до 0
+            material.color = color; // Применяем новый цвет
+            mainModule.startColor = new ParticleSystem.MinMaxGradient(color); // Применяем новый цвет
+            // Плавно уменьшаем lifetime частиц
+            mainModule.startLifetime = Mathf.Lerp(initialLifetime, 0, t); // Уменьшаем lifetime
+            yield return null; // Ждем один кадр
+        }
+// Вызываем событие перед уничтожением объекта
+       
         SaveManager.SetKilledZombiesCount();
         int zb = SaveManager.LoadKilledZombies();
         countZombie.text = zb + "/20";
-        Destroy(gameObject);
+    
+        Destroy(gameObject); // Уничтожаем объект после исчезновения
     }
 }
