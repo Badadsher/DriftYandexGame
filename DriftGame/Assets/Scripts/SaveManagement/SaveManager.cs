@@ -28,6 +28,12 @@ public static class  SaveManager
   {
     return YG2.saves._recordDrift;
   }
+  
+  //загрузка убитых зомби
+  public static int LoadKilledZombies()
+  {
+    return YG2.saves._zombieCount;
+  }
 
   //установка нового рекорда
   public static void SetRecordDrift(int record)
@@ -42,6 +48,15 @@ public static class  SaveManager
     YG2.saves._unlockedCarCount += 1;
     SaveProgress();
   }
+
+  //запись убитых зомби
+  public static void SetKilledZombiesCount()
+  {
+    YG2.saves._zombieCount += 1;
+    SaveProgress();
+  }
+  
+  
   
   //добавление денег
   public static void SetMoneyCount()

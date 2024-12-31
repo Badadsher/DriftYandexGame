@@ -10,6 +10,6 @@ namespace YG
         public int _money;
         public int _recordDrift;
         public int _unlockedCarCount;
-
+        public int _zombieCount = 0;
     }
 }

@@ -1,0 +1,21 @@
+{
+    "stringKeys": [],
+    "stringValues": [],
+    "floatKeys": [],
+    "floatValues": [],
+    "intKeys": [],
+    "intValues": [],
+    "intExample": 5,
+    "strExample": "Hello!",
+    "boolExample": [
+        false,
+        false,
+        false,
+        false
+    ],
+    "idSave": 2,
+    "_money": 0,
+    "_recordDrift": 0,
+    "_unlockedCarCount": 0,
+    "_zombieCount": 2
+}

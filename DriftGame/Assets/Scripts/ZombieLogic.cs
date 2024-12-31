@@ -2,6 +2,8 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using YG;
+using TMPro;
 
 public class ZombieLogic : MonoBehaviour
 {
@@ -13,9 +15,11 @@ public class ZombieLogic : MonoBehaviour
     private Rigidbody rb; // Rigidbody для физики
     private bool isAttacking = false; // Флаг для отслеживания состояния атаки
     private ParticleSystem dyingPart;
-    private TextMeshPro countZombie;
+    private TextMeshProUGUI countZombie;
+
     void Start()
     {
+        countZombie = GameObject.Find("KilledCount").GetComponent<TMPro.TextMeshProUGUI>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player")?.transform;
@@ -116,7 +120,9 @@ public class ZombieLogic : MonoBehaviour
         dyingPart = transform.Find("DyingParticle").GetComponent<ParticleSystem>();
         dyingPart.Play();
         yield return new WaitForSeconds(1.5f);
-       // countZombie.text = "фыв";
+        SaveManager.SetKilledZombiesCount();
+        int zb = SaveManager.LoadKilledZombies();
+        countZombie.text = zb + "/20";
         Destroy(gameObject);
     }
 }
