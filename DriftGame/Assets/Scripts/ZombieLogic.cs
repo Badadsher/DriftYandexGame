@@ -119,7 +119,8 @@ public class ZombieLogic : MonoBehaviour
     {
         dyingPart = transform.Find("DyingParticle").GetComponent<ParticleSystem>();
         dyingPart.Play();
-        yield return new WaitForSeconds(1.5f);
+        animator.Play("die");
+        yield return new WaitForSeconds(2f);
         SaveManager.SetKilledZombiesCount();
         int zb = SaveManager.LoadKilledZombies();
         countZombie.text = zb + "/20";

@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 5cb41aefde75aab4398926231941ac6b, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 68d9f79ea492fe8448cd9f34773ec006, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.968
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.16132447, g: 0.20242347, b: 0.27951404, a: 0.968}
+  m_IndirectSpecularColor: {r: 0.2790429, g: 0.17424934, b: 0.3034508, a: 0.968}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1034,7 +1034,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDistance: 4
   rotationSpeed: 5
-  animator: {fileID: 0}
 --- !u!1001 &99033275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5484,7 +5483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -90.1, y: 357}
+  m_AnchoredPosition: {x: -90.1001, y: 357}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &505175085
@@ -5725,7 +5724,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDistance: 5
   rotationSpeed: 5
-  animator: {fileID: 0}
 --- !u!54 &516361225
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5920,7 +5918,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -6867,7 +6865,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -216.451}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -145.51581, y: -67.59033}
+  m_AnchoredPosition: {x: -145.51562, y: -67.59033}
   m_SizeDelta: {x: 150, y: 140}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &617760863
@@ -16224,7 +16222,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDistance: 4
   rotationSpeed: 5
-  animator: {fileID: 0}
 --- !u!1 &1021210335 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7848657572127513549, guid: 97718a386a494f64f9bbea4b62581a79, type: 3}
@@ -17457,7 +17454,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -90.1, y: 135.62}
+  m_AnchoredPosition: {x: -90.1001, y: 135.62012}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1197194768

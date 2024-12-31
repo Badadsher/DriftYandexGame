@@ -56,6 +56,12 @@ public static class  SaveManager
     SaveProgress();
   }
   
+  //сброс убитых зомби
+  public static void ResetKilledZombiesCount()
+  {
+    YG2.saves._zombieCount = 0;
+    SaveProgress();
+  }
   
   
   //добавление денег
