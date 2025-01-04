@@ -6,27 +6,40 @@
   <component name="ChangeListManager">
     <list default="true" id="951a7324-e62c-4543-9d1b-05845eb6f6df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/FifthZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/FifthZombie.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/FirstZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/FirstZombie.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/FourthZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/FourthZombie.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/SecondZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/SecondZombie.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/ThirdZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/ThirdZombie.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/Prefabs/Rigged/die.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/Prefabs/Rigged/die.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/Prefabs/Rigged/pumch.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/Prefabs/Rigged/pumch.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/Prefabs/Rigged/running.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/Prefabs/Rigged/running.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZombieLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ZombieLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZombieSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ZombieSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/boot.config" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Badadsher"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Badadsher&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Badadsher/DriftYandexGame.git",
-    "accountId": "68733434-95d5-4d81-8384-8121463d24ae"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Badadsher/DriftYandexGame.git&quot;,
+    &quot;accountId&quot;: &quot;68733434-95d5-4d81-8384-8121463d24ae&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelType.cs" root0="FORCE_HIGHLIGHTING" />
@@ -61,7 +74,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="E:\Windows\ForUnity\2021.3.29f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="E:\Windows\ForUnity\2022.3.12f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath E:\UnityProjects\UnityProjects\DriftGameYD\DriftYandex\DriftGame -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="E:\UnityProjects\UnityProjects\DriftGameYD\DriftYandex\DriftGame" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -69,7 +82,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="E:\Windows\ForUnity\2021.3.29f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="E:\Windows\ForUnity\2022.3.12f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath E:\UnityProjects\UnityProjects\DriftGameYD\DriftYandex\DriftGame -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="E:\UnityProjects\UnityProjects\DriftGameYD\DriftYandex\DriftGame" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -112,7 +125,8 @@
       <workItem from="1735576066265" duration="22000" />
       <workItem from="1735576105225" duration="229000" />
       <workItem from="1735576350231" duration="14008000" />
-      <workItem from="1735645799288" duration="5281000" />
+      <workItem from="1735645799288" duration="7039000" />
+      <workItem from="1736023225695" duration="1265000" />
     </task>
     <servers />
   </component>
