@@ -13,11 +13,11 @@
         false,
         false
     ],
-    "idSave": 544,
+    "idSave": 592,
     "_money": 0,
     "_recordDrift": 0,
     "_unlockedCarCount": 0,
-    "_zombieCount": 0,
-    "_volumeFXStatus": false,
-    "volumeCount": 100
+    "_zombieCount": 3,
+    "_volumeFXStatus": true,
+    "volumeCount": 66
 }
