@@ -13,9 +13,9 @@ public class GameManager : MonoBehaviour
     private GameObject volume;
     void Start()
     {
-        volume = GameObject.Find("Volume");
-        Debug.Log(YG2.saves._volumeStatus);
-      //  if (YG2.saves._volumeStatus)
+        volume = GameObject.Find("Volume"); 
+        Debug.Log(SaveManager.LoadFXStatus());
+      //  if (SaveManager.LoadFXStatus())
        // {
        //     volume.SetActive(true);
       //  }

@@ -10,6 +10,7 @@ namespace YG
         public int _recordDrift;
         public int _unlockedCarCount;
         public int _zombieCount = 0;
-        public bool _volumeStatus;
+        public bool _volumeFXStatus = false;
+        public int volumeCount = 100;
     }
 }

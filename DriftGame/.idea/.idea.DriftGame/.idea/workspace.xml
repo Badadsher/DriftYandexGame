@@ -6,16 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="951a7324-e62c-4543-9d1b-05845eb6f6df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/FifthZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/FifthZombie.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/FirstZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/FirstZombie.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/FourthZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/FourthZombie.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/SecondZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/SecondZombie.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/ThirdZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/ThirdZombie.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaterialsAndOther/ofont.ru_CutOut SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaterialsAndOther/ofont.ru_CutOut SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/DefaultCityDrift.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/DefaultCityDrift.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoseBarLogic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoseBarLogic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SaveManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SavesYG.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SavesYG.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZombieLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ZombieLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +36,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoseBarLogic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/SettingsMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveManagement/SaveManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -123,6 +122,7 @@
       <workItem from="1735645799288" duration="7039000" />
       <workItem from="1736023225695" duration="8020000" />
       <workItem from="1736079159194" duration="4900000" />
+      <workItem from="1736183928173" duration="2852000" />
     </task>
     <servers />
   </component>

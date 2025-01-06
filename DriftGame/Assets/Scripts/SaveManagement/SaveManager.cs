@@ -16,7 +16,16 @@ public static class  SaveManager
   {
     return YG2.saves._unlockedCarCount;
   }
-  
+  // загрузка уровня громкости
+  public static int LoadVolume()
+  {
+    return YG2.saves.volumeCount;
+  }
+  // загрузка статуса крутой графики
+  public static bool LoadFXStatus()
+  {
+    return YG2.saves._volumeFXStatus;
+  }
   //загрузка кол-ва денег
   public static int LoadMoneyCount()
   {
@@ -39,6 +48,20 @@ public static class  SaveManager
   public static void SetRecordDrift(int record)
   {
     YG2.saves._recordDrift = record;
+    SaveProgress();
+  }
+  
+  //установка графики
+  public static void SetVolumeFXStatus(bool status)
+  {
+    YG2.saves._volumeFXStatus = status;
+    SaveProgress();
+  }
+  
+  //установка звука
+  public static void SetVolume(int count)
+  {
+    YG2.saves.volumeCount = count;
     SaveProgress();
   }
 
