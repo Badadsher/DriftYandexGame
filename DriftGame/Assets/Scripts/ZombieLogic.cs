@@ -17,6 +17,9 @@ public class ZombieLogic : MonoBehaviour
     private ParticleSystem dyingPart;
     private TextMeshProUGUI countZombie;
     private GameManager _gameManager;
+    private bool isDead = false; // Флаг для отслеживания состояния смерти
+    public AudioClip zombieSound; // Аудиоклип, который будет воспроизводиться
+    private AudioSource audioSource; // Компонент AudioSource
     public delegate void ZombieDestroyedHandler();
     public event ZombieDestroyedHandler OnZombieDestroyed;
 
@@ -33,11 +36,15 @@ public class ZombieLogic : MonoBehaviour
         navMeshAgent.speed = 6f; // Установите максимальную скорость
         navMeshAgent.acceleration = 20f; // Установите максимальное ускорение
         navMeshAgent.angularSpeed = 360f; // Установите угловую скорость
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = zombieSound;
+        audioSource.volume = 0.1f;
+        StartCoroutine(PlayRandomSound());
     }
 
     void Update()
     {
-        if (player == null) return; // Проверка на случай, если игрок не найден
+        if (player == null || isDead) return; // Проверка на случай, если игрок не найден или зомби мертв
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
@@ -71,6 +78,7 @@ public class ZombieLogic : MonoBehaviour
 
     private void StartAttack()
     {
+        if (isDead) return; // Проверка на состояние смерти перед атакой
         isAttacking = true; // Устанавливаем флаг атаки
         navMeshAgent.ResetPath();
         navMeshAgent.isStopped = true; // Остановить зомби перед атакой
@@ -82,7 +90,7 @@ public class ZombieLogic : MonoBehaviour
     {
         yield return new WaitForSeconds(1f); // Задержка перед проверкой атаки
         float distanceToPlayerForKill = Vector3.Distance(transform.position, player.position);
-        if (distanceToPlayerForKill <= attackDistance)
+        if (distanceToPlayerForKill <= attackDistance && !isDead) // Проверка на смерть перед нанесением урона
         {
             _gameManager.MinusHp();
         }
@@ -112,6 +120,7 @@ public class ZombieLogic : MonoBehaviour
 
     private System.Collections.IEnumerator KillZombie()
     {
+        isDead = true; // Устанавливаем флаг смерти
         dyingPart = transform.Find("DyingParticle").GetComponent<ParticleSystem>();
         dyingPart.Play();
 
@@ -126,5 +135,16 @@ public class ZombieLogic : MonoBehaviour
         countZombie.text = zb + "/20";
 
         Destroy(gameObject); // Уничтожаем объект после исчезновения
+    }
+    private System.Collections.IEnumerator PlayRandomSound()
+    {
+        while (!isDead) // Пока зомби не мертв
+        {
+            float randomDelay = Random.Range(5f, 10f); // Генерируем случайную задержку от 5 до 10 секунд
+            yield return new WaitForSeconds(randomDelay); 
+
+            audioSource.Play(); // Воспроизводим звук
+            yield return new WaitForSeconds(audioSource.clip.length); // Ждем окончания воспроизведения звука перед следующей задержкой
+        }
     }
 }

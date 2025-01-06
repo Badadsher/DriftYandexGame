@@ -11,12 +11,11 @@
       <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/FourthZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/FourthZombie.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/SecondZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/SecondZombie.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/ThirdZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/ThirdZombie.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaterialsAndOther/ofont.ru_CutOut SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaterialsAndOther/ofont.ru_CutOut SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/HalloweenScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/HalloweenScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/DefaultCityDrift.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/DefaultCityDrift.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SavesYG.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SavesYG.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZombieLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ZombieLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +121,8 @@
       <workItem from="1735576105225" duration="229000" />
       <workItem from="1735576350231" duration="14008000" />
       <workItem from="1735645799288" duration="7039000" />
-      <workItem from="1736023225695" duration="7419000" />
+      <workItem from="1736023225695" duration="8020000" />
+      <workItem from="1736079159194" duration="4900000" />
     </task>
     <servers />
   </component>

@@ -383,6 +383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDistance: 4.35
   rotationSpeed: 5
+  zombieSound: {fileID: 8300000, guid: 0c9cf0bbc5376bf4eb5d4e5499ee0cbe, type: 3}
 --- !u!54 &8418150150426785107
 Rigidbody:
   m_ObjectHideFlags: 0
