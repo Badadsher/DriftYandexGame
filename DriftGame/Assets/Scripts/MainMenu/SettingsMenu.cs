@@ -12,6 +12,7 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI volumeCount;
     private void Start()
     {
+        volumeCount.text = SaveManager.LoadVolume().ToString();
         // Устанавливаем состояние Toggle при запуске сцены
         graphicToggle.isOn = SaveManager.LoadFXStatus();
         // Подписываемся на событие изменения состояния Toggle
