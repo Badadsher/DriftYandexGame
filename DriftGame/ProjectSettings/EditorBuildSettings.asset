@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelsDrift/HalloweenScene.unity
     guid: a1d864caf6a677f48ac4669d09259e31
+  - enabled: 1
+    path: Assets/Scenes/LevelsDrift/DefaultCityDrift.unity
+    guid: 6bf5845b5eb053448a835c53856fc436
   m_configObjects: {}

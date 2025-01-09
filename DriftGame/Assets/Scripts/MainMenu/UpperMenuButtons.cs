@@ -13,6 +13,7 @@ public class UpperMenuButtons : MonoBehaviour
     [SerializeField] private GameObject mainPage;
     [SerializeField] private GameObject settingsPage;
     [SerializeField] private GameObject garagePage;
+    [SerializeField] private GameObject playerModel;
     void Start()
     {
         // Устанавливаем обработчики событий для каждого переключателя
@@ -67,18 +68,21 @@ public class UpperMenuButtons : MonoBehaviour
             mainPage.SetActive(true);
             settingsPage.SetActive(false);
             garagePage.SetActive(false);
+            playerModel.SetActive(true);
         }
         else if (activeToggle == toggles[1])
         {
             mainPage.SetActive(false);
             settingsPage.SetActive(true);
             garagePage.SetActive(false);
+            playerModel.SetActive(true);
         }
         else if (activeToggle == toggles[2])
         {
             mainPage.SetActive(false);
             settingsPage.SetActive(false);
             garagePage.SetActive(true);
+            playerModel.SetActive(false);
         }
     }
 }

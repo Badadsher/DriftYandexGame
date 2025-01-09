@@ -172,6 +172,11 @@ public class PrometeoCarController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      if (Application.isMobilePlatform == true)
+      {
+        useTouchControls = true;
+      }
+      
       cinemachineCamera = GameObject.Find("CarCamera").GetComponent< CinemachineVirtualCamera >();
       //In this part, we set the 'carRigidbody' value with the Rigidbody attached to this
       //gameObject. Also, we define the center of mass of the car with the Vector3 given
