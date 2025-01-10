@@ -21,7 +21,7 @@ MonoBehaviour:
     selectWebGLTemplate: 1
     runInBackground: 0
     enableExceptions: 2
-    compressionFormat: 0
+    compressionFormat: 1
     decompressionFallback: 0
     autoGraphicsAPI: 1
     dataCaching: 1
