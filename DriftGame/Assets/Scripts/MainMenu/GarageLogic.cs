@@ -30,6 +30,9 @@ public class GarageLogic : MonoBehaviour
     [Header("Car Prices")]
     [SerializeField] private int[] carPrices; // Цены на машины
     
+    [Header("ManagerMoney")]
+    [SerializeField] private UpperMenuButtons managerMoney;
+    
     void Start()
     {
         UpdateCarStates();  
@@ -70,8 +73,6 @@ public class GarageLogic : MonoBehaviour
                         lockers[i - 1].SetActive(true);
                     }
                 }
-               
-               
             }
             else
             {
@@ -93,6 +94,12 @@ public class GarageLogic : MonoBehaviour
         {
             carList[selectedCarIndex].SetActive(true);
             carButtons[selectedCarIndex].gameObject.SetActive(true);
+        }
+        // Устанавливаем состояние переключателей
+        for (int i = 0; i < toggles.Length; i++)
+        {
+            toggles[i].isOn = (i == selectedCarIndex); // Включаем переключатель, если индекс совпадает с выбранным
+            SetToggleAppearance(toggles[i], toggles[i].isOn); // Устанавливаем внешний вид переключателя
         }
         
         UpdateButtonTexts(); // Обновляем текст кнопок при инициализации
@@ -117,7 +124,41 @@ public class GarageLogic : MonoBehaviour
                 UpdateButtonTexts(); // Обновляем текст кнопок после выбора
             }
         }
+        else
+        {
+            TryPurchaseCar(index); 
+        }
     }
+    
+    private void TryPurchaseCar(int index)
+    {
+        int price = carPrices[index]; // Получаем цену выбранной машины
+
+        if (SaveManager.LoadMoneyCount() >= price) // Проверяем, достаточно ли денег
+        {
+            SaveManager.DeductMoney(price); // Уменьшаем количество денег на цену машины
+            SaveManager.SetCarPurchased(index); // Помечаем машину как купленную
+
+            managerMoney.UpdateMoney();
+            
+            Debug.Log("Машина " + (index + 1) + " куплена!");
+            
+            UpdateCarStates(); // Обновляем состояние машин после покупки
+            UpdateButtonTexts(); // Обновляем текст кнопок после покупки
+            
+            if (selectedCarIndex == -1) 
+            {
+                selectedCarIndex = index; // Если ничего не выбрано, устанавливаем только что купленную машину как выбранную.
+                SaveManager.SaveSelectedCar(selectedCarIndex); 
+                UpdateButtonTexts(); 
+            }
+        }
+        else
+        {
+            Debug.Log("Недостаточно денег для покупки машины " + (index + 1));
+        }
+    }
+
 
     private void UpdateButtonTexts()
     {
@@ -127,7 +168,7 @@ public class GarageLogic : MonoBehaviour
             if (i == selectedCarIndex)
             {
                 buttonText.text = "Выбрано"; // Текст для выбранной машины
-                carTextDesk[i].text = "ДОСТУПНО";
+                carTextDesk[i].text = "ВЫБРАНА";
             }
             else if (SaveManager.IsCarPurchased(i))
             {

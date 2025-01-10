@@ -6,13 +6,33 @@
   <component name="ChangeListManager">
     <list default="true" id="951a7324-e62c-4543-9d1b-05845eb6f6df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MaterialsAndOther/ofont.ru_CutOut SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaterialsAndOther/ofont.ru_CutOut SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OtherUI/1676577266_catherineasquithgallery-com-p-zelenii-tekst-na-oranzhevom-fone-66.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OtherUI/1676577266_catherineasquithgallery-com-p-zelenii-tekst-na-oranzhevom-fone-66.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OtherUI/button_yellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OtherUI/button_yellow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OtherUI/pngwing.com (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OtherUI/pngwing.com (1).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OtherUI/pngwing.com.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OtherUI/pngwing.com.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu/GarageLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/GarageLogic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu/UpperMenuButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/UpperMenuButtons.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SavesYG.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SavesYG.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +144,7 @@
       <workItem from="1736079159194" duration="4900000" />
       <workItem from="1736183928173" duration="5240000" />
       <workItem from="1736453006303" duration="2481000" />
-      <workItem from="1736512681522" duration="10416000" />
+      <workItem from="1736512681522" duration="12759000" />
     </task>
     <servers />
   </component>

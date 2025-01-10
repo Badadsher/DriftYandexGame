@@ -26,7 +26,8 @@ public static class  SaveManager
     // Сохраняем индекс выбранной машины
     public static void SaveSelectedCar(int index)
     {
-      YG2.saves.selectedCarIndex = index; 
+      YG2.saves.selectedCarIndex = index;
+      SaveProgress();
       // Здесь добавьте код для фактического сохранения данных (например, в файл или базу данных)
     }
     
@@ -35,6 +36,28 @@ public static class  SaveManager
     {
       return YG2.saves.selectedCarIndex; 
     }
+    
+    //cписываем деньги
+    public static void DeductMoney(int amount)
+    {
+      YG2.saves._money -= amount;
+      SaveProgress();
+      
+    }
+    
+    public static void SetCarPurchased(int index)
+    {
+      if(index >= 0 && index < YG2.saves.purchasedCars.Length)
+      {
+        YG2.saves.purchasedCars[index] = true;
+        SaveProgress();
+      }
+      else
+      {
+        Debug.LogError("Index out of bounds for purchasedCars array.");
+      }
+    }
+
     
   // загрузка уровня громкости
   public static int LoadVolume()

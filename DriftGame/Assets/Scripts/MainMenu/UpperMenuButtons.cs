@@ -19,12 +19,17 @@ public class UpperMenuButtons : MonoBehaviour
     [SerializeField] private TextMeshProUGUI moneyText;
     void Start()
     {
-        moneyText.text = SaveManager.LoadMoneyCount().ToString();
+        UpdateMoney();
         // Устанавливаем обработчики событий для каждого переключателя
         foreach (var toggle in toggles)
         {
             toggle.onValueChanged.AddListener(delegate { OnToggleChanged(toggle); });
         }
+    }
+
+    public void UpdateMoney()
+    {
+        moneyText.text = SaveManager.LoadMoneyCount().ToString();
     }
 
     private void OnToggleChanged(Toggle changedToggle)
