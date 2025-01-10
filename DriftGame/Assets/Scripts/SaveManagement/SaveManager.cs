@@ -11,15 +11,35 @@ public static class  SaveManager
     YG2.SaveProgress();
   }
 
-  // загрузка кол-ва открытых машин
-  public static int LoadUnlockedCarCount()
+  //выгрузка массива купленный машин
+  public static bool[] PurchasedCarsArray()
   {
-    return YG2.saves._unlockedCarCount;
+    return YG2.saves.purchasedCars;
   }
+  
+  //получение статуса куплена ли машина по индексу
+    public static bool IsCarPurchased(int index)
+    {
+      return YG2.saves.purchasedCars[index];
+    }
+    
+    // Сохраняем индекс выбранной машины
+    public static void SaveSelectedCar(int index)
+    {
+      YG2.saves.selectedCarIndex = index; 
+      // Здесь добавьте код для фактического сохранения данных (например, в файл или базу данных)
+    }
+    
+    // Загружаем индекс выбранной машины
+    public static int LoadSelectedCar()
+    {
+      return YG2.saves.selectedCarIndex; 
+    }
+    
   // загрузка уровня громкости
   public static int LoadVolume()
   {
-    return YG2.saves.volumeCount;
+    return YG2.saves._volumeCount;
   }
   // загрузка статуса крутой графики
   public static bool LoadFXStatus()
@@ -61,14 +81,14 @@ public static class  SaveManager
   //установка звука
   public static void SetVolume(int count)
   {
-    YG2.saves.volumeCount = count;
+    YG2.saves._volumeCount = count;
     SaveProgress();
   }
 
   //открытие машин
   public static void SetLoadUnlockedCount()
   {
-    YG2.saves._unlockedCarCount += 1;
+    ///////
     SaveProgress();
   }
 

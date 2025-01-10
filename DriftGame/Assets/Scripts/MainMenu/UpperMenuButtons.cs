@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 public class UpperMenuButtons : MonoBehaviour
@@ -14,8 +15,11 @@ public class UpperMenuButtons : MonoBehaviour
     [SerializeField] private GameObject settingsPage;
     [SerializeField] private GameObject garagePage;
     [SerializeField] private GameObject playerModel;
+    [SerializeField] private GameObject cars;
+    [SerializeField] private TextMeshProUGUI moneyText;
     void Start()
     {
+        moneyText.text = SaveManager.LoadMoneyCount().ToString();
         // Устанавливаем обработчики событий для каждого переключателя
         foreach (var toggle in toggles)
         {
@@ -69,6 +73,7 @@ public class UpperMenuButtons : MonoBehaviour
             settingsPage.SetActive(false);
             garagePage.SetActive(false);
             playerModel.SetActive(true);
+            cars.SetActive(false);
         }
         else if (activeToggle == toggles[1])
         {
@@ -76,6 +81,7 @@ public class UpperMenuButtons : MonoBehaviour
             settingsPage.SetActive(true);
             garagePage.SetActive(false);
             playerModel.SetActive(true);
+            cars.SetActive(false);
         }
         else if (activeToggle == toggles[2])
         {
@@ -83,6 +89,7 @@ public class UpperMenuButtons : MonoBehaviour
             settingsPage.SetActive(false);
             garagePage.SetActive(true);
             playerModel.SetActive(false);
+            cars.SetActive(true);
         }
     }
 }
