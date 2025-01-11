@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,36 +14,84 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject loseBar;
     [SerializeField] private GameObject loadLevelUI;
     [SerializeField] private GameObject mobileUI;
+    
     [SerializeField] private AudioSource mainAudioSource;
+    
+    [Header("ForCar")]
     [SerializeField] private AudioClip heatClip;
     [SerializeField] private AudioClip explosionClip;
-
+    [SerializeField] private GameObject[] cars;
+    private int selectedCarIndex;
+    [SerializeField] private CinemachineVirtualCamera carCamera;
+    
     [Header("CarSounds")]
     [SerializeField] private AudioSource carEngine;
     private GameObject volume;
+    private bool _cursorLocked = true;
     void Start()
     {
+        selectedCarIndex = SaveManager.LoadSelectedCar(); // Загружаем индекс выбранной машины
+        InitializeCar();
+        // Блокируем курсор при старте сцены
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         
         if(Application.isMobilePlatform == true)
         {
              mobileUI.SetActive(true);
         }
+        
         volume = GameObject.Find("Volume"); 
         Debug.Log(SaveManager.LoadFXStatus());
         if (SaveManager.LoadFXStatus())
         {
             volume.SetActive(true);
         }
-       else
-       {
+        else
+        {
           volume.SetActive(false);
-       }
+        }
+        
         loadLevelUI.SetActive(true);
         if (type == LevelType.Zombie)
         {
          SaveManager.ResetKilledZombiesCount();
          hpBar = GameObject.Find("Health").GetComponent<Slider>();
         }
+    }
+
+    private void Update()
+    {
+        // Проверяем нажатие клавиши Tab
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            // Переключаем состояние курсора
+            _cursorLocked = !_cursorLocked;
+
+            // Обновляем состояние курсора
+            if (_cursorLocked)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+        }
+    }
+
+    private void InitializeCar()
+    {
+      
+        if (!SaveManager.IsCarPurchased(selectedCarIndex))
+        {
+            selectedCarIndex = 0; // Если сохраненная машина не куплена, выбираем первую по умолчанию
+        }
+        
+        cars[selectedCarIndex].SetActive(true);
+        carCamera.Follow = cars[selectedCarIndex].transform;
     }
 
     public void MinusHp()
@@ -55,6 +105,8 @@ public class GameManager : MonoBehaviour
     {
         if (hpBar.value <= 0)
         {
+            var particle =  cars[selectedCarIndex].transform.Find("VFX_Fire").GetComponent<ParticleSystem>();
+            particle.Play();
             mainAudioSource.PlayOneShot(explosionClip);
             loseBar.SetActive(true);
             StartCoroutine(CleanScene());

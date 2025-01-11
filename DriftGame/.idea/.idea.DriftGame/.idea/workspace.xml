@@ -6,19 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="951a7324-e62c-4543-9d1b-05845eb6f6df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/FifthZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/FifthZombie.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/FirstZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/FirstZombie.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/FourthZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/FourthZombie.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/SecondZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/SecondZombie.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/ThirdZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/PolygonZombies/FrefabForLevel/ThirdZombie.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/HalloweenScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/HalloweenScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZombieLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ZombieLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sounds/zombiesound.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sounds/zombiesound.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu/GarageLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/GarageLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ResetBt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ResetBt.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +125,8 @@
       <workItem from="1736183928173" duration="5240000" />
       <workItem from="1736453006303" duration="2481000" />
       <workItem from="1736512681522" duration="12759000" />
-      <workItem from="1736599597496" duration="8527000" />
+      <workItem from="1736599597496" duration="11872000" />
+      <workItem from="1736633670000" duration="500000" />
     </task>
     <servers />
   </component>

@@ -34,6 +34,7 @@ public class GarageLogic : MonoBehaviour
     [SerializeField] private UpperMenuButtons managerMoney;
 
     [SerializeField] private GameObject noMoney;
+    [SerializeField] private GameObject succesBuying;
     
     [Header("Volume")]
     [SerializeField] private AudioClip toggleSound; // Звук нажатия на кнопку
@@ -152,6 +153,7 @@ public class GarageLogic : MonoBehaviour
             managerMoney.UpdateMoney();
             
             Debug.Log("Машина " + (index + 1) + " куплена!");
+            succesBuying.SetActive(true);
             PlayToggleSound(1);
             
             UpdateCarStates(); // Обновляем состояние машин после покупки
