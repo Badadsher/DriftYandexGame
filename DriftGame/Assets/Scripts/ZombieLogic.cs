@@ -106,7 +106,7 @@ public class ZombieLogic : MonoBehaviour
         if (prometeoCarController != null)
         {
             float carSpeed = prometeoCarController.carSpeed;
-            if (carSpeed >= 40 && other.CompareTag("Player"))
+            if (carSpeed >= 30 && other.CompareTag("Player"))
             {
                 Vector3 forceDirection = (transform.position - other.transform.position).normalized; // Направление от автомобиля
                 rb.isKinematic = false; // Убедитесь, что Rigidbody не кинематический
