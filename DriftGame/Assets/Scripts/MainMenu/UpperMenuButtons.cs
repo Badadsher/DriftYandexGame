@@ -23,6 +23,9 @@ public class UpperMenuButtons : MonoBehaviour
     [SerializeField] private TextMeshProUGUI moneyText;
     [SerializeField] private GameObject adButton;
     
+    [Header("Volume")]
+    [SerializeField] private AudioClip toggleSound; // Звук нажатия на кнопку
+    [SerializeField]  private AudioSource audioSource; // Компонент AudioSource
     void Start()
     {
         UpdateMoney();
@@ -43,6 +46,7 @@ public class UpperMenuButtons : MonoBehaviour
         // Если переключатель включен, отключаем остальные
         if (changedToggle.isOn)
         {
+            PlayToggleSound();
             foreach (var toggle in toggles)
             {
                 if (toggle != changedToggle)
@@ -56,6 +60,14 @@ public class UpperMenuButtons : MonoBehaviour
             SetToggleAppearance(changedToggle, true);
             // Выполняем уникальную логику для каждого переключателя
             ExecuteToggleLogic(changedToggle);
+        }
+    }
+    
+    private void PlayToggleSound()
+    {
+        if (audioSource != null && toggleSound != null)
+        {
+            audioSource.PlayOneShot(toggleSound); // Воспроизводим звук нажатия
         }
     }
 

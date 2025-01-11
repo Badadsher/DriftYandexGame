@@ -11,6 +11,10 @@ public class MainPageButtons : MonoBehaviour
     [SerializeField] private GameObject activatorZombieScene;
     [SerializeField] private GameObject activatorDriftScene;
     [SerializeField] private GameObject activatorRampScene;
+    
+    [Header("Volume")]
+    [SerializeField] private AudioClip levelSound; // Звук нажатия на уровень
+    [SerializeField]  private AudioSource audioSource; // Компонент AudioSource
 
     private void Start()
     {
@@ -23,6 +27,7 @@ public class MainPageButtons : MonoBehaviour
     
     private void OnButtonClicked(int buttonIndex)
     {
+        PlayToggleSound();
         switch (buttonIndex)
         {
             case 0:
@@ -36,6 +41,14 @@ public class MainPageButtons : MonoBehaviour
                 break;
             default:
                 break;
+        }
+    }
+    
+    private void PlayToggleSound()
+    {
+        if (audioSource != null && levelSound != null)
+        {
+            audioSource.PlayOneShot(levelSound); // Воспроизводим звук нажатия
         }
     }
 }

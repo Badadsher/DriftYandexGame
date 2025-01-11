@@ -6,61 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="951a7324-e62c-4543-9d1b-05845eb6f6df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/BuildLogYG2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/BuildLogYG2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/ModulesListYG2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/ModulesListYG2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Example.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Example/Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Example/Scenes/OpenURL.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Example/Scenes/OpenURL.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Plugins.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Plugins/OpenURL.jslib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Plugins/OpenURL.jslib.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Prefabs/AllGames.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Prefabs/AllGames.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Prefabs/GameYG.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Prefabs/GameYG.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/AllGamesYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/AllGamesYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/Editor/CopyCode.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/Editor/CopyCode/OpenURL_js.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/Editor/CopyCode/OpenURL_js.js.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/Editor/Icons.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/Editor/Icons/OpenURL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/Editor/Icons/OpenURL.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/Editor/OpenURL_build.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/Editor/OpenURL_build.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/GameYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/GameYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/URL_info.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/URL_info.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/URL_interface.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/URL_interface.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/URL_yandexPlatform.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/URL_yandexPlatform.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/URL_yg.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/URL_yg.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Version.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Version.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Platforms/YandexGames/YandexGames.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Platforms/YandexGames/YandexGames.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu/GarageLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/GarageLogic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu/SettingsMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/SettingsMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu/UpperMenuButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/UpperMenuButtons.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/popitka2/TemplateData/TemplateData.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/popitka2/TemplateData/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/popitka2/TemplateData/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/popitka2/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/popitka2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/popitka2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/popitka2/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/popitka2/popitka2.zip" beforeDir="false" afterPath="$PROJECT_DIR$/popitka2/popitka2.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/MainPageButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/MainPageButtons.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +125,7 @@
       <workItem from="1736183928173" duration="5240000" />
       <workItem from="1736453006303" duration="2481000" />
       <workItem from="1736512681522" duration="12759000" />
-      <workItem from="1736599597496" duration="2229000" />
+      <workItem from="1736599597496" duration="3372000" />
     </task>
     <servers />
   </component>

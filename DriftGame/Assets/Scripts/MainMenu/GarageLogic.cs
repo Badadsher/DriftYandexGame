@@ -35,6 +35,13 @@ public class GarageLogic : MonoBehaviour
 
     [SerializeField] private GameObject noMoney;
     
+    [Header("Volume")]
+    [SerializeField] private AudioClip toggleSound; // Звук нажатия на кнопку
+    [SerializeField] private AudioClip paySound; // Звук оплаты
+    [SerializeField] private AudioClip carClick; // Звук клика выбора
+    [SerializeField]  private AudioSource audioSource; // Компонент AudioSource
+    
+    
     void Start()
     {
         UpdateCarStates();  
@@ -109,6 +116,7 @@ public class GarageLogic : MonoBehaviour
 
     private void OnCarButtonClicked(int index)
     {
+        PlayToggleSound(2);
         if (SaveManager.IsCarPurchased(index))
         {
             if (selectedCarIndex == index)
@@ -144,6 +152,7 @@ public class GarageLogic : MonoBehaviour
             managerMoney.UpdateMoney();
             
             Debug.Log("Машина " + (index + 1) + " куплена!");
+            PlayToggleSound(1);
             
             UpdateCarStates(); // Обновляем состояние машин после покупки
             UpdateButtonTexts(); // Обновляем текст кнопок после покупки
@@ -188,6 +197,7 @@ public class GarageLogic : MonoBehaviour
 
     private void OnToggleChanged(Toggle changedToggle)
     {
+        PlayToggleSound(0);
         // Если переключатель включен, отключаем остальные
         if (changedToggle.isOn)
         {
@@ -207,6 +217,32 @@ public class GarageLogic : MonoBehaviour
      
         }
     }
+    
+    private void PlayToggleSound(int variant)
+    {
+        if (variant == 0)
+        {
+            if (audioSource != null && toggleSound != null)
+            {
+                audioSource.PlayOneShot(toggleSound); // Воспроизводим звук нажатия
+            }
+        }
+        else if(variant == 1)
+        {
+            if (audioSource != null && paySound != null)
+            {
+                audioSource.PlayOneShot(paySound); // Воспроизводим звук покупки
+            }
+        }
+        else
+        {
+            if (audioSource != null && paySound != null)
+            {
+                audioSource.PlayOneShot(carClick); // Воспроизводим звук клика на кнопку машины
+            }
+        }
+    }
+
 
     private void SetToggleAppearance(Toggle toggle, bool isActive)
     {

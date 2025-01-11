@@ -7,9 +7,14 @@ using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
+    [Header("Objects")]
     [SerializeField] private Slider volumeSlider;
     [SerializeField] private Toggle graphicToggle;
     [SerializeField] private TextMeshProUGUI volumeCount;
+    
+    [Header("Volume")]
+    [SerializeField] private AudioClip toggleSound; // Звук нажатия на кнопку
+    [SerializeField]  private AudioSource audioSource; // Компонент AudioSource
     private void Start()
     {
         volumeCount.text = SaveManager.LoadVolume().ToString();
@@ -19,7 +24,7 @@ public class SettingsMenu : MonoBehaviour
         graphicToggle.onValueChanged.AddListener(OnGraphicToggleChanged);
         
         // Устанавливаем начальное значение слайдера и подписываемся на его изменение
-        volumeSlider.value = SaveManager.LoadVolume() * 100; // Предполагается, что вы используете AudioListener для регулировки громкости
+        volumeSlider.value = SaveManager.LoadVolume(); // Предполагается, что вы используете AudioListener для регулировки громкости
         
         volumeSlider.onValueChanged.AddListener(OnVolumeSliderChanged);
     }
@@ -30,6 +35,7 @@ public class SettingsMenu : MonoBehaviour
     }
     private void OnGraphicToggleChanged(bool isOn)
     {
+        PlayToggleSound();
         if (isOn)
         {
            SaveManager.SetVolumeFXStatus(true);
@@ -39,5 +45,14 @@ public class SettingsMenu : MonoBehaviour
             SaveManager.SetVolumeFXStatus(false);
         }
     }
+    
+    private void PlayToggleSound()
+    {
+        if (audioSource != null && toggleSound != null)
+        {
+            audioSource.PlayOneShot(toggleSound); // Воспроизводим звук нажатия
+        }
+    }
+
     
 }

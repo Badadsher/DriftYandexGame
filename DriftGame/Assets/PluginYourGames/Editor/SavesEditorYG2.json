@@ -13,12 +13,12 @@
         false,
         false
     ],
-    "idSave": 1724,
-    "_money": 6300,
+    "idSave": 725,
+    "_money": 9000,
     "_recordDrift": 0,
-    "_zombieCount": 0,
+    "_zombieCount": 2,
     "_volumeFXStatus": true,
-    "_volumeCount": 37,
+    "_volumeCount": 100,
     "_selectedCar": 0,
     "selectedCar": [
         true,
@@ -27,10 +27,10 @@
         false
     ],
     "purchasedCars": [
-        false,
         true,
+        false,
         false,
         false
     ],
-    "selectedCarIndex": 1
+    "selectedCarIndex": 0
 }
