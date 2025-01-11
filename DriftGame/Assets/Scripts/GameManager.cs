@@ -12,6 +12,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject loseBar;
     [SerializeField] private GameObject loadLevelUI;
     [SerializeField] private GameObject mobileUI;
+    [SerializeField] private AudioSource mainAudioSource;
+    [SerializeField] private AudioClip heatClip;
+    [SerializeField] private AudioClip explosionClip;
+
+    [Header("CarSounds")]
+    [SerializeField] private AudioSource carEngine;
     private GameObject volume;
     void Start()
     {
@@ -40,6 +46,7 @@ public class GameManager : MonoBehaviour
 
     public void MinusHp()
     {
+        mainAudioSource.PlayOneShot(heatClip);
         hpBar.value -= 10;
         DeathChecker();
     }
@@ -48,11 +55,28 @@ public class GameManager : MonoBehaviour
     {
         if (hpBar.value <= 0)
         {
+            mainAudioSource.PlayOneShot(explosionClip);
             loseBar.SetActive(true);
+            StartCoroutine(CleanScene());
         }
-        else
+    }
+
+    private IEnumerator CleanScene()
+    {
+        yield return new WaitForSeconds(2.5f);
+        DestroyObjectsByTag("Zombie"); // Удаляем всех зомби
+        DestroyObjectsByTag("Player"); // Удаляем игрока
+    }
+    
+    // Метод для удаления всех объектов с указанными тегами
+    private void DestroyObjectsByTag(string tag)
+    {
+        carEngine.enabled = false;
+        GameObject[] objectsToDestroy = GameObject.FindGameObjectsWithTag(tag); // Находим все объекты с указанным тегом
+        
+        foreach (GameObject obj in objectsToDestroy)
         {
-            return;
+            Destroy(obj); // Удаляем объект
         }
     }
 }

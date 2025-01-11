@@ -18,7 +18,7 @@ public class ZombieLogic : MonoBehaviour
     private TextMeshProUGUI countZombie;
     private GameManager _gameManager;
     private bool isDead = false; // Флаг для отслеживания состояния смерти
-    public AudioClip zombieSound; // Аудиоклип, который будет воспроизводиться
+    public AudioClip[] zombieSounds; // Аудиоклип, который будет воспроизводиться
     private AudioSource audioSource; // Компонент AudioSource
     public delegate void ZombieDestroyedHandler();
     public event ZombieDestroyedHandler OnZombieDestroyed;
@@ -37,7 +37,6 @@ public class ZombieLogic : MonoBehaviour
         navMeshAgent.acceleration = 20f; // Установите максимальное ускорение
         navMeshAgent.angularSpeed = 360f; // Установите угловую скорость
         audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.clip = zombieSound;
         audioSource.volume = 0.1f;
         StartCoroutine(PlayRandomSound());
     }
@@ -141,9 +140,13 @@ public class ZombieLogic : MonoBehaviour
         while (!isDead) // Пока зомби не мертв
         {
             float randomDelay = Random.Range(5f, 10f); // Генерируем случайную задержку от 5 до 10 секунд
+            
             yield return new WaitForSeconds(randomDelay); 
 
+            audioSource.clip = zombieSounds[Random.Range(0, zombieSounds.Length)]; // Выбираем случайный звук из массива
+            
             audioSource.Play(); // Воспроизводим звук
+            
             yield return new WaitForSeconds(audioSource.clip.length); // Ждем окончания воспроизведения звука перед следующей задержкой
         }
     }

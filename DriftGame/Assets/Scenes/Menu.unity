@@ -190,8 +190,8 @@ MonoBehaviour:
   cars: {fileID: 1960938620}
   moneyText: {fileID: 308741516}
   adButton: {fileID: 1224000917}
-  toggleSound: {fileID: 0}
-  audioSource: {fileID: 0}
+  toggleSound: {fileID: 8300000, guid: 3c5c3d96d7c726e4bb82f4af527b4321, type: 3}
+  audioSource: {fileID: 1678218070}
 --- !u!1 &38595521
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,6 +288,8 @@ MonoBehaviour:
   volumeSlider: {fileID: 946047048}
   graphicToggle: {fileID: 1195327251}
   volumeCount: {fileID: 294383523}
+  toggleSound: {fileID: 8300000, guid: 3c5c3d96d7c726e4bb82f4af527b4321, type: 3}
+  audioSource: {fileID: 1678218070}
 --- !u!4 &48119522 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7344874181333496817, guid: ab4ea67cd9337c341af0bd7182c60f92, type: 3}
@@ -2687,6 +2689,8 @@ MonoBehaviour:
   activatorZombieScene: {fileID: 215079218}
   activatorDriftScene: {fileID: 1559209599}
   activatorRampScene: {fileID: 1849554131}
+  levelSound: {fileID: 8300000, guid: d1522d20fab613a42955b598adfaf4d6, type: 3}
+  audioSource: {fileID: 1678218070}
 --- !u!1 &791207684
 GameObject:
   m_ObjectHideFlags: 0
@@ -6514,7 +6518,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.596
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6906,6 +6910,10 @@ MonoBehaviour:
   carPrices: 0a0000008813000010270000204e0000
   managerMoney: {fileID: 15015286}
   noMoney: {fileID: 1481137776}
+  toggleSound: {fileID: 8300000, guid: 3c5c3d96d7c726e4bb82f4af527b4321, type: 3}
+  paySound: {fileID: 8300000, guid: 9b467120a5a33cb47bcefd532ec13cff, type: 3}
+  carClick: {fileID: 8300000, guid: d1522d20fab613a42955b598adfaf4d6, type: 3}
+  audioSource: {fileID: 1678218070}
 --- !u!1 &1826508591
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,10 +16,11 @@ public class AudioManager : MonoBehaviour
         // Получаем все аудиоисточники на сцене
         audioSources = FindObjectsOfType<AudioSource>();
 
+        Debug.Log(volume);
         // Устанавливаем громкость для каждого аудиоисточника
         foreach (AudioSource audioSource in audioSources)
         {
-            audioSource.volume = volume;
+            audioSource.volume = volume /100f;
         }
 
         if (SceneManager.GetActiveScene().name == "Menu")
