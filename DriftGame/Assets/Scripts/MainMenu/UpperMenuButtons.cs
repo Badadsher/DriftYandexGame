@@ -11,12 +11,18 @@ public class UpperMenuButtons : MonoBehaviour
     [SerializeField] private Color inactiveColor ; // Цвет неактивных переключателей
     [SerializeField] private Color activeColorText ; // Цвет активного переключателя
     [SerializeField] private Color inactiveColorText; // Цвет неактивных переключателей
+    
+    [Header("Pages")]
     [SerializeField] private GameObject mainPage;
     [SerializeField] private GameObject settingsPage;
     [SerializeField] private GameObject garagePage;
+    
+    [Header("Objects")]
     [SerializeField] private GameObject playerModel;
     [SerializeField] private GameObject cars;
     [SerializeField] private TextMeshProUGUI moneyText;
+    [SerializeField] private GameObject adButton;
+    
     void Start()
     {
         UpdateMoney();
@@ -79,6 +85,7 @@ public class UpperMenuButtons : MonoBehaviour
             garagePage.SetActive(false);
             playerModel.SetActive(true);
             cars.SetActive(false);
+            adButton.SetActive(false);
         }
         else if (activeToggle == toggles[1])
         {
@@ -87,6 +94,7 @@ public class UpperMenuButtons : MonoBehaviour
             garagePage.SetActive(false);
             playerModel.SetActive(true);
             cars.SetActive(false);
+            adButton.SetActive(false);
         }
         else if (activeToggle == toggles[2])
         {
@@ -95,6 +103,7 @@ public class UpperMenuButtons : MonoBehaviour
             garagePage.SetActive(true);
             playerModel.SetActive(false);
             cars.SetActive(true);
+            adButton.SetActive(true);
         }
     }
 }

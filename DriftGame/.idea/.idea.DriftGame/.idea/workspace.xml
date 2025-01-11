@@ -6,33 +6,61 @@
   <component name="ChangeListManager">
     <list default="true" id="951a7324-e62c-4543-9d1b-05845eb6f6df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 04.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 05.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 06.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 07.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 08.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 09.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 10.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 11.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 12.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 13.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 14.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 15.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 16.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsPrefabs/LaFinca/Midgard Skybox/Cubemaps/Midgard Cubemap 17.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OtherUI/1676577266_catherineasquithgallery-com-p-zelenii-tekst-na-oranzhevom-fone-66.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OtherUI/1676577266_catherineasquithgallery-com-p-zelenii-tekst-na-oranzhevom-fone-66.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OtherUI/button_yellow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OtherUI/button_yellow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OtherUI/pngwing.com (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OtherUI/pngwing.com (1).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OtherUI/pngwing.com.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OtherUI/pngwing.com.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/BuildLogYG2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/BuildLogYG2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/ModulesListYG2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/ModulesListYG2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Example.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Example/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Example/Scenes/OpenURL.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Example/Scenes/OpenURL.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Plugins.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Plugins/OpenURL.jslib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Plugins/OpenURL.jslib.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Prefabs/AllGames.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Prefabs/AllGames.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Prefabs/GameYG.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Prefabs/GameYG.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/AllGamesYG.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/AllGamesYG.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/Editor/CopyCode.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/Editor/CopyCode/OpenURL_js.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/Editor/CopyCode/OpenURL_js.js.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/Editor/Icons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/Editor/Icons/OpenURL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/Editor/Icons/OpenURL.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/Editor/OpenURL_build.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/Editor/OpenURL_build.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/GameYG.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/GameYG.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/URL_info.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/URL_info.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/URL_interface.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/URL_interface.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/URL_yandexPlatform.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/URL_yandexPlatform.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/URL_yg.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Scripts/URL_yg.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Version.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Modules/OpenURL/Version.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Platforms/YandexGames/YandexGames.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Platforms/YandexGames/YandexGames.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu/GarageLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/GarageLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu/SettingsMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/SettingsMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu/UpperMenuButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/UpperMenuButtons.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SaveManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/popitka2/TemplateData/TemplateData.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/popitka2/TemplateData/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/popitka2/TemplateData/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/popitka2/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/popitka2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/popitka2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/popitka2/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/popitka2/popitka2.zip" beforeDir="false" afterPath="$PROJECT_DIR$/popitka2/popitka2.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +80,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/SettingsMenu.cs" root0="FORCE_HIGHLIGHTING" />
@@ -66,26 +95,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Heisenberg\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Heisenberg\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\Heisenberg\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Heisenberg\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Heisenberg\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Heisenberg\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="E:\Windows\ForUnity\2022.3.12f1\Editor\Unity.exe" />
@@ -113,10 +142,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="2576">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="2576" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -145,6 +174,7 @@
       <workItem from="1736183928173" duration="5240000" />
       <workItem from="1736453006303" duration="2481000" />
       <workItem from="1736512681522" duration="12759000" />
+      <workItem from="1736599597496" duration="2229000" />
     </task>
     <servers />
   </component>

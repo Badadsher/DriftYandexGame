@@ -19,7 +19,8 @@ public class SettingsMenu : MonoBehaviour
         graphicToggle.onValueChanged.AddListener(OnGraphicToggleChanged);
         
         // Устанавливаем начальное значение слайдера и подписываемся на его изменение
-        volumeSlider.value = SaveManager.LoadVolume(); // Предполагается, что вы используете AudioListener для регулировки громкости
+        volumeSlider.value = SaveManager.LoadVolume() * 100; // Предполагается, что вы используете AudioListener для регулировки громкости
+        
         volumeSlider.onValueChanged.AddListener(OnVolumeSliderChanged);
     }
     private void OnVolumeSliderChanged(float value)

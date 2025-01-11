@@ -108,12 +108,7 @@ public static class  SaveManager
     SaveProgress();
   }
 
-  //открытие машин
-  public static void SetLoadUnlockedCount()
-  {
-    ///////
-    SaveProgress();
-  }
+ 
 
   //запись убитых зомби
   public static void SetKilledZombiesCount()

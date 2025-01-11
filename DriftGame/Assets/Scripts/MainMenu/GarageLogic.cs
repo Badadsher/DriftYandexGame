@@ -32,6 +32,8 @@ public class GarageLogic : MonoBehaviour
     
     [Header("ManagerMoney")]
     [SerializeField] private UpperMenuButtons managerMoney;
+
+    [SerializeField] private GameObject noMoney;
     
     void Start()
     {
@@ -155,6 +157,7 @@ public class GarageLogic : MonoBehaviour
         }
         else
         {
+            noMoney.SetActive(true);
             Debug.Log("Недостаточно денег для покупки машины " + (index + 1));
         }
     }
