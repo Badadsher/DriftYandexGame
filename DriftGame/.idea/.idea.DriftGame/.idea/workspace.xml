@@ -6,9 +6,31 @@
   <component name="ChangeListManager">
     <list default="true" id="951a7324-e62c-4543-9d1b-05845eb6f6df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OtherUI/Prefabs/MobileUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OtherUI/Prefabs/MobileUI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/BuildLogYG2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/BuildLogYG2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/HalloweenScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/HalloweenScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZombieLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ZombieLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/ServerInfoYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/ServerInfoYG2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Demo Blend.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Demo Blend.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Demo Blend.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Demo Blend.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HalloweenScene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HalloweenScene/NavMesh.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HalloweenScene/NavMesh.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/HalloweenScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/HalloweenScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/SampleScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/SampleScene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Volumes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Volumes/HalloweenScene_Profiles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Volumes/HalloweenScene_Profiles/HalloweenVolume.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Volumes/HalloweenScene_Profiles/HalloweenVolume.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Volumes/WinterScene_Profiles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Volumes/WinterScene_Profiles/Volume Profile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Volumes/WinterScene_Profiles/Volume Profile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SavesYG.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SavesYG.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/popitka2/popitka2.zip" beforeDir="false" afterPath="$PROJECT_DIR$/popitka2/popitka2.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +147,7 @@
       <workItem from="1736512681522" duration="12759000" />
       <workItem from="1736599597496" duration="11872000" />
       <workItem from="1736633674061" duration="1720000" />
+      <workItem from="1738415464261" duration="966000" />
     </task>
     <servers />
   </component>

@@ -721,7 +721,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &43672819
 RectTransform:
   m_ObjectHideFlags: 0
@@ -738,10 +738,10 @@ RectTransform:
   - {fileID: 1004857465}
   m_Father: {fileID: 525350813}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &43672820
 Animator:
@@ -18973,7 +18973,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -18989,7 +18989,7 @@ Canvas:
   m_GameObject: {fileID: 525350809}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 446696639}
   m_PlaneDistance: 1
   m_PixelPerfect: 0
@@ -20025,12 +20025,12 @@ MonoBehaviour:
   useSounds: 0
   carEngineSound: {fileID: 0}
   tireScreechSound: {fileID: 0}
-  useTouchControls: 0
-  throttleButton: {fileID: 0}
-  reverseButton: {fileID: 0}
-  turnRightButton: {fileID: 0}
-  turnLeftButton: {fileID: 0}
-  handbrakeButton: {fileID: 0}
+  useTouchControls: 1
+  throttleButton: {fileID: 170426476}
+  reverseButton: {fileID: 398125459}
+  turnRightButton: {fileID: 293240278}
+  turnLeftButton: {fileID: 1091938854}
+  handbrakeButton: {fileID: 19082720}
   carSpeed: 0
   isDrifting: 0
   isTractionLocked: 0
@@ -21460,12 +21460,12 @@ MonoBehaviour:
   useSounds: 0
   carEngineSound: {fileID: 0}
   tireScreechSound: {fileID: 0}
-  useTouchControls: 0
-  throttleButton: {fileID: 0}
-  reverseButton: {fileID: 0}
-  turnRightButton: {fileID: 0}
-  turnLeftButton: {fileID: 0}
-  handbrakeButton: {fileID: 0}
+  useTouchControls: 1
+  throttleButton: {fileID: 170426476}
+  reverseButton: {fileID: 398125459}
+  turnRightButton: {fileID: 293240278}
+  turnLeftButton: {fileID: 1091938854}
+  handbrakeButton: {fileID: 19082720}
   carSpeed: 0
   isDrifting: 0
   isTractionLocked: 0
@@ -26366,7 +26366,7 @@ PrefabInstance:
       objectReference: {fileID: 767491703}
     - target: {fileID: 627556911, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: useTouchControls
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 627556911, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: accelerationMultiplier
@@ -29337,12 +29337,12 @@ MonoBehaviour:
   useSounds: 1
   carEngineSound: {fileID: 0}
   tireScreechSound: {fileID: 0}
-  useTouchControls: 0
-  throttleButton: {fileID: 0}
-  reverseButton: {fileID: 0}
-  turnRightButton: {fileID: 0}
-  turnLeftButton: {fileID: 0}
-  handbrakeButton: {fileID: 0}
+  useTouchControls: 1
+  throttleButton: {fileID: 170426476}
+  reverseButton: {fileID: 398125459}
+  turnRightButton: {fileID: 293240278}
+  turnLeftButton: {fileID: 1091938854}
+  handbrakeButton: {fileID: 19082720}
   carSpeed: 0
   isDrifting: 0
   isTractionLocked: 0
@@ -31490,6 +31490,7 @@ MonoBehaviour:
   loseBar: {fileID: 1609812790}
   loadLevelUI: {fileID: 187529292}
   mobileUI: {fileID: 1699239210}
+  trainingUI: {fileID: 43672818}
   mainAudioSource: {fileID: 1428207250}
   heatClip: {fileID: 8300000, guid: a29dc7405b719a64aa12f4a0f26f67c6, type: 3}
   explosionClip: {fileID: 8300000, guid: b80303e43bd9115468714ef2f61d08b0, type: 3}
@@ -50186,7 +50187,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948286870}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -9.4}
+  m_LocalPosition: {x: 0, y: 0, z: -9.40002}
   m_LocalScale: {x: 1.12, y: 1.12, z: 1.12}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -50201,7 +50202,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1820, y: 980}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1948286872
 MonoBehaviour:
@@ -54536,7 +54537,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 91784412098181878, guid: 2c5f56d61a08ae248857a07d41d82be1, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c5f56d61a08ae248857a07d41d82be1, type: 3}

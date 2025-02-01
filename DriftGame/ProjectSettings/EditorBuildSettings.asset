@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 54da409f1f536b140b8183ff7ff0dc06
   - enabled: 1
-    path: Assets/Scenes/LevelsDrift/HalloweenScene.unity
+    path: Assets/Scenes/ZombieMode/HalloweenScene.unity
     guid: a1d864caf6a677f48ac4669d09259e31
   - enabled: 1
     path: Assets/Scenes/LevelsDrift/DefaultCityDrift.unity

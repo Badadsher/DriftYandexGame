@@ -11,10 +11,14 @@ public class GameManager : MonoBehaviour
 {
     [field: SerializeField] public LevelType type { get; private set; }
     private Slider hpBar;
+    
+    [Header("UI")]
     [SerializeField] private GameObject loseBar;
     [SerializeField] private GameObject loadLevelUI;
     [SerializeField] private GameObject mobileUI;
+    [SerializeField] private GameObject trainingUI;
     
+    [Header("Audio")]
     [SerializeField] private AudioSource mainAudioSource;
     
     [Header("ForCar")]
@@ -27,42 +31,55 @@ public class GameManager : MonoBehaviour
     [Header("CarSounds")]
     [SerializeField] private AudioSource carEngine;
     private GameObject volume;
+    
+    
     private bool _cursorLocked = true;
     void Start()
     {
+        
         selectedCarIndex = SaveManager.LoadSelectedCar(); // Загружаем индекс выбранной машины
         InitializeCar();
-        // Блокируем курсор при старте сцены
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-        
-        if(Application.isMobilePlatform == true)
-        {
-             mobileUI.SetActive(true);
-        }
-        
+        CheckPlatform();
+        InitializeMode();
+    }
+
+    private void InitializeMode()
+    {
         volume = GameObject.Find("Volume"); 
-        Debug.Log(SaveManager.LoadFXStatus());
+        
         if (SaveManager.LoadFXStatus())
         {
             volume.SetActive(true);
         }
         else
         {
-          volume.SetActive(false);
+            volume.SetActive(false);
         }
         
         loadLevelUI.SetActive(true);
         if (type == LevelType.Zombie)
         {
-         SaveManager.ResetKilledZombiesCount();
-         hpBar = GameObject.Find("Health").GetComponent<Slider>();
+            SaveManager.ResetKilledZombiesCount();
+            hpBar = GameObject.Find("Health").GetComponent<Slider>();
+        }
+    }
+
+    private void CheckPlatform()
+    {
+        if(Application.isMobilePlatform == true)
+        {
+            mobileUI.SetActive(true);
+            trainingUI.SetActive(false);
+        }
+        else
+        {
+            trainingUI.SetActive(true);
+            mobileUI.SetActive(false);
         }
     }
 
     private void Update()
     {
-        // Проверяем нажатие клавиши Tab
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             // Переключаем состояние курсора

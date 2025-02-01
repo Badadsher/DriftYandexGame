@@ -12,7 +12,7 @@ namespace YG
         //кол-во зомби
         public int _zombieCount = 0;
         //графон
-        public bool _volumeFXStatus = false; 
+        public bool _volumeFXStatus = true; 
         //звук
         public int _volumeCount = 100;
         //индекс выбранной машина

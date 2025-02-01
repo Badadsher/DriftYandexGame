@@ -9125,6 +9125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadermenuUI: {fileID: 0}
+  reseterUi: {fileID: 0}
 --- !u!1 &703140432
 GameObject:
   m_ObjectHideFlags: 0
@@ -9695,6 +9696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadermenuUI: {fileID: 2073944351}
+  reseterUi: {fileID: 0}
 --- !u!114 &779786248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13080,6 +13082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadermenuUI: {fileID: 1708365148}
+  reseterUi: {fileID: 0}
 --- !u!114 &1102995434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18040,6 +18043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadermenuUI: {fileID: 0}
+  reseterUi: {fileID: 0}
 --- !u!114 &1616983368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18821,6 +18825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadermenuUI: {fileID: 1708365148}
+  reseterUi: {fileID: 0}
 --- !u!95 &1708365151
 Animator:
   serializedVersion: 5
@@ -24216,6 +24221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadermenuUI: {fileID: 2073944351}
+  reseterUi: {fileID: 0}
 --- !u!95 &2073944353
 Animator:
   serializedVersion: 5
