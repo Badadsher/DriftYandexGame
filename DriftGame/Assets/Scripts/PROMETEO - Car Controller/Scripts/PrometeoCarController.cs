@@ -172,7 +172,11 @@ public class PrometeoCarController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      if (Application.isMobilePlatform == true)
+      if (Application.isMobilePlatform == false)
+      {
+        useTouchControls = false;
+      }
+      else
       {
         useTouchControls = true;
       }
