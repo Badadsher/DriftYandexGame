@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.romanlee17.mirrasdkpackage": "file:C:/Users/domin/Downloads/mirra-3.19.12+merge4.tgz",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.ai.navigation": "1.1.5",
     "com.unity.cinemachine": "2.10.3",

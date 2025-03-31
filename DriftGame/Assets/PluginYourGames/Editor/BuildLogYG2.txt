@@ -1,3 +1,0 @@
-Build path: E:/UnityProjects/UnityProjects/DriftGameYD/DriftYandex/DriftGame/popitka2
-Build number: 5
-PluginYG version: 2.002

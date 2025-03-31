@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa1494c8c215e224984b6061a0ee673e, type: 3}
+  m_Name: RuntimeSettings
+  m_EditorClassIdentifier: 
+  <RotationLockType>k__BackingField: 0
+  <PausePopupAfterCountdown>k__BackingField: 1
+  <DebugMode>k__BackingField: 0
+  <MobileAspectRatioX>k__BackingField: 0
+  <MobileAspectRatioY>k__BackingField: 0
+  <DesktopAspectRatioX>k__BackingField: 0
+  <DesktopAspectRatioY>k__BackingField: 0
+  <LanguageType>k__BackingField: 0
+  <EditorLogger>k__BackingField: 1
+  <EditorAdsError>k__BackingField: 0
+  <EditorAdblockDetected>k__BackingField: 0
+  <EditorDeviceType>k__BackingField: 0
+  <EditorDeviceIsMobile>k__BackingField: 0
+  <WebBuildsFolder>k__BackingField: 
+  <WebBuildsName>k__BackingField: 
+  <WebIcon>k__BackingField: {fileID: 0}
+  <WebBackground>k__BackingField: {fileID: 0}
+  <DecompressionFallbackType>k__BackingField: 0
+  <PrefsContainerTags>k__BackingField:
+  - json-data
+  <YandexGamesDomainSDK>k__BackingField: 0
+  <GamePushProjectId>k__BackingField: 
+  <GamePushToken>k__BackingField: 
+  <YandexGameId>k__BackingField: 
+  <YandexBannerId>k__BackingField: 
+  <YandexInterstitialDesktopId>k__BackingField: 
+  <YandexInterstitialMobileId>k__BackingField: 
+  <YandexRewardedDesktopId>k__BackingField: 
+  <YandexRewardedMobileId>k__BackingField: 
+  <GameDistributionId>k__BackingField: 
+  <CrazyGamesXSollaProjectId>k__BackingField: 
+  <GoogleAdsClient>k__BackingField: 
+  <GoogleAdsChannel>k__BackingField: 
+  <GoogleAdsTest>k__BackingField: 1
+  <AppodealAndroidAppKey>k__BackingField: 
+  <AppodealIOSAppKey>k__BackingField: 
+  <IronSourceAppKey>k__BackingField: 
+  <AdMobAndroidBannerId>k__BackingField: 
+  <AdMobIPhoneBannerId>k__BackingField: 
+  <AdMobAndroidInterstitialId>k__BackingField: 
+  <AdMobIPhoneInterstitialId>k__BackingField: 
+  <AdMobAndroidRewardedId>k__BackingField: 
+  <AdMobIPhoneRewardedId>k__BackingField: 

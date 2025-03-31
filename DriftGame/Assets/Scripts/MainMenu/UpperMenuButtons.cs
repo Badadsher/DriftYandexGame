@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
+
 public class UpperMenuButtons : MonoBehaviour
 {
     [Header("Toggle Settings")]
@@ -24,12 +26,24 @@ public class UpperMenuButtons : MonoBehaviour
     [SerializeField] private GameObject adButton;
     
     [Header("Volume")]
-    [SerializeField] private AudioClip toggleSound; // Звук нажатия на кнопку
-    [SerializeField]  private AudioSource audioSource; // Компонент AudioSource
+    [SerializeField] private AudioClip toggleSound;
+    [SerializeField]  private AudioSource audioSource;
+    
+    private SaveLoadManager _saveLoadManager;
+    
+    [Inject]
+    private void Construct(SaveLoadManager saveLoadManager)
+    {
+        _saveLoadManager = saveLoadManager;
+        Debug.Log("initialization complete");
+    }
+    
+    
+    
     void Start()
     {
+        Debug.Log("initialization complete2");
         UpdateMoney();
-        // Устанавливаем обработчики событий для каждого переключателя
         foreach (var toggle in toggles)
         {
             toggle.onValueChanged.AddListener(delegate { OnToggleChanged(toggle); });
@@ -38,7 +52,8 @@ public class UpperMenuButtons : MonoBehaviour
 
     public void UpdateMoney()
     {
-        moneyText.text = SaveManager.LoadMoneyCount().ToString();
+        Debug.Log(_saveLoadManager);
+        moneyText.text = _saveLoadManager.LoadMoneyCount().ToString();
     }
 
     private void OnToggleChanged(Toggle changedToggle)

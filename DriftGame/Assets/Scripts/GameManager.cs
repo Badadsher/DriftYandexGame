@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using YG;
+using Zenject;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,13 +32,20 @@ public class GameManager : MonoBehaviour
     [Header("CarSounds")]
     [SerializeField] private AudioSource carEngine;
     private GameObject volume;
-    
-    
+    private SaveLoadManager _saveLoadManager;
     private bool _cursorLocked = true;
-    void Start()
+    
+    [Inject]
+    private void Construct(SaveLoadManager saveLoadManager)
+    {
+        _saveLoadManager = saveLoadManager;
+        Initialize();
+    }
+    
+    void Initialize()
     {
         
-        selectedCarIndex = SaveManager.LoadSelectedCar(); // Загружаем индекс выбранной машины
+        selectedCarIndex = _saveLoadManager.LoadSelectedCar(); // Загружаем индекс выбранной машины
         InitializeCar();
         CheckPlatform();
         InitializeMode();
@@ -47,7 +55,7 @@ public class GameManager : MonoBehaviour
     {
         volume = GameObject.Find("Volume"); 
         
-        if (SaveManager.LoadFXStatus())
+        if (_saveLoadManager.LoadFXStatus())
         {
             volume.SetActive(true);
         }
@@ -59,7 +67,7 @@ public class GameManager : MonoBehaviour
         loadLevelUI.SetActive(true);
         if (type == LevelType.Zombie)
         {
-            SaveManager.ResetKilledZombiesCount();
+            _saveLoadManager.ResetKilledZombiesCount();
             hpBar = GameObject.Find("Health").GetComponent<Slider>();
         }
     }
@@ -102,7 +110,7 @@ public class GameManager : MonoBehaviour
     private void InitializeCar()
     {
       
-        if (!SaveManager.IsCarPurchased(selectedCarIndex))
+        if (!_saveLoadManager.IsCarPurchased(selectedCarIndex))
         {
             selectedCarIndex = 0; // Если сохраненная машина не куплена, выбираем первую по умолчанию
         }

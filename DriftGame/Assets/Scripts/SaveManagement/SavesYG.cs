@@ -9,7 +9,7 @@ namespace YG
         public int _money;
         //рекорд дрифта
         public int _recordDrift;
-        //кол-во зомби
+        //кол-во зомбиЫы
         public int _zombieCount = 0;
         //графон
         public bool _volumeFXStatus = true; 

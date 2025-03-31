@@ -1,38 +1,51 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using romanlee17.MirraGames;
 using UnityEngine;
+using UnityEngine.UI;
 using YG;
+using Zenject;
+
 public class AdvertScript : MonoBehaviour
 {
-    [SerializeField] private string rewardID;
-    [SerializeField] private UpperMenuButtons managerMoney;
-    // Когда объект с данным классом станет активным, метод OnReward подпишится на событие вознаграждения
-    private void OnEnable()
+    [SerializeField] private UpperMenuButtons _managerMoney;
+    [SerializeField] private Button _rewardButton;
+    private const string ADD_MONEY_REWARD_ID = "menuAddMoney";
+    private SaveLoadManager _saveLoadManager;
+  
+    [Inject]
+    private void Construct(SaveLoadManager saveLoadManager)
     {
-        YG2.onRewardAdv += OnReward;
+        _saveLoadManager = saveLoadManager;
+        Initialize();
     }
-
-    // Необходимо отписывать методы от событий при деактивации объекта
-    private void OnDisable()
+    
+    private void Initialize()
     {
-        YG2.onRewardAdv -= OnReward;
-    }
-
-    // Вызов рекламы за вознаграждение
-    public void MyRewardAdvShow(string id)
-    {
-        YG2.RewardedAdvShow(rewardID);
-    }
-
-    // Метод подписан на событие OnReward (ивент вознаграждения)
-    private void OnReward(string id)
-    {
-        // Проверяем ID вознаграждения. Если совпадает с тем ID, с которым вызывали рекламу, то вознаграждаем.
-        if (id == rewardID)
+        _saveLoadManager.RewardAdvAddListener(AddRewardMoney);
+        _rewardButton.onClick.AddListener(() =>
         {
-            SaveManager.SetMoneyCount();
-            managerMoney.UpdateMoney();
-            
-        }
+            MirraSDK.Ads.InvokeRewarded(
+                onSuccess: () =>
+                {
+                    Debug.Log("начислено!!");
+                    _saveLoadManager.SetMoneyCount();
+                    _saveLoadManager.LoadMoneyCount();
+                    _managerMoney.UpdateMoney();
+                },
+                onNotReady: () => {  Debug.Log("notready!!"); },
+                onAnyClose: () => {  Debug.Log("anyclose!!"); },
+                rewardTag: "menuAddMoney"
+            );
+        });
+    }
+    
+    public void AddRewardMoney(string id)
+    {
+        if (id != ADD_MONEY_REWARD_ID)
+            return;
+           
+        _saveLoadManager.SetMoneyCount();
     }
 }

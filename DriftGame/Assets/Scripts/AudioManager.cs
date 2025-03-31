@@ -3,16 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Zenject;
 
 public class AudioManager : MonoBehaviour
 {
     private int volume;
     [SerializeField] private Slider volumeSlider;
     private AudioSource[] audioSources;
-    void Start()
+    private SaveLoadManager _saveLoadManager;
+    
+    [Inject]
+    private void Construct(SaveLoadManager saveLoadManager)
+    {
+        _saveLoadManager = saveLoadManager;
+        Initialize();
+    }
+    
+    private void Initialize()
     {
         
-        volume = SaveManager.LoadVolume();
+        volume = _saveLoadManager.LoadVolume();
         // Получаем все аудиоисточники на сцене
         audioSources = FindObjectsOfType<AudioSource>();
 
@@ -38,6 +48,5 @@ public class AudioManager : MonoBehaviour
             audioSource.volume = value/100f;
            
         }
-        Debug.Log("изменено");
     }
 }

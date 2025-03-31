@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 
 public class GarageLogic : MonoBehaviour
@@ -41,9 +42,17 @@ public class GarageLogic : MonoBehaviour
     [SerializeField] private AudioClip paySound; // Звук оплаты
     [SerializeField] private AudioClip carClick; // Звук клика выбора
     [SerializeField]  private AudioSource audioSource; // Компонент AudioSource
+
+    private SaveLoadManager _saveLoadManager;
     
+    [Inject]
+    private void Construct(SaveLoadManager saveLoadManager)
+    {
+        _saveLoadManager = saveLoadManager;
+        Initialize();
+    }
     
-    void Start()
+    void Initialize()
     {
         UpdateCarStates();  
         
@@ -70,11 +79,11 @@ public class GarageLogic : MonoBehaviour
 
         for (int i = 0; i < carList.Length; i++)
         {
-            if (i < SaveManager.PurchasedCarsArray().Length) // Проверяем границы массива
+            if (i < _saveLoadManager.PurchasedCarsArray().Length) // Проверяем границы массива
             {
                 if (i > 0)
                 {
-                    if (SaveManager.IsCarPurchased(i))
+                    if (_saveLoadManager.IsCarPurchased(i))
                     {
                         lockers[i - 1].SetActive(false);
                     }
@@ -93,9 +102,9 @@ public class GarageLogic : MonoBehaviour
     
     private void InitializeCarSelection()
     {
-        selectedCarIndex = SaveManager.LoadSelectedCar(); // Загружаем индекс выбранной машины
+        selectedCarIndex = _saveLoadManager.LoadSelectedCar(); // Загружаем индекс выбранной машины
 
-        if (!SaveManager.IsCarPurchased(selectedCarIndex))
+        if (!_saveLoadManager.IsCarPurchased(selectedCarIndex))
         {
             selectedCarIndex = 0; // Если сохраненная машина не куплена, выбираем первую по умолчанию
         }
@@ -118,7 +127,7 @@ public class GarageLogic : MonoBehaviour
     private void OnCarButtonClicked(int index)
     {
         PlayToggleSound(2);
-        if (SaveManager.IsCarPurchased(index))
+        if (_saveLoadManager.IsCarPurchased(index))
         {
             if (selectedCarIndex == index)
             {
@@ -131,7 +140,7 @@ public class GarageLogic : MonoBehaviour
                 // Выбираем новую машину
                 selectedCarIndex = index;
                 Debug.Log("Выбрана машина: " + index);
-                SaveManager.SaveSelectedCar(selectedCarIndex); 
+                _saveLoadManager.SaveSelectedCar(selectedCarIndex); 
                 UpdateButtonTexts(); // Обновляем текст кнопок после выбора
             }
         }
@@ -145,10 +154,10 @@ public class GarageLogic : MonoBehaviour
     {
         int price = carPrices[index]; // Получаем цену выбранной машины
 
-        if (SaveManager.LoadMoneyCount() >= price) // Проверяем, достаточно ли денег
+        if (_saveLoadManager.LoadMoneyCount() >= price) // Проверяем, достаточно ли денег
         {
-            SaveManager.DeductMoney(price); // Уменьшаем количество денег на цену машины
-            SaveManager.SetCarPurchased(index); // Помечаем машину как купленную
+            _saveLoadManager.DeductMoney(price); // Уменьшаем количество денег на цену машины
+            _saveLoadManager.SetCarPurchased(index); // Помечаем машину как купленную
 
             managerMoney.UpdateMoney();
             
@@ -162,7 +171,7 @@ public class GarageLogic : MonoBehaviour
             if (selectedCarIndex == -1) 
             {
                 selectedCarIndex = index; // Если ничего не выбрано, устанавливаем только что купленную машину как выбранную.
-                SaveManager.SaveSelectedCar(selectedCarIndex); 
+                _saveLoadManager.SaveSelectedCar(selectedCarIndex); 
                 UpdateButtonTexts(); 
             }
         }
@@ -184,7 +193,7 @@ public class GarageLogic : MonoBehaviour
                 buttonText.text = "Выбрано"; // Текст для выбранной машины
                 carTextDesk[i].text = "ВЫБРАНА";
             }
-            else if (SaveManager.IsCarPurchased(i))
+            else if (_saveLoadManager.IsCarPurchased(i))
             {
                 buttonText.text = "Выбрать"; // Текст для доступных машин
                 carTextDesk[i].text = "Доступно";

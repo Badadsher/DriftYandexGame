@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Zenject;
 public class SettingsMenu : MonoBehaviour
 {
     [Header("Objects")]
@@ -13,36 +13,43 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI volumeCount;
     
     [Header("Volume")]
-    [SerializeField] private AudioClip toggleSound; // Звук нажатия на кнопку
-    [SerializeField]  private AudioSource audioSource; // Компонент AudioSource
-    private void Start()
+    [SerializeField] private AudioClip toggleSound;
+    [SerializeField] private AudioSource audioSource;
+
+    private SaveLoadManager _saveLoadManager;
+    
+    [Inject]
+    private void Construct(SaveLoadManager saveLoadManager)
     {
-        volumeCount.text = SaveManager.LoadVolume().ToString();
-        // Устанавливаем состояние Toggle при запуске сцены
-        graphicToggle.isOn = SaveManager.LoadFXStatus();
-        // Подписываемся на событие изменения состояния Toggle
+        _saveLoadManager = saveLoadManager;
+        Initialize();
+    }
+    
+    private void Initialize()
+    {
+        volumeCount.text = _saveLoadManager.LoadVolume().ToString();
+        graphicToggle.isOn = _saveLoadManager.LoadFXStatus();
         graphicToggle.onValueChanged.AddListener(OnGraphicToggleChanged);
         
-        // Устанавливаем начальное значение слайдера и подписываемся на его изменение
-        volumeSlider.value = SaveManager.LoadVolume(); // Предполагается, что вы используете AudioListener для регулировки громкости
+        volumeSlider.value = _saveLoadManager.LoadVolume();
         
         volumeSlider.onValueChanged.AddListener(OnVolumeSliderChanged);
     }
     private void OnVolumeSliderChanged(float value)
     {
         volumeCount.text = volumeSlider.value.ToString();
-        SaveManager.SetVolume(Convert.ToInt32(value));
+        _saveLoadManager.SetVolume(Convert.ToInt32(value));
     }
     private void OnGraphicToggleChanged(bool isOn)
     {
         PlayToggleSound();
         if (isOn)
         {
-           SaveManager.SetVolumeFXStatus(true);
+            _saveLoadManager.SetVolumeFXStatus(true);
         }
         else
         {
-            SaveManager.SetVolumeFXStatus(false);
+            _saveLoadManager.SetVolumeFXStatus(false);
         }
     }
     

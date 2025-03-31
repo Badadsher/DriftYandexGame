@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using YG;
+using Zenject;
 
 public class ZombieLogic : MonoBehaviour
 {
@@ -23,7 +24,16 @@ public class ZombieLogic : MonoBehaviour
     public delegate void ZombieDestroyedHandler();
     public event ZombieDestroyedHandler OnZombieDestroyed;
 
-    void Start()
+    private SaveLoadManager _saveLoadManager;
+    
+    [Inject]
+    private void Construct(SaveLoadManager saveLoadManager)
+    {
+        _saveLoadManager = saveLoadManager;
+        Initialize();
+    }
+    
+    void Initialize()
     {
         countZombie = GameObject.Find("KilledCount").GetComponent<TMPro.TextMeshProUGUI>();
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -128,9 +138,9 @@ public class ZombieLogic : MonoBehaviour
 
         yield return new WaitForSeconds(2f); // Время анимации смерти
 
-        SaveManager.SetKilledZombiesCount();
+        _saveLoadManager.SetKilledZombiesCount();
 
-        int zb = SaveManager.LoadKilledZombies();
+        int zb = _saveLoadManager.LoadKilledZombies();
         countZombie.text = zb + "/20";
 
         Destroy(gameObject); // Уничтожаем объект после исчезновения
