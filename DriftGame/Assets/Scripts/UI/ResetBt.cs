@@ -3,33 +3,48 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 public class ResetBt : MonoBehaviour
 {
-    [SerializeField] private GameObject loadermenuUI;
-    [SerializeField] private GameObject reseterUi;
+    [Header("Buttons")]
+    [SerializeField] private Button[] _toMenuButtons;
+    [SerializeField] private Button[] _toResetButtons;
+    [SerializeField] private Button[] _getChanseButton;
+    [Header("UI")]
+    [SerializeField] private GameObject _loadermenuUI;
+    [SerializeField] private GameObject _reseterUi;
+    
+    
     private int level;
     private void Start()
     {
+        foreach (Button menuButton in _toMenuButtons)
+        {
+            menuButton.onClick.AddListener(StartMenuON);
+        }
+
+        foreach (Button resetButton in _toResetButtons)
+        {
+            resetButton.onClick.AddListener(StartResetScene);
+        }
         level = SceneManager.GetActiveScene().buildIndex;
     }
     public void UpperCar()
     {
         var player = GameObject.FindGameObjectWithTag("Player");
         Vector3 direction = (transform.position - player.transform.position).normalized;
-
-        // Применяем силу отталкивания к машинке
         player.GetComponent<Rigidbody>().AddForce(Vector3.up * 200000f);
-       
     }
 
     public void StartMenuON()
     {
-        loadermenuUI.SetActive(true);
+        _loadermenuUI.SetActive(true);
     }
 
     public void StartResetScene()
     {
-        reseterUi.SetActive(true);
+        _reseterUi.SetActive(true);
     }
 
     public void ResetScene()
