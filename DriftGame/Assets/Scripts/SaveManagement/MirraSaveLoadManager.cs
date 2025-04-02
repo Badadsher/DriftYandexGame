@@ -10,116 +10,119 @@ public class MirraSaveLoadManager : SaveLoadManager
   private Action OnOpenAnyAdv;
   private Action OnCloseAnyAdv;
   private Action<string> OnRewardAdv;
-  
-  public override string lang { get {
-            var langCode = MirraSDK.Language.Current.ToString();
-            switch (langCode)
-            {
-                case "Turkish": return "tr";
-                case "Spanish": return "es";
-                case "German": return "de";
-                case "Polish": return "pl";
-                case "Swedish": return "sv";
-                default: return langCode.Substring(0, 2).ToLower();
-            }
-        }
+
+  public override string lang
+  {
+    get
+    {
+      var langCode = MirraSDK.Language.Current.ToString();
+      switch (langCode)
+      {
+        case "Turkish": return "tr";
+        case "Spanish": return "es";
+        case "German": return "de";
+        case "Polish": return "pl";
+        case "Swedish": return "sv";
+        default: return langCode.Substring(0, 2).ToLower();
+      }
     }
-    
-    public override bool nowInterAdv => _nowInterAdv;
-    private bool _nowInterAdv;  
-    
-     public override void SaveProgress()
+  }
+
+  public override bool nowInterAdv => _nowInterAdv;
+  private bool _nowInterAdv;
+
+  public override void SaveProgress()
   {
     MirraSDK.Prefs.Save();
   }
-  
-    public override bool[] PurchasedCarsArray()
-    { 
-      string savedData = PlayerPrefs.GetString("PurchasedCars", "");
-      return DeserializeBoolArray(savedData);
-    }
-  
-    public override bool IsCarPurchased(int index)
+
+  public override bool[] PurchasedCarsArray()
+  {
+    string savedData = PlayerPrefs.GetString("PurchasedCars", "");
+    return DeserializeBoolArray(savedData);
+  }
+
+  public override bool IsCarPurchased(int index)
+  {
+    return MirraSDK.Prefs.GetInt("PurchasedCars_" + index, 0) == 1;
+  }
+
+  public override void SaveSelectedCar(int index)
+  {
+    MirraSDK.Prefs.SetInt("SelectedCarIndex", index);
+    SaveProgress();
+  }
+
+
+  public override int LoadSelectedCar()
+  {
+    return MirraSDK.Prefs.GetInt("SelectedCarIndex", 0);
+  }
+
+  public override void DeductMoney(int amount)
+  {
+    int currentMoney = LoadMoneyCount();
+    currentMoney -= amount;
+    MirraSDK.Prefs.SetInt("Money", currentMoney);
+    SaveProgress();
+  }
+
+  public override void SetCarPurchased(int index)
+  {
+    if (index >= 0 && index < 4)
     {
-      return MirraSDK.Prefs.GetInt("PurchasedCars_" + index, 0) == 1;
-    }
-    
-    public override void SaveSelectedCar(int index)
-    {
-      MirraSDK.Prefs.SetInt("SelectedCarIndex", index);
+      MirraSDK.Prefs.SetInt("PurchasedCars_" + index, 1);
       SaveProgress();
     }
-    
-  
-    public override int LoadSelectedCar()
+    else
     {
-      return MirraSDK.Prefs.GetInt("SelectedCarIndex", 0);
+      Debug.LogError("Index out of bounds for purchasedCars array.");
     }
-    
-    public override void DeductMoney(int amount)
-    {
-      int currentMoney = LoadMoneyCount();
-      currentMoney -= amount;
-      MirraSDK.Prefs.SetInt("Money", currentMoney);
-      SaveProgress();
-    }
-    
-    public override void SetCarPurchased(int index)
-    {
-      if(index >= 0 && index < 4)
-      {
-        MirraSDK.Prefs.SetInt("PurchasedCars_" + index, 1);
-        SaveProgress();
-      }
-      else
-      {
-        Debug.LogError("Index out of bounds for purchasedCars array.");
-      }
-    }
-    
+  }
+
   public override int LoadVolume()
   {
-    return  MirraSDK.Prefs.GetInt("VolumeCount", 100);
+    return MirraSDK.Prefs.GetInt("VolumeCount", 100);
   }
-  
+
   public override bool LoadFXStatus()
   {
-    return  MirraSDK.Prefs.GetInt("VolumeFXStatus", 1) == 1;
+    return MirraSDK.Prefs.GetInt("VolumeFXStatus", 1) == 1;
   }
-  
+
   public override int LoadMoneyCount()
   {
-    return  MirraSDK.Prefs.GetInt("Money", 0);
+    return MirraSDK.Prefs.GetInt("Money", 0);
   }
-  
+
   public override int LoadRecordDrift()
   {
-    return  MirraSDK.Prefs.GetInt("RecordDrift", 0);
+    return MirraSDK.Prefs.GetInt("RecordDrift", 0);
   }
-  
+
   public override int LoadKilledZombies()
   {
-    return  MirraSDK.Prefs.GetInt("ZombieCount", 0);
+    return MirraSDK.Prefs.GetInt("ZombieCount", 0);
   }
-  
+
   public override void SetRecordDrift(int record)
   {
     MirraSDK.Prefs.SetInt("RecordDrift", record);
     SaveProgress();
   }
-  
+
   public override void SetVolumeFXStatus(bool status)
   {
     MirraSDK.Prefs.SetInt("VolumeFXStatus", status ? 1 : 0);
     SaveProgress();
   }
-  
+
   public override void SetVolume(int count)
   {
     MirraSDK.Prefs.SetInt("VolumeCount", count);
     SaveProgress();
   }
-  
+
   public override void SetKilledZombiesCount()
   {
     int currentCount = LoadKilledZombies();
@@ -127,13 +130,13 @@ public class MirraSaveLoadManager : SaveLoadManager
     MirraSDK.Prefs.SetInt("ZombieCount", currentCount);
     SaveProgress();
   }
-  
+
   public override void ResetKilledZombiesCount()
   {
     MirraSDK.Prefs.SetInt("ZombieCount", 0);
     SaveProgress();
   }
-  
+
   public override void SetMoneyCount()
   {
     int currentMoney = LoadMoneyCount();
@@ -141,16 +144,13 @@ public class MirraSaveLoadManager : SaveLoadManager
     MirraSDK.Prefs.SetInt("Money", currentMoney);
     SaveProgress();
   }
-  
+
   public override void RewardAdvShow(string id)
   {
-    MirraSDK.Ads.InvokeRewarded(onSuccess: () =>
-    {
-      OnRewardAdv?.Invoke(id);
-    }, rewardTag: id);
-            
+    MirraSDK.Ads.InvokeRewarded(onSuccess: () => { OnRewardAdv?.Invoke(id); }, rewardTag: id);
+
   }
-  
+
   public override void RewardAdvAddListener(Action<string> action)
   {
     OnRewardAdv += action;
@@ -160,8 +160,29 @@ public class MirraSaveLoadManager : SaveLoadManager
   {
     OnRewardAdv -= action;
   }
-  
-  public override string SerializeBoolArray(bool[] array)
+
+  public override void OnOpenAnyAdvAddListener(Action action)
+  {
+    OnOpenAnyAdv += action;
+  }
+
+  public override void OnOpenAnyAdvRemoveListener(Action action)
+  {
+    OnOpenAnyAdv -= action;
+  }
+
+  // public override void OnCloseAnyAdvAddListener(Action action)
+  // {
+  //   OnCloseAnyAdv += action;
+  // }
+  //
+  // public override void OnCloseAnyAdvRemoveListener(Action action)
+  // {
+  //   OnCloseAnyAdv -= action;
+  // }
+
+
+public override string SerializeBoolArray(bool[] array)
   {
     return string.Join(",", System.Array.ConvertAll(array, item => item ? "1" : "0"));
   }

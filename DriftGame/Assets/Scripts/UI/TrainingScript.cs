@@ -14,6 +14,5 @@ public class TrainingScript : MonoBehaviour
         Time.timeScale = 1.0f;
         var trainAnim = gameObject.GetComponent<Animator>();
         trainAnim.Play("CloseTrain");
-        
     }
 }

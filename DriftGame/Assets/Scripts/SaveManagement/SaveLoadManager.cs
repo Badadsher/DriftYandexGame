@@ -46,6 +46,9 @@ public abstract class SaveLoadManager
     public abstract void RewardAdvAddListener(Action<string> action);
 
     public abstract void RewardAdvRemoveListener(Action<string> action);
+    
+    public abstract void OnOpenAnyAdvAddListener(Action action);
+    public abstract void OnOpenAnyAdvRemoveListener(Action action);
 
     public abstract void RewardAdvShow(string id);
     public abstract string SerializeBoolArray(bool[] array);

@@ -39,13 +39,12 @@ public class GameManager : MonoBehaviour
     private void Construct(SaveLoadManager saveLoadManager)
     {
         _saveLoadManager = saveLoadManager;
-        Initialize();
     }
     
-    void Initialize()
+    void Start()
     {
         
-        selectedCarIndex = _saveLoadManager.LoadSelectedCar(); // Загружаем индекс выбранной машины
+        selectedCarIndex = _saveLoadManager.LoadSelectedCar(); 
         InitializeCar();
         CheckPlatform();
         InitializeMode();
@@ -109,9 +108,10 @@ public class GameManager : MonoBehaviour
 
     private void InitializeCar()
     {
-      
+      Debug.Log(_saveLoadManager);
         if (!_saveLoadManager.IsCarPurchased(selectedCarIndex))
         {
+            Debug.Log("Выбрана машина:" + selectedCarIndex);
             selectedCarIndex = 0; // Если сохраненная машина не куплена, выбираем первую по умолчанию
         }
         

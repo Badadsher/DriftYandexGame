@@ -30,10 +30,9 @@ public class ZombieLogic : MonoBehaviour
     private void Construct(SaveLoadManager saveLoadManager)
     {
         _saveLoadManager = saveLoadManager;
-        Initialize();
     }
     
-    void Initialize()
+    void Start()
     {
         countZombie = GameObject.Find("KilledCount").GetComponent<TMPro.TextMeshProUGUI>();
         navMeshAgent = GetComponent<NavMeshAgent>();

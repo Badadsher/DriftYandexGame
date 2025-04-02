@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa1494c8c215e224984b6061a0ee673e, type: 3}
   m_Name: RuntimeSettings
   m_EditorClassIdentifier: 
-  <RotationLockType>k__BackingField: 0
+  <RotationLockType>k__BackingField: 2
   <PausePopupAfterCountdown>k__BackingField: 1
   <DebugMode>k__BackingField: 0
   <MobileAspectRatioX>k__BackingField: 0
@@ -20,11 +20,11 @@ MonoBehaviour:
   <DesktopAspectRatioX>k__BackingField: 0
   <DesktopAspectRatioY>k__BackingField: 0
   <LanguageType>k__BackingField: 0
-  <EditorLogger>k__BackingField: 1
+  <EditorLogger>k__BackingField: 0
   <EditorAdsError>k__BackingField: 0
   <EditorAdblockDetected>k__BackingField: 0
   <EditorDeviceType>k__BackingField: 0
-  <EditorDeviceIsMobile>k__BackingField: 0
+  <EditorDeviceIsMobile>k__BackingField: 1
   <WebBuildsFolder>k__BackingField: 
   <WebBuildsName>k__BackingField: 
   <WebIcon>k__BackingField: {fileID: 0}
