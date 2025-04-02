@@ -40,7 +40,7 @@ public class AdvertScript : MonoBehaviour
 
     private void OnEnable()
     {
-        _saveLoadManager.RewardAdvAddListener(AddRewardMoney);
+
     }
 
     private void ShowRewardedAd()
@@ -48,7 +48,7 @@ public class AdvertScript : MonoBehaviour
         MirraSDK.Ads.InvokeRewarded(
             onSuccess: () =>
             {
-                Debug.Log("Rewarded Ad Success");
+                AddRewardMoney();
             },
             onNotReady: () => {   Debug.Log("Rewarded Ad notr"); },
             onAnyClose: () => { return; },
@@ -56,11 +56,8 @@ public class AdvertScript : MonoBehaviour
         );
     }
     
-    public void AddRewardMoney(string id)
+    public void AddRewardMoney()
     {
-        if (id != ADD_MONEY_REWARD_ID)
-            return;
-        
         Debug.Log("Adding reward money to advert");
             Debug.Log("Adding reward money");
             _saveLoadManager.SetMoneyCount();
@@ -70,6 +67,5 @@ public class AdvertScript : MonoBehaviour
 
     private void OnDisable()
     {
-        _saveLoadManager.RewardAdvRemoveListener(AddRewardMoney);
     }
 }
