@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -187,7 +188,7 @@ public class GarageLogic : MonoBehaviour
     {
         for (int i = 0; i < carButtons.Length; i++)
         {
-            Text buttonText = carButtons[i].GetComponentInChildren<Text>();
+            TextMeshProUGUI buttonText = carButtons[i].GetComponentInChildren<TextMeshProUGUI>();
             if (i == selectedCarIndex)
             {
                 buttonText.text = "Выбрано"; // Текст для выбранной машины

@@ -96,7 +96,7 @@ public class UpperMenuButtons : MonoBehaviour
         }
 
         // Изменяем текст внутри Toggle (если есть)
-        Text labelText = toggle.GetComponentInChildren<Text>();
+        TextMeshProUGUI labelText = toggle.GetComponentInChildren<TextMeshProUGUI>();
         if (labelText != null)
         {
             labelText.color = isActive ? activeColorText : inactiveColorText;
