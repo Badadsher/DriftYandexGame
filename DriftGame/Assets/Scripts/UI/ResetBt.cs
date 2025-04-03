@@ -19,14 +19,20 @@ public class ResetBt : MonoBehaviour
     private int level;
     private void Start()
     {
-        foreach (Button menuButton in _toMenuButtons)
+        if (_toMenuButtons != null)
         {
-            menuButton.onClick.AddListener(StartMenuON);
+            foreach (Button menuButton in _toMenuButtons)
+            {
+                menuButton.onClick.AddListener(StartMenuON);
+            }
         }
 
-        foreach (Button resetButton in _toResetButtons)
+        if (_toResetButtons != null)
         {
-            resetButton.onClick.AddListener(StartResetScene);
+            foreach (Button resetButton in _toResetButtons)
+            {
+                resetButton.onClick.AddListener(StartResetScene);
+            }
         }
         level = SceneManager.GetActiveScene().buildIndex;
     }
