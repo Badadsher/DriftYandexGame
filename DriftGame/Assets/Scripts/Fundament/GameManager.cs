@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject loadLevelUI;
     [SerializeField] private GameObject mobileUI;
     [SerializeField] private GameObject trainingUI;
+    [SerializeField] private bool _isRace;
     
     [Header("Audio")]
     [SerializeField] private AudioSource mainAudioSource;
@@ -43,7 +44,6 @@ public class GameManager : MonoBehaviour
     
     void Start()
     {
-        
         selectedCarIndex = _saveLoadManager.LoadSelectedCar(); 
         InitializeCar();
         CheckPlatform();
@@ -116,7 +116,18 @@ public class GameManager : MonoBehaviour
         }
         
         cars[selectedCarIndex].SetActive(true);
-        carCamera.Follow = cars[selectedCarIndex].transform;
+        if (_isRace)
+        {
+            var currentCar = FindObjectOfType<PrometeoCarController>();
+            var cm = currentCar.transform.Find("cm");
+            carCamera.LookAt = cm.transform;
+            carCamera.Follow = cm.transform;
+        }
+        else
+        {
+            carCamera.Follow = cars[selectedCarIndex].transform;
+        }
+       
     }
 
     public void MinusHp()
