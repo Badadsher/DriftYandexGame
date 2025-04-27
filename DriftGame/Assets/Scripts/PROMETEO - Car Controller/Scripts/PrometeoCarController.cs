@@ -12,11 +12,23 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PrometeoCarController : MonoBehaviour
 {
+  [Space(10)]
+  [Header("Drift Scoring")]
+  public bool useDriftScoring = false;
+  public TextMeshProUGUI driftScoreText;
+  public float driftScore = 0f;
+  public float scorePerSecond = 100f; // Базовое количество очков в секунду
+  public float speedMultiplier = 0.1f; // Множитель от скорости
+  private bool wasDrifting = false; // Для отслеживания изменения состояния дрифта
+  private float driftStartTime; // Время начала дрифта
+
+  
   [Space(20)]
   //[Header("Camera")]
   [Space(10)]
@@ -115,7 +127,7 @@ public class PrometeoCarController : MonoBehaviour
       float initialCarEngineSoundPitch; // Used to store the initial pitch of the car engine sound.
 
     //CONTROLS
-
+  
       [Space(20)]
       //[Header("CONTROLS")]
       [Space(10)]
@@ -133,7 +145,6 @@ public class PrometeoCarController : MonoBehaviour
       PrometeoTouchInput handbrakePTI;
 
     //CAR DATA
-
       [HideInInspector]
       public float carSpeed; // Used to store the speed of the car.
       [HideInInspector]
@@ -287,6 +298,36 @@ public class PrometeoCarController : MonoBehaviour
     void Update()
     {
 
+      if (useDriftScoring)
+      {
+        if (isDrifting)
+        {
+          if (!wasDrifting)
+          {
+            // Дрифт только начался
+            wasDrifting = true;
+            driftStartTime = Time.time;
+          }
+
+          // Рассчитываем время дрифта
+          float driftDuration = Time.time - driftStartTime;
+
+          // Начисляем очки с учетом скорости (чем быстрее, тем больше очков)
+          float speedFactor = 1 + Mathf.Abs(carSpeed) * speedMultiplier;
+          driftScore += scorePerSecond * speedFactor * Time.deltaTime;
+
+          // Обновляем текстовое поле
+          if (driftScoreText != null)
+          {
+            driftScoreText.text = "Drift Score: " + Mathf.RoundToInt(driftScore).ToString();
+          }
+        }
+        else if (wasDrifting)
+        {
+          // Дрифт закончился
+          wasDrifting = false;
+        }
+      }
       //CAR DATA
 
       // We determine the speed of the car.
