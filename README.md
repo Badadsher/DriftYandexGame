@@ -2,7 +2,7 @@
 
 Добро пожаловать в **DriftYandexGame** — динамичную **Unity**-игру, где тебе предстоит не только дрифтовать на бешеной скорости, но и **уничтожать зомби**, которые жаждут разбить твою тачку! 🧨💥
 
-![Unity](https://img.shields.io/badge/engine-Unity-2023.2+-white?logo=unity)
+[![Unity](https://img.shields.io/badge/Unity-%23000000.svg?logo=unity&logoColor=white)](#)
 ![Platform](https://img.shields.io/badge/platform-Yandex%20Games-blue?logo=yandex)
 ![Status](https://img.shields.io/badge/status-In%20Development-orange)
 
