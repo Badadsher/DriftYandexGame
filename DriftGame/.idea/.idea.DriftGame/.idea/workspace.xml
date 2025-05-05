@@ -6,14 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="951a7324-e62c-4543-9d1b-05845eb6f6df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/MaterialsAndOther/ofont.ru_CutOut SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/MaterialsAndOther/ofont.ru_CutOut SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/WinterScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/WinterScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Race/RasingSceneOne.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Race/RasingSceneOne.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PROMETEO - Car Controller/Scripts/PrometeoCarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PROMETEO - Car Controller/Scripts/PrometeoCarController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/MainPageButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/MainPageButtons.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/MirraSaveLoadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/MirraSaveLoadManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SaveLoadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SaveLoadManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,6 +140,7 @@
       <workItem from="1743665289895" duration="1670000" />
       <workItem from="1743704487713" duration="4127000" />
       <workItem from="1745665979178" duration="6839000" />
+      <workItem from="1746476883808" duration="211000" />
     </task>
     <servers />
   </component>
