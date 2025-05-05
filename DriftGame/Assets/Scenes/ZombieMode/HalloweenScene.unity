@@ -20004,9 +20004,9 @@ MonoBehaviour:
   RRWTireSkid: {fileID: 544111093}
   useUI: 1
   carSpeedText: {fileID: 961645107}
-  useSounds: 0
-  carEngineSound: {fileID: 0}
-  tireScreechSound: {fileID: 0}
+  useSounds: 1
+  carEngineSound: {fileID: 478607719}
+  tireScreechSound: {fileID: 767491703}
   useTouchControls: 1
   throttleButton: {fileID: 170426476}
   reverseButton: {fileID: 398125459}
@@ -21190,9 +21190,9 @@ MonoBehaviour:
   RRWTireSkid: {fileID: 2032406008}
   useUI: 1
   carSpeedText: {fileID: 961645107}
-  useSounds: 0
-  carEngineSound: {fileID: 0}
-  tireScreechSound: {fileID: 0}
+  useSounds: 1
+  carEngineSound: {fileID: 478607719}
+  tireScreechSound: {fileID: 767491703}
   useTouchControls: 1
   throttleButton: {fileID: 170426476}
   reverseButton: {fileID: 398125459}
@@ -28891,8 +28891,8 @@ MonoBehaviour:
   useUI: 1
   carSpeedText: {fileID: 961645107}
   useSounds: 1
-  carEngineSound: {fileID: 0}
-  tireScreechSound: {fileID: 0}
+  carEngineSound: {fileID: 478607719}
+  tireScreechSound: {fileID: 767491703}
   useTouchControls: 1
   throttleButton: {fileID: 170426476}
   reverseButton: {fileID: 398125459}
