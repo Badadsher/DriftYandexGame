@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
 
     private void CheckPlatform()
     {
-        if(Application.isMobilePlatform == true)
+        if(Application.isMobilePlatform)
         {
             mobileUI.SetActive(true);
             trainingUI.SetActive(false);
