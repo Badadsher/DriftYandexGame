@@ -10,6 +10,7 @@ public class MirraSaveLoadManager : SaveLoadManager
   private Action OnOpenAnyAdv;
   private Action OnCloseAnyAdv;
   private Action<string> OnRewardAdv;
+  
 
   public override string lang
   {
@@ -200,4 +201,24 @@ public override string SerializeBoolArray(bool[] array)
     }
     return result;
   }
+  
+  public override void PauseGame(bool state)
+  {
+    MirraSDK.Time.Scale = state ? 0 : 1;
+  }
+  
+  public override void FullscreenAdvShow()
+  {
+    MirraSDK.Ads.InvokeInterstitial(onAnyClose: () =>
+    { 
+      _nowInterAdv = false;
+      OnCloseAnyAdv?.Invoke();
+      MirraSDK.Time.Scale = 1;
+    });
+    _nowInterAdv = true;
+    OnOpenAnyAdv?.Invoke();
+    // Cursor.lockState = CursorLockMode.None;
+    // Cursor.visible = true;
+  }
+
 }

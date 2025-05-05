@@ -54,6 +54,10 @@ public abstract class SaveLoadManager
     public abstract string SerializeBoolArray(bool[] array);
 
     public abstract bool[] DeserializeBoolArray(string array);
+    
+    public abstract void PauseGame(bool state);
+    
+    public abstract void FullscreenAdvShow();
 }
 
 
