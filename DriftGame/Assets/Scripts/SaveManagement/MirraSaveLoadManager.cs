@@ -183,7 +183,7 @@ public class MirraSaveLoadManager : SaveLoadManager
   // }
 
 
-public override string SerializeBoolArray(bool[] array)
+  public override string SerializeBoolArray(bool[] array)
   {
     return string.Join(",", System.Array.ConvertAll(array, item => item ? "1" : "0"));
   }
@@ -251,5 +251,15 @@ public override string SerializeBoolArray(bool[] array)
     MirraSDK.Socials.SetScore(boardName, value);
   }
 
+  public override void SetScoreDrift(int drift)
+  {
+    MirraSDK.Prefs.SetInt("ScoreDrift", drift);
+    SaveProgress();
+  }
+
+  public override int GetScoreDrift()
+  {
+    return MirraSDK.Prefs.GetInt("ScoreDrift",0);
+  }
   
 }

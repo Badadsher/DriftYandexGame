@@ -65,6 +65,10 @@ public abstract class SaveLoadManager
     
     public abstract void SetLeaderboard(string boardName, int value);
     
+    public abstract void SetScoreDrift(int drift);
+    
+    public abstract int GetScoreDrift();
+    
 }
 
 
