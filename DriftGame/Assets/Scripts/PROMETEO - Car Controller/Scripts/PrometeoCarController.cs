@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 public class PrometeoCarController : MonoBehaviour
 {
@@ -25,8 +26,8 @@ public class PrometeoCarController : MonoBehaviour
   public float scorePerSecond = 1000f; // Увеличено для заметного прироста
   public float speedMultiplier = 0.1f; // Множитель от скорости
   private bool wasDrifting = false; // Для отслеживания изменения состояния дрифта
-  private float driftStartTime; // Время начала дрифта
-
+  private float driftStartTime; // Время нач
+  private SaveLoadManager _saveLoadManager;
   [Space(20)]
   private CinemachineVirtualCamera cinemachineCamera; // Ваша Cinemachine камера
   private float minOrthoSize = 8f;  // Минимальное значение размера
@@ -132,6 +133,12 @@ public class PrometeoCarController : MonoBehaviour
   WheelFrictionCurve RRwheelFriction;
   float RRWextremumSlip;
 
+  [Inject]
+  private void Construct(SaveLoadManager saveLoadManager)
+  {
+    _saveLoadManager = saveLoadManager;
+  }
+  
   void Start()
   {
     if (Application.isMobilePlatform == false)
@@ -149,7 +156,7 @@ public class PrometeoCarController : MonoBehaviour
 
     // Находим компонент DriftScoreUI в сцене
     driftScoreUI = FindObjectOfType<DriftScoreUI>();
-    
+    Debug.Log(driftScoreUI);
     FLwheelFriction = new WheelFrictionCurve();
     FLwheelFriction.extremumSlip = frontLeftCollider.sidewaysFriction.extremumSlip;
     FLWextremumSlip = frontLeftCollider.sidewaysFriction.extremumSlip;
@@ -259,7 +266,7 @@ public class PrometeoCarController : MonoBehaviour
     // Инициализация текста очков дрифта
     if (driftScoreUI != null)
     {
-      driftScoreUI.UpdateScore(driftScore);
+      driftScoreUI.UpdateScore(driftScore + 10);
     }
     else
     {
@@ -269,8 +276,7 @@ public class PrometeoCarController : MonoBehaviour
 
   void Update()
   {
-    if (useDriftScoring)
-    {
+   
       if (isDrifting)
       {
         if (!wasDrifting)
@@ -278,30 +284,27 @@ public class PrometeoCarController : MonoBehaviour
           // Дрифт только начался
           wasDrifting = true;
           driftStartTime = Time.time;
-          Debug.Log("Drift started!");
         }
-
         // Рассчитываем время дрифта
         float driftDuration = Time.time - driftStartTime;
 
         // Начисляем очки с учетом скорости
         float speedFactor = 1 + Mathf.Abs(carSpeed) * speedMultiplier;
         driftScore += scorePerSecond * speedFactor * Time.deltaTime;
-        Debug.Log($"Drifting! Score: {driftScore}, Speed: {carSpeed}, SpeedFactor: {speedFactor}, Duration: {driftDuration}");
+        driftScoreUI.UpdateScore(driftScore);
+
+        if (_saveLoadManager.GetScoreDrift() > (Mathf.RoundToInt(driftScore)))
+        {
+          _saveLoadManager.SetScoreDrift(Mathf.RoundToInt(driftScore));
+        }
+
       }
       else if (wasDrifting)
       {
         // Дрифт закончился
         wasDrifting = false;
-        Debug.Log("Drift ended! Final Score: " + driftScore);
       }
-    }
-
-    // Обновляем текст очков дрифта
-    if (driftScoreUI != null)
-    {
-      driftScoreUI.UpdateScore(driftScore);
-    }
+      
 
     carSpeed = (2 * Mathf.PI * frontLeftCollider.radius * frontLeftCollider.rpm * 60) / 1000;
     localVelocityX = transform.InverseTransformDirection(carRigidbody.velocity).x;
