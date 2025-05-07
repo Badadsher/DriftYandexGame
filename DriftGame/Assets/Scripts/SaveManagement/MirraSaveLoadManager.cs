@@ -221,4 +221,35 @@ public override string SerializeBoolArray(bool[] array)
     // Cursor.visible = true;
   }
 
+  public override void GetLeaderboard(string name, int playerCountTop, int playerCountAround)
+  {
+    Debug.Log($"Get Board: {name}");
+
+    MirraSDK.Socials.GetScoreTable(name, playerCountTop, true, playerCountAround, (data) =>
+    {
+      Debug.Log($"Success get board");
+      var playersData = new List<LeaderboardPlayerData>();
+      for (int i = 0; i < data.Count; i++)
+      {
+        var playerDt = data[i];
+        playersData.Add(new LeaderboardPlayerData(
+          name: playerDt.name,
+          score: playerDt.score,
+          position: playerDt.position,
+          imgUrl: playerDt.pictureURL
+        ));
+      }
+
+      var lbData = new LeaderboardData(name, playersData.ToArray());
+      OnGetLeaderboadData?.Invoke(lbData);
+    }, () => { Debug.Log("Error getting leaderboard"); });
+  }
+  
+  public override void SetLeaderboard(string boardName, int value)
+  {
+    Debug.Log($"Set Score: {boardName} {value}");
+    MirraSDK.Socials.SetScore(boardName, value);
+  }
+
+  
 }

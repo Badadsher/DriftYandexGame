@@ -4,6 +4,8 @@ using YG;
 
 public abstract class SaveLoadManager
 {
+    public Action<LeaderboardData> OnGetLeaderboadData;
+    
     public abstract bool nowInterAdv { get; }
     public abstract string lang { get; }
 
@@ -58,6 +60,11 @@ public abstract class SaveLoadManager
     public abstract void PauseGame(bool state);
     
     public abstract void FullscreenAdvShow();
+    
+    public abstract void GetLeaderboard(string name, int playerCountTop, int playerCountAround);
+    
+    public abstract void SetLeaderboard(string boardName, int value);
+    
 }
 
 
