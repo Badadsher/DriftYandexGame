@@ -37,8 +37,8 @@ public class ZombieLogic : MonoBehaviour
         countZombie = GameObject.Find("KilledCount").GetComponent<TMPro.TextMeshProUGUI>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-        player = GameObject.FindWithTag("Player")?.transform;
-        _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        player = FindTargetedPlayer().transform;
+        _gameManager = FindFirstObjectByType<GameManager>();
         rb = GetComponent<Rigidbody>();
 
         // Настройки NavMeshAgent
@@ -52,7 +52,11 @@ public class ZombieLogic : MonoBehaviour
 
     void Update()
     {
-        if (player == null || isDead) return; // Проверка на случай, если игрок не найден или зомби мертв
+        if ((player == null || isDead) && !player.GetComponent<Player>().isTarget)
+        {
+            FindTargetedPlayer();
+            return; // Проверка на случай, если игрок не найден или зомби мертв
+        }
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
@@ -115,7 +119,7 @@ public class ZombieLogic : MonoBehaviour
         if (prometeoCarController != null)
         {
             float carSpeed = prometeoCarController.carSpeed;
-            if (carSpeed >= 30 && other.CompareTag("Player"))
+            if (carSpeed >= 30 && other.TryGetComponent<Player>(out Player player))
             {
                 Vector3 forceDirection = (transform.position - other.transform.position).normalized; // Направление от автомобиля
                 rb.isKinematic = false; // Убедитесь, что Rigidbody не кинематический
@@ -158,5 +162,16 @@ public class ZombieLogic : MonoBehaviour
             
             yield return new WaitForSeconds(audioSource.clip.length); // Ждем окончания воспроизведения звука перед следующей задержкой
         }
+    }
+
+    private GameObject FindTargetedPlayer()
+    {
+        Player[] players = FindObjectsByType<Player>(FindObjectsSortMode.None);
+        foreach(Player player in players)
+        {
+            if (player.isTarget)
+                return player.gameObject;
+        }
+        return null;
     }
 }

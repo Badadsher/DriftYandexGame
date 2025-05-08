@@ -17,19 +17,29 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject loseBar;
     [SerializeField] private GameObject loadLevelUI;
     [SerializeField] private GameObject mobileUI;
+    [SerializeField] private GameObject carUI;
+    [SerializeField] private GameObject characterUI;
     [SerializeField] private GameObject trainingUI;
+    [SerializeField] private GameObject eeButton;
     [SerializeField] private bool _isRace;
     
     [Header("Audio")]
     [SerializeField] private AudioSource mainAudioSource;
     
-    [Header("ForCar")]
+    [Header("For Car")]
     [SerializeField] private AudioClip heatClip;
     [SerializeField] private AudioClip explosionClip;
     [SerializeField] private GameObject[] cars;
     private int selectedCarIndex;
+    private bool isCar;
     [SerializeField] private CinemachineVirtualCamera carCamera;
-    
+
+    [Header("For Character")]
+    [SerializeField] private bool initCharacter;
+    [SerializeField] private GameObject characterObj;
+    [SerializeField] private Vector3 exitOffset;
+    [SerializeField] private float nearDistance;
+
     [Header("CarSounds")]
     [SerializeField] private AudioSource carEngine;
     private GameObject volume;
@@ -41,13 +51,27 @@ public class GameManager : MonoBehaviour
     {
         _saveLoadManager = saveLoadManager;
     }
-    
+
+    private void LateUpdate()
+    {
+        if (!Application.isMobilePlatform && Input.GetKeyDown(KeyCode.E))
+        {
+            ChangePlayer(0);
+        }
+        else
+        {
+            eeButton.SetActive(isCar || isCharNear2Car());
+        }
+    }
+
     void Start()
     {
         selectedCarIndex = _saveLoadManager.LoadSelectedCar(); 
         InitializeCar();
         CheckPlatform();
         InitializeMode();
+
+        ChangePlayer(initCharacter ? 3 : 2);
     }
 
     private void InitializeMode()
@@ -127,7 +151,6 @@ public class GameManager : MonoBehaviour
         {
             carCamera.Follow = cars[selectedCarIndex].transform;
         }
-       
     }
 
     public void MinusHp()
@@ -166,5 +189,39 @@ public class GameManager : MonoBehaviour
         {
             Destroy(obj); // Удаляем объект
         }
+    }
+    /// <summary>
+    /// 0 - Swap, 1 - To Character, 2 - To Car, 3 - Initialize Character
+    /// </summary>
+    /// <param name="optionID"></param>
+    public void ChangePlayer(int optionID) 
+    {
+        if (optionID != 0)
+        {
+            bool toCar = optionID % 2 == 0;
+
+            carUI.SetActive(toCar);
+            cars[selectedCarIndex].GetComponent<PrometeoCarController>().enabled = toCar;
+            characterUI.SetActive(!toCar);
+            characterObj.SetActive(!toCar);
+            carCamera.Follow = toCar ? cars[selectedCarIndex].transform : characterObj.transform;
+
+            characterObj.transform.position = optionID < 3 ? cars[selectedCarIndex].transform.position + exitOffset : characterObj.transform.position;
+
+            cars[selectedCarIndex].GetComponent<Player>().isTarget = toCar;
+            characterObj.GetComponent<Player>().isTarget = !toCar;
+
+            isCar = toCar;
+        }
+        else if (optionID == 0 && (isCar || isCharNear2Car()))
+        {
+            ChangePlayer(isCar ? 1 : 2);
+        }
+    }
+
+    private bool isCharNear2Car()
+    {
+        float distance = Vector3.Distance(cars[selectedCarIndex].transform.position, characterObj.transform.position);
+        return distance < nearDistance;
     }
 }
