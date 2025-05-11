@@ -11651,7 +11651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.44400004, y: 0.14422221}
   m_AnchorMax: {x: 0.5576074, y: 0.29900002}
-  m_AnchoredPosition: {x: -1.5, y: -12.300446}
+  m_AnchoredPosition: {x: -1.5, y: -12.300415}
   m_SizeDelta: {x: -87, y: -67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &432492843
@@ -18453,6 +18453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _toMenuButtons: []
   _toResetButtons: []
+  _resetCar: {fileID: 0}
   _getChanseButton: []
   _loadermenuUI: {fileID: 0}
   _reseterUi: {fileID: 0}
@@ -18978,6 +18979,8 @@ RectTransform:
   - {fileID: 1708365149}
   - {fileID: 505553936}
   - {fileID: 187529293}
+  - {fileID: 691238508}
+  - {fileID: 2141676536}
   - {fileID: 43672819}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19000,10 +19003,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _toMenuButtons:
   - {fileID: 2096395771}
-  - {fileID: 0}
+  - {fileID: 691238509}
   _toResetButtons:
-  - {fileID: 0}
   - {fileID: 1663161362}
+  _resetCar: {fileID: 2141676537}
   _getChanseButton: []
   _loadermenuUI: {fileID: 1708365148}
   _reseterUi: {fileID: 505553935}
@@ -19975,7 +19978,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useDriftScoring: 0
-  driftScoreText: {fileID: 0}
   driftScore: 0
   scorePerSecond: 100
   speedMultiplier: 0.1
@@ -20007,6 +20009,8 @@ MonoBehaviour:
   useSounds: 1
   carEngineSound: {fileID: 478607719}
   tireScreechSound: {fileID: 767491703}
+  checkDrift: 0
+  isDrifting: 0
   useTouchControls: 1
   throttleButton: {fileID: 170426476}
   reverseButton: {fileID: 398125459}
@@ -20014,7 +20018,6 @@ MonoBehaviour:
   turnLeftButton: {fileID: 1091938854}
   handbrakeButton: {fileID: 19082720}
   carSpeed: 0
-  isDrifting: 0
   isTractionLocked: 0
   virtualCamera: {fileID: 0}
 --- !u!4 &589841174 stripped
@@ -21161,7 +21164,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useDriftScoring: 0
-  driftScoreText: {fileID: 0}
   driftScore: 0
   scorePerSecond: 100
   speedMultiplier: 0.1
@@ -21193,6 +21195,8 @@ MonoBehaviour:
   useSounds: 1
   carEngineSound: {fileID: 478607719}
   tireScreechSound: {fileID: 767491703}
+  checkDrift: 0
+  isDrifting: 0
   useTouchControls: 1
   throttleButton: {fileID: 170426476}
   reverseButton: {fileID: 398125459}
@@ -21200,7 +21204,6 @@ MonoBehaviour:
   turnLeftButton: {fileID: 1091938854}
   handbrakeButton: {fileID: 19082720}
   carSpeed: 0
-  isDrifting: 0
   isTractionLocked: 0
   virtualCamera: {fileID: 0}
 --- !u!23 &651214087
@@ -22143,6 +22146,126 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.001, y: 0.22200002, z: -0.011000001}
   m_TimeToStationary: 0.5
+--- !u!1 &691238507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 691238508}
+  - component: {fileID: 691238511}
+  - component: {fileID: 691238510}
+  - component: {fileID: 691238509}
+  m_Layer: 5
+  m_Name: ToMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &691238508
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691238507}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 525350813}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 37.400024, y: -24.211975}
+  m_SizeDelta: {x: 57.2266, y: 49.9804}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &691238509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691238507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 691238510}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &691238510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691238507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -2010200980, guid: 7ac8d55bd9307f24a882ea7524bd464c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &691238511
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691238507}
+  m_CullTransparentMesh: 1
 --- !u!1 &691592241 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1026222739917526287, guid: 7f98c8176bfca7347b11006aac2c90ce, type: 3}
@@ -28411,7 +28534,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5.620636, y: 0}
+  m_AnchoredPosition: {x: -5.6206665, y: 0}
   m_SizeDelta: {x: -11.2412, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1043096356
@@ -28861,7 +28984,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useDriftScoring: 0
-  driftScoreText: {fileID: 0}
   driftScore: 0
   scorePerSecond: 100
   speedMultiplier: 0.1
@@ -28893,6 +29015,8 @@ MonoBehaviour:
   useSounds: 1
   carEngineSound: {fileID: 478607719}
   tireScreechSound: {fileID: 767491703}
+  checkDrift: 0
+  isDrifting: 0
   useTouchControls: 1
   throttleButton: {fileID: 170426476}
   reverseButton: {fileID: 398125459}
@@ -28900,7 +29024,6 @@ MonoBehaviour:
   turnLeftButton: {fileID: 1091938854}
   handbrakeButton: {fileID: 19082720}
   carSpeed: 0
-  isDrifting: 0
   isTractionLocked: 0
   virtualCamera: {fileID: 0}
 --- !u!54 &1072686243
@@ -35364,7 +35487,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -4.9999695, y: 0}
+  m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1455015313
@@ -43986,7 +44109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.41825, y: 0.7066667}
   m_AnchorMax: {x: 0.5898125, y: 0.95500004}
-  m_AnchoredPosition: {x: -0.62049866, y: -1.7518005}
+  m_AnchoredPosition: {x: -0.62049866, y: -1.751831}
   m_SizeDelta: {x: 3.1857986, y: 4.4965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1675912335
@@ -44291,6 +44414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _toMenuButtons: []
   _toResetButtons: []
+  _resetCar: {fileID: 0}
   _getChanseButton: []
   _loadermenuUI: {fileID: 0}
   _reseterUi: {fileID: 0}
@@ -54439,6 +54563,126 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6204297988398887812, guid: 41d39579352781a469fa30b8617ec422, type: 3}
+--- !u!1 &2141676535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2141676536}
+  - component: {fileID: 2141676539}
+  - component: {fileID: 2141676538}
+  - component: {fileID: 2141676537}
+  m_Layer: 5
+  m_Name: ResetCar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2141676536
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141676535}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 525350813}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -30, y: -20.833}
+  m_SizeDelta: {x: 60.1947, y: 56.7379}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &2141676537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141676535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2141676538}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2141676538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141676535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: a991753b23a1fb34c9f481a162c4467c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2141676539
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141676535}
+  m_CullTransparentMesh: 1
 --- !u!1 &2144898631 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1757012320288738589, guid: 6c614c98192c964489b8f234f55f4c80, type: 3}
@@ -54571,6 +54815,10 @@ PrefabInstance:
     - target: {fileID: 1601144449217629386, guid: 35fa95bde1a56744eb9b514cef2e0af8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005612380530944439, guid: 35fa95bde1a56744eb9b514cef2e0af8, type: 3}
+      propertyPath: checkDelay
+      value: 61
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

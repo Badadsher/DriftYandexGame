@@ -3968,6 +3968,8 @@ MonoBehaviour:
   driftButtons:
   - {fileID: 34769477}
   - {fileID: 1363726958}
+  driftBlockator: {fileID: 1512044166}
+  driftUnlocker: {fileID: 476758450}
   activatorZombieScene: {fileID: 215079218}
   driftScenesLists: {fileID: 326174037}
   activatorRampScene: {fileID: 1849554131}

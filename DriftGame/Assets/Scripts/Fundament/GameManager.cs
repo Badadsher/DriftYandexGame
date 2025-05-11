@@ -41,14 +41,19 @@ public class GameManager : MonoBehaviour
     {
         _saveLoadManager = saveLoadManager;
     }
-    
-    void Start()
+
+
+    private void Awake()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         selectedCarIndex = _saveLoadManager.LoadSelectedCar(); 
         InitializeCar();
         CheckPlatform();
         InitializeMode();
     }
+
+  
 
     private void InitializeMode()
     {
@@ -76,11 +81,9 @@ public class GameManager : MonoBehaviour
         if(Application.isMobilePlatform)
         {
             mobileUI.SetActive(true);
-            trainingUI.SetActive(false);
         }
         else
         {
-            trainingUI.SetActive(true);
             mobileUI.SetActive(false);
         }
     }

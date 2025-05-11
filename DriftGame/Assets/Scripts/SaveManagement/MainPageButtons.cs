@@ -39,7 +39,7 @@ public class MainPageButtons : MonoBehaviour
     private void Construct(SaveLoadManager saveLoadManager)
     {
         _saveLoadManager = saveLoadManager;
-
+        Debug.Log(_saveLoadManager.GetScoreDrift());
     }
     private void Start()
     {

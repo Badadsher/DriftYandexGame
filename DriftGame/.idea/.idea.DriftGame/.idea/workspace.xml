@@ -6,13 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="951a7324-e62c-4543-9d1b-05845eb6f6df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/WinterScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelsDrift/WinterScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ZombieMode/HalloweenScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ZombieMode/HalloweenScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fundament/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fundament/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PROMETEO - Car Controller/Editor/PrometeoEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PROMETEO - Car Controller/Editor/PrometeoEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PROMETEO - Car Controller/Scripts/PrometeoCarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PROMETEO - Car Controller/Scripts/PrometeoCarController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/MainPageButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/MainPageButtons.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/MirraSaveLoadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/MirraSaveLoadManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SaveLoadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SaveLoadManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DriftButtonLockController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DriftButtonLockController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ResetBt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ResetBt.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +37,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1a49100dc0894bfc95bed836b8ae4cdc95e200/7f/fdc300a5/SerializedObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/SettingsMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Racing/NpcCarController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveManagement/MainPageButtons.cs" root0="FORCE_HIGHLIGHTING" />

@@ -22,7 +22,7 @@ public class PrometeoCarController : MonoBehaviour
   [Header("Drift Scoring")]
   public bool useDriftScoring = false;
   private DriftScoreUI driftScoreUI; // Ссылка на скрипт UI
-  public float driftScore = 0f;
+  public float driftScore = 0;
   public float scorePerSecond = 100f;
   public float speedMultiplier = 0.1f; // Множитель от скорости
   private bool wasDrifting = false; // Для отслеживания изменения состояния дрифта
@@ -37,6 +37,7 @@ public class PrometeoCarController : MonoBehaviour
 
   //CAR SETUP
   [Space(20)]
+  
   [Range(20, 190)]
   public int maxSpeed = 90; //The maximum speed that the car can reach in km/h.
   [Range(10, 120)]
@@ -94,6 +95,8 @@ public class PrometeoCarController : MonoBehaviour
 
   //CONTROLS
   [Space(20)]
+  public bool checkDrift = false;
+  public bool isDrifting = false;
   public bool useTouchControls = false;
   public GameObject throttleButton;
   PrometeoTouchInput throttlePTI;
@@ -109,8 +112,6 @@ public class PrometeoCarController : MonoBehaviour
   //CAR DATA
   [HideInInspector]
   public float carSpeed; // Used to store the speed of the car.
-  [HideInInspector]
-  public bool isDrifting; // Used to know whether the car is drifting or not.
   [HideInInspector]
   public bool isTractionLocked; // Used to know whether the traction of the car is locked or not.
 
@@ -132,7 +133,8 @@ public class PrometeoCarController : MonoBehaviour
   float RLWextremumSlip;
   WheelFrictionCurve RRwheelFriction;
   float RRWextremumSlip;
-
+  private float startDelay = 1f; // Задержка в секундах
+  private bool isGameStarted = false;
   [Inject]
   private void Construct(SaveLoadManager saveLoadManager)
   {
@@ -264,10 +266,10 @@ public class PrometeoCarController : MonoBehaviour
     }
 
     // Инициализация текста очков дрифта
-    if (driftScoreUI != null)
-    {
-      driftScoreUI.UpdateScore(driftScore);
-    }
+    // if (driftScoreUI != null)
+    // {
+    //   driftScoreUI.UpdateScore(driftScore);
+    // }
     else
     {
       Debug.LogWarning("DriftScoreUI not found in the scene!");
@@ -276,7 +278,15 @@ public class PrometeoCarController : MonoBehaviour
 
   void Update()
   {
-   
+    if (!isGameStarted)
+    {
+      startDelay -= Time.deltaTime;
+      if (startDelay <= 0) isGameStarted = true;
+      return;
+    }
+    
+    if (checkDrift)
+    {
       if (isDrifting)
       {
         if (!wasDrifting)
@@ -293,7 +303,7 @@ public class PrometeoCarController : MonoBehaviour
         driftScore += scorePerSecond * speedFactor * Time.deltaTime;
         driftScoreUI.UpdateScore(driftScore);
 
-        if (_saveLoadManager.GetScoreDrift() > (Mathf.RoundToInt(driftScore)))
+        if (_saveLoadManager.GetScoreDrift() < (Mathf.RoundToInt(driftScore)))
         {
           _saveLoadManager.SetScoreDrift(Mathf.RoundToInt(driftScore));
         }
@@ -304,6 +314,8 @@ public class PrometeoCarController : MonoBehaviour
         // Дрифт закончился
         wasDrifting = false;
       }
+    }
+
       
 
     carSpeed = (2 * Mathf.PI * frontLeftCollider.radius * frontLeftCollider.rpm * 60) / 1000;
@@ -425,6 +437,7 @@ public class PrometeoCarController : MonoBehaviour
     wasDrifting = false;
     if (driftScoreUI != null)
     {
+     
       driftScoreUI.UpdateScore(driftScore);
     }
   }
