@@ -23,10 +23,10 @@ public class PrometeoCarController : MonoBehaviour
   public bool useDriftScoring = false;
   private DriftScoreUI driftScoreUI; // Ссылка на скрипт UI
   public float driftScore = 0f;
-  public float scorePerSecond = 1000f; // Увеличено для заметного прироста
+  public float scorePerSecond = 100f;
   public float speedMultiplier = 0.1f; // Множитель от скорости
   private bool wasDrifting = false; // Для отслеживания изменения состояния дрифта
-  private float driftStartTime; // Время нач
+  private float driftStartTime; // Время начала
   private SaveLoadManager _saveLoadManager;
   [Space(20)]
   private CinemachineVirtualCamera cinemachineCamera; // Ваша Cinemachine камера
