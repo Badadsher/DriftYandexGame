@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="951a7324-e62c-4543-9d1b-05845eb6f6df" name="Changes" comment="" />
+    <list default="true" id="951a7324-e62c-4543-9d1b-05845eb6f6df" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DriftGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PROMETEO - Car Controller/Scripts/PrometeoCarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PROMETEO - Car Controller/Scripts/PrometeoCarController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/MainPageButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/MainPageButtons.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/MirraSaveLoadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/MirraSaveLoadManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SaveLoadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveManagement/SaveLoadManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DriftButtonLockController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DriftButtonLockController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,6 +99,9 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -100,6 +112,9 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>

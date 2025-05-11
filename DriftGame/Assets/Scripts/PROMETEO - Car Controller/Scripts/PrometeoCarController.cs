@@ -266,7 +266,7 @@ public class PrometeoCarController : MonoBehaviour
     // Инициализация текста очков дрифта
     if (driftScoreUI != null)
     {
-      driftScoreUI.UpdateScore(driftScore + 10);
+      driftScoreUI.UpdateScore(driftScore);
     }
     else
     {

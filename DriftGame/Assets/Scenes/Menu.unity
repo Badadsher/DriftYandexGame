@@ -352,6 +352,7 @@ GameObject:
   - component: {fileID: 34769474}
   - component: {fileID: 34769476}
   - component: {fileID: 34769475}
+  - component: {fileID: 34769477}
   m_Layer: 5
   m_Name: SpringButton
   m_TagString: Untagged
@@ -417,6 +418,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34769473}
   m_CullTransparentMesh: 1
+--- !u!114 &34769477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34769473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 34769475}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &38595521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,11 +1979,11 @@ RectTransform:
   - {fileID: 1787043490}
   - {fileID: 38595522}
   - {fileID: 15015285}
+  - {fileID: 1826508592}
+  - {fileID: 326174038}
   - {fileID: 215079219}
   - {fileID: 1559209600}
   - {fileID: 1849554132}
-  - {fileID: 1826508592}
-  - {fileID: 326174038}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3826,7 +3871,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.4108635, y: 0.32064128}
   m_AnchorMax: {x: 0.5928487, y: 0.58000004}
-  m_AnchoredPosition: {x: -1, y: -55}
+  m_AnchoredPosition: {x: -1, y: -7}
   m_SizeDelta: {x: 2, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &734953631
@@ -3920,61 +3965,19 @@ MonoBehaviour:
   - {fileID: 388736285}
   - {fileID: 2103012397}
   - {fileID: 932165914}
+  driftButtons:
+  - {fileID: 34769477}
+  - {fileID: 1363726958}
   activatorZombieScene: {fileID: 215079218}
   driftScenesLists: {fileID: 326174037}
   activatorRampScene: {fileID: 1849554131}
+  activatorDriftSpringScene: {fileID: 1559209599}
+  activatorDriftWinterScene: {fileID: 1849554131}
   levelSound: {fileID: 8300000, guid: d1522d20fab613a42955b598adfaf4d6, type: 3}
   audioSource: {fileID: 1678218070}
-  animationDuration: 0.3
-  showCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  hideCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  hideYOffset: -50
+  fadeDuration: 0.3
+  scaleDuration: 0.3
+  targetScale: 1.1
   closeDriftScenes: {fileID: 785652847}
 --- !u!1 &745045632
 GameObject:
@@ -5534,7 +5537,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.15
+  m_fontSize: 28.55
   m_fontSizeBase: 35.1
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6670,6 +6673,7 @@ GameObject:
   - component: {fileID: 1363726956}
   - component: {fileID: 1363726957}
   - component: {fileID: 1363726955}
+  - component: {fileID: 1363726958}
   m_Layer: 5
   m_Name: WinterButton
   m_TagString: Untagged
@@ -6750,6 +6754,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetImage: {fileID: 1363726953}
   lockImage: {fileID: 1577747503}
+--- !u!114 &1363726958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363726953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1363726955}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1377197590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8024,8 +8072,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 3117d0844f2e54a42ac5bc8fc3d523b2, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -8101,7 +8149,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u0420\u0410\u0417\u0411\u041B\u041E\u041A\u0418\u0420\u0423\u0415\u0422\u0421\u042F
     \u041F\u041E\u0421\u041B\u0415 \u0420\u0415\u041A\u041E\u0420\u0414\u0410 \u0412
-    1000 \u041E\u0427\u041A\u041E\u0412 \u0414\u0420\u0418\u0424\u0422\u0410"
+    10000 \u041E\u0427\u041A\u041E\u0412 \u0414\u0420\u0418\u0424\u0422\u0410"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25a5f742fc28a8142b90bf4077382d28, type: 2}
   m_sharedMaterial: {fileID: -8473366916079334941, guid: 25a5f742fc28a8142b90bf4077382d28, type: 2}
@@ -8404,7 +8452,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.596
   m_Pitch: 1
   Loop: 0
@@ -9131,7 +9179,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1826508592
 RectTransform:
   m_ObjectHideFlags: 0

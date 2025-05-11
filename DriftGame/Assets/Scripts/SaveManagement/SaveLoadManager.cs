@@ -68,7 +68,10 @@ public abstract class SaveLoadManager
     public abstract void SetScoreDrift(int drift);
     
     public abstract int GetScoreDrift();
-    
+
+    public abstract bool GetZombieCompleteStatus();
+
+    public abstract void SetZombieCompleteStatus();
 }
 
 

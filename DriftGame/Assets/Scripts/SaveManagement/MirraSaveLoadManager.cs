@@ -261,5 +261,16 @@ public class MirraSaveLoadManager : SaveLoadManager
   {
     return MirraSDK.Prefs.GetInt("ScoreDrift",0);
   }
+
+  public override bool GetZombieCompleteStatus()
+  {
+    return MirraSDK.Prefs.GetBool("ZombieComplete", false);
+  }
+  
+  public override void SetZombieCompleteStatus()
+  {
+     MirraSDK.Prefs.SetBool("ZombieComplete", true);
+     SaveProgress();
+  }
   
 }
