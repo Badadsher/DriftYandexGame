@@ -31286,7 +31286,7 @@ MonoBehaviour:
   carCamera: {fileID: 2025218428}
   initCharacter: 1
   characterObj: {fileID: 1453914536}
-  exitOffset: {x: 2, y: 1, z: -1}
+  exitOffset: {x: 2, y: 1.6, z: -1}
   nearDistance: 6
   carEngine: {fileID: 478607719}
 --- !u!4 &1257901149
@@ -35726,7 +35726,7 @@ MonoBehaviour:
   moveForce: 30
   maxSpeed: 6
   rotationAngle: 45
-  joystick: {fileID: 0}
+  joystick: {fileID: 1729701144}
 --- !u!54 &1453914542
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -35735,7 +35735,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1453914536}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 150
   m_Drag: 4
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -45481,6 +45481,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1000613538}
   m_SourcePrefab: {fileID: 100100000, guid: 1885c34483df2264dbe998d6edbb1d3d, type: 3}
+--- !u!114 &1729701144 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+  m_PrefabInstance: {fileID: 1717809459}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1731871700 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3703581492467372302, guid: 46787c0ca02578e40ab1a18b749a4ff1, type: 3}
@@ -46503,7 +46514,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7698749, y: 0.25833336}
   m_AnchorMax: {x: 0.957375, y: 0.34166667}
-  m_AnchoredPosition: {x: 0.5, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0.5, y: 0}
   m_SizeDelta: {x: -1, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1781207833
@@ -50564,7 +50575,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.014, y: 0.25833336}
   m_AnchorMax: {x: 0.20400001, y: 0.34166667}
-  m_AnchoredPosition: {x: 0, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1946787127

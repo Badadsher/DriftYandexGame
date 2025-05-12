@@ -128,6 +128,21 @@ public class ZombieLogic : MonoBehaviour
                 StartCoroutine(KillZombie());
             }
         }
+
+        float pushForce = 750f;
+
+        // Проверяем, есть ли Rigidbody у вошедшего объекта
+        Rigidbody playerRB = other.attachedRigidbody;
+
+        if (playerRB != null && playerRB.TryGetComponent<Player>(out Player playerPlayer))
+        {
+            print("ENTER");
+            // Вычисляем направление отталкивания от центра триггера
+            Vector3 pushDirection = (other.transform.position - transform.position).normalized;
+
+            // Применяем силу
+            playerRB.AddForce(pushDirection * pushForce, ForceMode.Impulse);
+        }
     }
 
     private System.Collections.IEnumerator KillZombie()
