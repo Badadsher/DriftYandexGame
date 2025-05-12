@@ -10,6 +10,7 @@ public class MirraSaveLoadManager : SaveLoadManager
   private Action OnOpenAnyAdv;
   private Action OnCloseAnyAdv;
   private Action<string> OnRewardAdv;
+  
 
   public override string lang
   {
@@ -182,7 +183,7 @@ public class MirraSaveLoadManager : SaveLoadManager
   // }
 
 
-public override string SerializeBoolArray(bool[] array)
+  public override string SerializeBoolArray(bool[] array)
   {
     return string.Join(",", System.Array.ConvertAll(array, item => item ? "1" : "0"));
   }
@@ -200,4 +201,76 @@ public override string SerializeBoolArray(bool[] array)
     }
     return result;
   }
+  
+  public override void PauseGame(bool state)
+  {
+    MirraSDK.Time.Scale = state ? 0 : 1;
+  }
+  
+  public override void FullscreenAdvShow()
+  {
+    MirraSDK.Ads.InvokeInterstitial(onAnyClose: () =>
+    { 
+      _nowInterAdv = false;
+      OnCloseAnyAdv?.Invoke();
+      MirraSDK.Time.Scale = 1;
+    });
+    _nowInterAdv = true;
+    OnOpenAnyAdv?.Invoke();
+    // Cursor.lockState = CursorLockMode.None;
+    // Cursor.visible = true;
+  }
+
+  public override void GetLeaderboard(string name, int playerCountTop, int playerCountAround)
+  {
+    Debug.Log($"Get Board: {name}");
+
+    MirraSDK.Socials.GetScoreTable(name, playerCountTop, true, playerCountAround, (data) =>
+    {
+      Debug.Log($"Success get board");
+      var playersData = new List<LeaderboardPlayerData>();
+      for (int i = 0; i < data.Count; i++)
+      {
+        var playerDt = data[i];
+        playersData.Add(new LeaderboardPlayerData(
+          name: playerDt.name,
+          score: playerDt.score,
+          position: playerDt.position,
+          imgUrl: playerDt.pictureURL
+        ));
+      }
+
+      var lbData = new LeaderboardData(name, playersData.ToArray());
+      OnGetLeaderboadData?.Invoke(lbData);
+    }, () => { Debug.Log("Error getting leaderboard"); });
+  }
+  
+  public override void SetLeaderboard(string boardName, int value)
+  {
+    Debug.Log($"Set Score: {boardName} {value}");
+    MirraSDK.Socials.SetScore(boardName, value);
+  }
+
+  public override void SetScoreDrift(int drift)
+  {
+    MirraSDK.Prefs.SetInt("ScoreDrift", drift);
+    SaveProgress();
+  }
+
+  public override int GetScoreDrift()
+  {
+    return MirraSDK.Prefs.GetInt("ScoreDrift",0);
+  }
+
+  public override bool GetZombieCompleteStatus()
+  {
+    return MirraSDK.Prefs.GetBool("ZombieComplete", false);
+  }
+  
+  public override void SetZombieCompleteStatus()
+  {
+     MirraSDK.Prefs.SetBool("ZombieComplete", true);
+     SaveProgress();
+  }
+  
 }

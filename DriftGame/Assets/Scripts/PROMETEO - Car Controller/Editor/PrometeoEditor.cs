@@ -16,6 +16,7 @@ public class PrometeoEditor : Editor{
   //CAR SETUP
   //
   //
+  private SerializedProperty checkDrift;
   private SerializedProperty maxSpeed;
   private SerializedProperty maxReverseSpeed;
   private SerializedProperty accelerationMultiplier;
@@ -112,6 +113,7 @@ public class PrometeoEditor : Editor{
     tireScreechSound = SO.FindProperty("tireScreechSound");
 
     useTouchControls = SO.FindProperty("useTouchControls");
+    checkDrift = SO.FindProperty("checkDrift");
     throttleButton = SO.FindProperty("throttleButton");
     reverseButton = SO.FindProperty("reverseButton");
     turnRightButton = SO.FindProperty("turnRightButton");
@@ -230,8 +232,12 @@ public class PrometeoEditor : Editor{
     GUILayout.Space(25);
     GUILayout.Label("TOUCH CONTROLS", EditorStyles.boldLabel);
     GUILayout.Space(10);
+    checkDrift.boolValue = EditorGUILayout.BeginToggleGroup("Use Drift Counts?", checkDrift.boolValue);
+    EditorGUILayout.EndToggleGroup();
 
     useTouchControls.boolValue = EditorGUILayout.BeginToggleGroup("Use touch controls (mobile devices)?", useTouchControls.boolValue);
+   
+   
     GUILayout.Space(10);
 
         EditorGUILayout.PropertyField(throttleButton, new GUIContent("Throttle Button: "));

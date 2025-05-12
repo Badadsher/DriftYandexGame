@@ -4,6 +4,8 @@ using YG;
 
 public abstract class SaveLoadManager
 {
+    public Action<LeaderboardData> OnGetLeaderboadData;
+    
     public abstract bool nowInterAdv { get; }
     public abstract string lang { get; }
 
@@ -54,6 +56,22 @@ public abstract class SaveLoadManager
     public abstract string SerializeBoolArray(bool[] array);
 
     public abstract bool[] DeserializeBoolArray(string array);
+    
+    public abstract void PauseGame(bool state);
+    
+    public abstract void FullscreenAdvShow();
+    
+    public abstract void GetLeaderboard(string name, int playerCountTop, int playerCountAround);
+    
+    public abstract void SetLeaderboard(string boardName, int value);
+    
+    public abstract void SetScoreDrift(int drift);
+    
+    public abstract int GetScoreDrift();
+
+    public abstract bool GetZombieCompleteStatus();
+
+    public abstract void SetZombieCompleteStatus();
 }
 
 
