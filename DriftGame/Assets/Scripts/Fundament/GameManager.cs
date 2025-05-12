@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     private Slider hpBar;
     
     [Header("UI")]
-    [SerializeField] private GameObject loseBar;
+    [SerializeField] public GameObject loseBar;
     [SerializeField] private GameObject loadLevelUI;
     [SerializeField] private GameObject mobileUI;
     [SerializeField] private GameObject trainingUI;
@@ -148,15 +148,14 @@ public class GameManager : MonoBehaviour
             particle.Play();
             mainAudioSource.PlayOneShot(explosionClip);
             loseBar.SetActive(true);
-            StartCoroutine(CleanScene());
         }
     }
 
-    private IEnumerator CleanScene()
+    public void ResetChanseScene()
     {
-        yield return new WaitForSeconds(2.5f);
-        DestroyObjectsByTag("Zombie"); // Удаляем всех зомби
-        DestroyObjectsByTag("Player"); // Удаляем игрока
+        var particle =  cars[selectedCarIndex].transform.Find("VFX_Fire").GetComponent<ParticleSystem>();
+        particle.Stop();
+        hpBar.value = 100;
     }
     
     // Метод для удаления всех объектов с указанными тегами
