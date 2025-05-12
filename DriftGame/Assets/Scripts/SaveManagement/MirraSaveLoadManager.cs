@@ -221,4 +221,13 @@ public override string SerializeBoolArray(bool[] array)
     // Cursor.visible = true;
   }
 
+  public override bool CheckFirstEnter()
+  {
+    return MirraSDK.Prefs.GetBool("FirstEnter", true);
+  }
+  public override void SetFirstEnter()
+  {
+    MirraSDK.Prefs.SetBool("FirstEnter", false);
+  }
+
 }

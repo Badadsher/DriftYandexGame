@@ -104,7 +104,11 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            trainingUI.SetActive(true);
+            if (_saveLoadManager.CheckFirstEnter())
+            {
+                trainingUI.SetActive(true);
+            }
+          
             mobileUI.SetActive(false);
         }
     }

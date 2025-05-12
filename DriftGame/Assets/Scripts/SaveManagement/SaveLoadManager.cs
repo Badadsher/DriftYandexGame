@@ -58,6 +58,10 @@ public abstract class SaveLoadManager
     public abstract void PauseGame(bool state);
     
     public abstract void FullscreenAdvShow();
+
+    public abstract bool CheckFirstEnter();
+
+    public abstract void SetFirstEnter();
 }
 
 
