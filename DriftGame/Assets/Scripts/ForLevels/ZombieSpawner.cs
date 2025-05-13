@@ -12,14 +12,16 @@ public class ZombieSpawner : MonoBehaviour
     private int currentZombieCount = 0; // Текущее количество заспавненных зомби
     private int totalZombiesSpawned = 0; // Общее количество заспавненных зомби
     private const int maxZombiesAtOnce = 4; // Максимальное количество зомби одновременно
-    private const int maxTotalZombies = 20; // Максимальное количество зомби за все время
-    
+    [SerializeField]  private int maxTotalZombies; // Максимальное количество зомби за все время
+    [SerializeField] private GameObject winBar;
     private DiContainer _container;
-
+    private bool allZombiesSpawned = false;
+    private SaveLoadManager _saveLoadManager;
     [Inject]
-    private void Construct(DiContainer container)
+    private void Construct(DiContainer container, SaveLoadManager saveLoadManager)
     {
         _container = container;
+        _saveLoadManager = saveLoadManager;
     }
 
     void Start()
@@ -32,7 +34,7 @@ public class ZombieSpawner : MonoBehaviour
     {
         while (totalZombiesSpawned < maxTotalZombies)
         {
-            if (currentZombieCount < maxZombiesAtOnce)
+            if (currentZombieCount <= maxZombiesAtOnce)
             {
              
                 SpawnZombie();
@@ -40,11 +42,26 @@ public class ZombieSpawner : MonoBehaviour
             }
             else
             {
-
                 yield return null; // Ждем один кадр, если достигнуто максимальное количество зомби
+  
             }
         }
+        allZombiesSpawned = true;
+        CheckWinCondition();
+ 
     }
+    private void CheckWinCondition()
+    {
+        Debug.Log("ended");
+        // Победа только если все зомби заспавнены И все убиты
+        if (allZombiesSpawned && currentZombieCount <= 0)
+        {
+            Debug.Log("onner");
+            winBar.SetActive(true);
+            _saveLoadManager.SetZombieCompleteStatus();
+        }
+    }
+    
 
     private void SpawnZombie()
     {
@@ -63,6 +80,7 @@ public class ZombieSpawner : MonoBehaviour
         if (zombieLogic != null)
         {
             zombieLogic.OnZombieDestroyed += HandleZombieDestroyed; // Подписка на событие
+            zombieLogic.OnZombieDestroyed += CheckWinCondition;
 
         }
     }

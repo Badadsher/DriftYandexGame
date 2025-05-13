@@ -158,7 +158,7 @@ public class PrometeoCarController : MonoBehaviour
 
     // Находим компонент DriftScoreUI в сцене
     driftScoreUI = FindObjectOfType<DriftScoreUI>();
-    Debug.Log(driftScoreUI);
+  
     FLwheelFriction = new WheelFrictionCurve();
     FLwheelFriction.extremumSlip = frontLeftCollider.sidewaysFriction.extremumSlip;
     FLWextremumSlip = frontLeftCollider.sidewaysFriction.extremumSlip;
