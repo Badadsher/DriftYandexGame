@@ -52,9 +52,10 @@ public class ZombieLogic : MonoBehaviour
 
     void Update()
     {
-        if ((player == null || isDead) && !player.GetComponent<Player>().isTarget)
+        if (player == null || isDead || !player.GetComponent<Player>().isTarget)
         {
-            FindTargetedPlayer();
+            print("Target Changed");
+            player = FindTargetedPlayer().transform;
             return; // Проверка на случай, если игрок не найден или зомби мертв
         }
 
@@ -119,7 +120,7 @@ public class ZombieLogic : MonoBehaviour
         if (prometeoCarController != null)
         {
             float carSpeed = prometeoCarController.carSpeed;
-            if (carSpeed >= 30 && other.TryGetComponent<Player>(out Player player))
+            if (Mathf.Abs(carSpeed) >= 30 && other.TryGetComponent<Player>(out Player player))
             {
                 Vector3 forceDirection = (transform.position - other.transform.position).normalized; // Направление от автомобиля
                 rb.isKinematic = false; // Убедитесь, что Rigidbody не кинематический
@@ -129,14 +130,13 @@ public class ZombieLogic : MonoBehaviour
             }
         }
 
-        float pushForce = 750f;
+        float pushForce = 1000f;
 
         // Проверяем, есть ли Rigidbody у вошедшего объекта
         Rigidbody playerRB = other.attachedRigidbody;
 
         if (playerRB != null && playerRB.TryGetComponent<Player>(out Player playerPlayer))
         {
-            print("ENTER");
             // Вычисляем направление отталкивания от центра триггера
             Vector3 pushDirection = (other.transform.position - transform.position).normalized;
 
