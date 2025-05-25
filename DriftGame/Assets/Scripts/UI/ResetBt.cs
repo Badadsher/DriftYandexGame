@@ -51,7 +51,7 @@ public class ResetBt : MonoBehaviour
 
     }
 
-    private void Start()
+    public void InitializeReseter()
     {
         player = GameObject.FindObjectOfType<PrometeoCarController>().gameObject;
         initialPosition = player.transform.position;

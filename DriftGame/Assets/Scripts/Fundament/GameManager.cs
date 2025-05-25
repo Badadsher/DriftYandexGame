@@ -33,20 +33,17 @@ public class GameManager : MonoBehaviour
     [Header("CarSounds")]
     [SerializeField] private AudioSource carEngine;
     private GameObject volume;
-    private SaveLoadManager _saveLoadManager;
+    [SerializeField] private SaveLoadManagerWrapper _saveLoadManager;
     private bool _cursorLocked = true;
-    
-    [Inject]
-    private void Construct(SaveLoadManager saveLoadManager)
-    {
-        _saveLoadManager = saveLoadManager;
-    }
+    [SerializeField] private ResetBt _reseter;
 
 
-    private void Awake()
+
+    private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        Debug.Log(( _saveLoadManager.LoadSelectedCar()));
         selectedCarIndex = _saveLoadManager.LoadSelectedCar(); 
         InitializeCar();
         CheckPlatform();
@@ -130,7 +127,8 @@ public class GameManager : MonoBehaviour
         {
             carCamera.Follow = cars[selectedCarIndex].transform;
         }
-       
+
+        _reseter.InitializeReseter();
     }
 
     public void MinusHp()

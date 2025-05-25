@@ -42,18 +42,13 @@ public class GarageLogic : MonoBehaviour
     [SerializeField] private AudioClip toggleSound; // Звук нажатия на кнопку
     [SerializeField] private AudioClip paySound; // Звук оплаты
     [SerializeField] private AudioClip carClick; // Звук клика выбора
-    [SerializeField]  private AudioSource audioSource; // Компонент AudioSource
+    [SerializeField] private AudioSource audioSource; // Компонент AudioSource
 
-    private SaveLoadManager _saveLoadManager;
+    [SerializeField] private SaveLoadManagerWrapper _saveLoadManager;
     
-    [Inject]
-    private void Construct(SaveLoadManager saveLoadManager)
-    {
-        _saveLoadManager = saveLoadManager;
-        Initialize();
-    }
+   
     
-    void Initialize()
+    void Start()
     {
         UpdateCarStates();  
         

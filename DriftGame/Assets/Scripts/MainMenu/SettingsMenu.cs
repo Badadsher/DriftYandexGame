@@ -16,16 +16,12 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] private AudioClip toggleSound;
     [SerializeField] private AudioSource audioSource;
 
-    private SaveLoadManager _saveLoadManager;
+    [SerializeField] private SaveLoadManagerWrapper _saveLoadManager;
     
-    [Inject]
-    private void Construct(SaveLoadManager saveLoadManager)
-    {
-        _saveLoadManager = saveLoadManager;
-        Initialize();
-    }
+
+
     
-    private void Initialize()
+    private void Start()
     {
         volumeCount.text = _saveLoadManager.LoadVolume().ToString();
         graphicToggle.isOn = _saveLoadManager.LoadFXStatus();

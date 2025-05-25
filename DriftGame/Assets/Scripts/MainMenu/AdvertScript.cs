@@ -13,15 +13,12 @@ public class AdvertScript : MonoBehaviour
     [SerializeField] private UpperMenuButtons _managerMoney;
     [SerializeField] private Button _rewardButton;
     private const string ADD_MONEY_REWARD_ID = "MENU";
-    private SaveLoadManager _saveLoadManager;
+    [SerializeField] private SaveLoadManagerWrapper _saveLoadManager;
   
     [Inject]
-    private void Construct(SaveLoadManager saveLoadManager)
-    {
-        _saveLoadManager = saveLoadManager;
-    }
 
-    private void Awake()
+
+    private void Start()
     {
         if (Bootstrap.isInitialized)
         {

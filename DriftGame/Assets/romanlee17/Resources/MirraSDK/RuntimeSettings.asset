@@ -27,7 +27,7 @@ MonoBehaviour:
   <EditorDeviceIsMobile>k__BackingField: 1
   <WebBuildsFolder>k__BackingField: 
   <WebBuildsName>k__BackingField: 
-  <WebIcon>k__BackingField: {fileID: 0}
+  <WebIcon>k__BackingField: {fileID: 2800000, guid: dc78341c45dae8348baa3baa3bb67457, type: 3}
   <WebBackground>k__BackingField: {fileID: 0}
   <DecompressionFallbackType>k__BackingField: 0
   <PrefsContainerTags>k__BackingField:

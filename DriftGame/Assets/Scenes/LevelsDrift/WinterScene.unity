@@ -1965,69 +1965,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 991345325}
   m_SourcePrefab: {fileID: 100100000, guid: f0aca05c4d7ab4f9d89b8b1819187377, type: 3}
---- !u!1 &174160982
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 174160984}
-  - component: {fileID: 174160983}
-  m_Layer: 0
-  m_Name: SceneContext
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &174160983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 174160982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89715ad69b973a14899afa2c6730b30b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _scriptableObjectInstallers: []
-  _monoInstallers: []
-  _installerPrefabs: []
-  _autoRun: 1
-  OnPreInstall:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPostInstall:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPreResolve:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPostResolve:
-    m_PersistentCalls:
-      m_Calls: []
-  _parentNewObjectsUnderSceneContext: 0
-  _contractNames: []
-  _parentContractNames: []
---- !u!4 &174160984
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 174160982}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.560368, y: 4.320486, z: -0.48169476}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &188033448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8854,6 +8791,7 @@ MonoBehaviour:
   _getChanseButton: []
   _loadermenuUI: {fileID: 0}
   _reseterUi: {fileID: 0}
+  _gameManager: {fileID: 0}
 --- !u!95 &339739517
 Animator:
   serializedVersion: 5
@@ -9869,6 +9807,8 @@ MonoBehaviour:
   - {fileID: 761583295}
   carCamera: {fileID: 1707221142}
   carEngine: {fileID: 841524326}
+  _saveLoadManager: {fileID: 1682908423}
+  _reseter: {fileID: 1810424840}
 --- !u!4 &444923090
 Transform:
   m_ObjectHideFlags: 0
@@ -22352,6 +22292,7 @@ MonoBehaviour:
   _getChanseButton: []
   _loadermenuUI: {fileID: 0}
   _reseterUi: {fileID: 0}
+  _gameManager: {fileID: 0}
 --- !u!114 &1012429505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34610,6 +34551,54 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdbd9d7226778fd4b8192cf3df5e028d, type: 3}
+--- !u!1 &1682908422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1682908424}
+  - component: {fileID: 1682908423}
+  m_Layer: 0
+  m_Name: Save
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1682908423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682908422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58ab9758df941b74c89f80b7ea858a4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rewardAdId: reward_ad
+  _leaderboardName: leaderboard
+  _topPlayersCount: 5
+  _aroundPlayersCount: 2
+--- !u!4 &1682908424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682908422}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.663349, y: 19.763441, z: -23.016901}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1686298006 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: bdbd9d7226778fd4b8192cf3df5e028d, type: 3}
@@ -35820,6 +35809,7 @@ MonoBehaviour:
   _getChanseButton: []
   _loadermenuUI: {fileID: 339739514}
   _reseterUi: {fileID: 1012429501}
+  _gameManager: {fileID: 0}
 --- !u!114 &1810424841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41010,4 +41000,4 @@ SceneRoots:
   - {fileID: 1918021181}
   - {fileID: 1525190936}
   - {fileID: 444923090}
-  - {fileID: 174160984}
+  - {fileID: 1682908424}

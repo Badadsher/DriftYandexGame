@@ -21,8 +21,9 @@ public class Bootstrap : MonoBehaviour
     
     private IEnumerator Initialize()
     {
+        yield return new WaitForSeconds(5f);
         isInitialized = true;
         onInitialized?.Invoke();
-        yield return 1f;
+
     }
 }

@@ -14,15 +14,9 @@ public class ZombieSpawner : MonoBehaviour
     private const int maxZombiesAtOnce = 4; // Максимальное количество зомби одновременно
     [SerializeField]  private int maxTotalZombies; // Максимальное количество зомби за все время
     [SerializeField] private GameObject winBar;
-    private DiContainer _container;
     private bool allZombiesSpawned = false;
-    private SaveLoadManager _saveLoadManager;
-    [Inject]
-    private void Construct(DiContainer container, SaveLoadManager saveLoadManager)
-    {
-        _container = container;
-        _saveLoadManager = saveLoadManager;
-    }
+    [SerializeField] private SaveLoadManagerWrapper _saveLoadManager;
+
 
     void Start()
     {
@@ -68,8 +62,8 @@ public class ZombieSpawner : MonoBehaviour
         GameObject randomZombiePrefab = zombiePrefabs[Random.Range(0, zombiePrefabs.Length)];
         Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
     
-        Debug.Log(_container);
-        GameObject newZombie = _container.InstantiatePrefab(randomZombiePrefab, spawnPoint);
+
+        GameObject newZombie = Instantiate(randomZombiePrefab, spawnPoint);
     
         currentZombieCount++;
         totalZombiesSpawned++;

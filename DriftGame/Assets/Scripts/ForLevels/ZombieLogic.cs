@@ -24,16 +24,11 @@ public class ZombieLogic : MonoBehaviour
     public delegate void ZombieDestroyedHandler();
     public event ZombieDestroyedHandler OnZombieDestroyed;
 
-    private SaveLoadManager _saveLoadManager;
-    
-    [Inject]
-    private void Construct(SaveLoadManager saveLoadManager)
-    {
-        _saveLoadManager = saveLoadManager;
-    }
-    
+    private SaveLoadManagerWrapper _saveLoadManager;
+
     void Start()
     {
+        _saveLoadManager = GameObject.FindObjectOfType<SaveLoadManagerWrapper>().GetComponent<SaveLoadManagerWrapper>();
         countZombie = GameObject.Find("KilledCount").GetComponent<TMPro.TextMeshProUGUI>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();

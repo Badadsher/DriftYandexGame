@@ -11,7 +11,9 @@ public class MainPageButtons : MonoBehaviour
     [Header("Button Settings")]
     [SerializeField] private Button[] buttons; // Массив кнопок
     [SerializeField] private Button[] driftButtons;
-
+    [SerializeField] private Button leaderBoard;
+    [SerializeField] private Button closeLeaderBoard;
+    [SerializeField] private GameObject leaderBoardObject;
     [SerializeField] private GameObject driftBlockator;
     [SerializeField] private GameObject driftUnlocker;
     [SerializeField] private GameObject activatorZombieScene;
@@ -27,22 +29,22 @@ public class MainPageButtons : MonoBehaviour
     [SerializeField] private float fadeDuration = 0.3f;
     [SerializeField] private float scaleDuration = 0.3f;
     [SerializeField] private float targetScale = 1.1f;
-    private SaveLoadManager _saveLoadManager;
+    [SerializeField] private SaveLoadManagerWrapper _saveLoadManager;
  
     private CanvasGroup driftCanvasGroup;
     private Vector3 originalScale;
     
     [SerializeField] private Button closeDriftScenes;
+    [SerializeField] private UpperMenuButtons upperMenuButtons;
     private bool isActivated = false;
+    private bool isLeaderBoardActivated = false;
     
-    [Inject]
-    private void Construct(SaveLoadManager saveLoadManager)
-    {
-        _saveLoadManager = saveLoadManager;
-        Debug.Log(_saveLoadManager.GetScoreDrift());
-    }
+
+  
     private void Start()
     {
+        _saveLoadManager.SetLeaderboard("leaderboard", _saveLoadManager.GetScoreDrift());
+        upperMenuButtons.InitializeUpper(_saveLoadManager);
         if (driftScenesLists != null)
         {
             driftCanvasGroup = driftScenesLists.GetComponent<CanvasGroup>();
@@ -79,8 +81,22 @@ public class MainPageButtons : MonoBehaviour
             int index = i; 
             driftButtons[i].onClick.AddListener(() => OnDriftClicked(index));
         }
+        leaderBoard.onClick.AddListener(()=> OpenLeaderboard());
+        closeLeaderBoard.onClick.AddListener(()=>ToggleLeaderBoard());
     }
 
+    private void OpenLeaderboard()
+    {
+        ToggleLeaderBoard();
+    }
+
+    private void ToggleLeaderBoard()
+    {
+        isLeaderBoardActivated = !isLeaderBoardActivated;
+        leaderBoardObject.SetActive(isLeaderBoardActivated);
+    }
+    
+    
     private void OnDriftClicked(int index)
     {
         PlayToggleSound();

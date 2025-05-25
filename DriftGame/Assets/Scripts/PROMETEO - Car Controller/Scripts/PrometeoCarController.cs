@@ -12,6 +12,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -27,7 +28,7 @@ public class PrometeoCarController : MonoBehaviour
   public float speedMultiplier = 0.1f; // Множитель от скорости
   private bool wasDrifting = false; // Для отслеживания изменения состояния дрифта
   private float driftStartTime; // Время начала
-  private SaveLoadManager _saveLoadManager;
+  private SaveLoadManagerWrapper _saveLoadManager;
   [Space(20)]
   private CinemachineVirtualCamera cinemachineCamera; // Ваша Cinemachine камера
   private float minOrthoSize = 8f;  // Минимальное значение размера
@@ -135,14 +136,12 @@ public class PrometeoCarController : MonoBehaviour
   float RRWextremumSlip;
   private float startDelay = 1f; // Задержка в секундах
   private bool isGameStarted = false;
-  [Inject]
-  private void Construct(SaveLoadManager saveLoadManager)
-  {
-    _saveLoadManager = saveLoadManager;
-  }
+
+  
   
   void Start()
   {
+    _saveLoadManager = GameObject.FindObjectOfType<SaveLoadManagerWrapper>().GetComponent<SaveLoadManagerWrapper>();
     if (Application.isMobilePlatform == false)
     {
       useTouchControls = false;
@@ -263,16 +262,6 @@ public class PrometeoCarController : MonoBehaviour
         " PrometeoCarController component.";
         Debug.LogWarning(ex);
       }
-    }
-
-    // Инициализация текста очков дрифта
-    // if (driftScoreUI != null)
-    // {
-    //   driftScoreUI.UpdateScore(driftScore);
-    // }
-    else
-    {
-      Debug.LogWarning("DriftScoreUI not found in the scene!");
     }
   }
 

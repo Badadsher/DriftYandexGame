@@ -26,15 +26,11 @@ public class LeaderboardYG : MonoBehaviour
     public int decimalSize = 1;
 
     public UnityEvent onUpdateData;
-    private SaveLoadManager _saveLoadManager;
+    [SerializeField] private SaveLoadManagerWrapper _saveLoadManager;
 
     private LBPlayerDataYG[] players;
 
-    [Inject]
-    private void Construct(SaveLoadManager saveLoadManager)
-    {
-        _saveLoadManager = saveLoadManager; 
-    }
+    
 
     private void OnEnable()
     {

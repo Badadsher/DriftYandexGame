@@ -29,19 +29,13 @@ public class UpperMenuButtons : MonoBehaviour
     [SerializeField] private AudioClip toggleSound;
     [SerializeField]  private AudioSource audioSource;
     
-    private SaveLoadManager _saveLoadManager;
+    private SaveLoadManagerWrapper _saveLoadManager;
     
-    [Inject]
-    private void Construct(SaveLoadManager saveLoadManager)
+    
+    public void InitializeUpper(SaveLoadManagerWrapper saveLoadManager)
     {
-        _saveLoadManager = saveLoadManager;
-        Debug.Log("initialization complete");
-    }
-    
-    
-    
-    void Start()
-    {
+        _saveLoadManager= saveLoadManager;
+        Debug.Log("SaveLoad in upper:" + _saveLoadManager );
         Debug.Log("initialization complete2");
         UpdateMoney();
         foreach (var toggle in toggles)
