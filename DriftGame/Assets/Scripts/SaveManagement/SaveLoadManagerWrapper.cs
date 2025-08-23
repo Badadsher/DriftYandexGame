@@ -67,6 +67,9 @@ public class SaveLoadManagerWrapper : MonoBehaviour
 
     // === Язык ===
     public string GetLanguageCode() => _saveLoadManager.lang;
-    
- 
+    public bool nowInterAdv;
+
+    // ===Первый запуск ===
+
+
 }

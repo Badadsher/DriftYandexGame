@@ -48,7 +48,6 @@ public class ResetBt : MonoBehaviour
                 chanseButton.onClick.AddListener(ChanseReset);
             }
         }
-
     }
 
     public void InitializeReseter()

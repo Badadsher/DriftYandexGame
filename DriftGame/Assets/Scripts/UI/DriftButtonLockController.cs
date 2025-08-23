@@ -4,20 +4,16 @@ using Zenject;
 
 public class DriftButtonLockController : MonoBehaviour
 {
+
     [SerializeField] private GameObject targetImage;
     [SerializeField] private GameObject lockImage;
+    [SerializeField] private SaveLoadManagerWrapper _saveLoadManager;
 
-    private SaveLoadManager _saveLoadManager;
     private const int RequiredDriftScore = 10000;
 
-    [Inject]
-    public void Initialize(SaveLoadManager saveLoadManager)
-    {
-        _saveLoadManager = saveLoadManager;
-    }
 
     private void Start()
-    {
+    { 
         UpdateImageState();
     }
 

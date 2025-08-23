@@ -1,11 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using romanlee17.MirraGames;
 using UnityEngine;
 using UnityEngine.UI;
-using YG;
 using Zenject;
+using romanlee17.MirraGames;
 
 public class AdvertScript : MonoBehaviour
 {
@@ -14,55 +11,66 @@ public class AdvertScript : MonoBehaviour
     [SerializeField] private Button _rewardButton;
     private const string ADD_MONEY_REWARD_ID = "MENU";
     [SerializeField] private SaveLoadManagerWrapper _saveLoadManager;
-  
-    [Inject]
 
-
-    private void Start()
+    private void Awake()
     {
+        // сразу подписываем кнопку
+        _rewardButton.onClick.AddListener(OnRewardButtonClicked);
+
+        // если SDK уже инициализировано – сразу выполняем
         if (Bootstrap.isInitialized)
         {
             OnSDKDataReceived();
+        }
+        else
+        {
+            // ждём событие инициализации
+            FindObjectOfType<Bootstrap>().onInitialized += OnSDKDataReceived;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        // убираем подписку, если объект уничтожается
+        var bootstrap = FindObjectOfType<Bootstrap>();
+        if (bootstrap != null)
+        {
+            bootstrap.onInitialized -= OnSDKDataReceived;
         }
     }
 
     private void OnSDKDataReceived()
     {
-        Debug.Log("Initializing Advert Script" + _saveLoadManager);
-        _rewardButton.onClick.AddListener(() =>
-        {
-            ShowRewardedAd();
-        });
+        Debug.Log("AdvertScript: SDK инициализировано");
     }
 
-    private void OnEnable()
+    private void OnRewardButtonClicked()
     {
-
+        Debug.Log("Reward Button Pressed");
+        ShowRewardedAd();
     }
 
     private void ShowRewardedAd()
     {
+        if (!Bootstrap.isInitialized)
+        {
+            Debug.LogWarning("SDK ещё не инициализировано, реклама недоступна");
+            return;
+        }
+
         MirraSDK.Ads.InvokeRewarded(
-            onSuccess: () =>
-            {
-                AddRewardMoney();
-            },
-            onNotReady: () => {   Debug.Log("Rewarded Ad notr"); },
-            onAnyClose: () => { return; },
-            rewardTag: "MENU"
+            onSuccess: AddRewardMoney,
+            onNotReady: () => Debug.Log("Реклама не готова"),
+            onAnyClose: () => Debug.Log("Реклама закрыта"),
+            rewardTag: ADD_MONEY_REWARD_ID
         );
     }
-    
+
     public void AddRewardMoney()
     {
-        Debug.Log("Adding reward money to advert");
-            Debug.Log("Adding reward money");
-            _saveLoadManager.SetMoneyCount();
-            _saveLoadManager.LoadMoneyCount();
-            _managerMoney.UpdateMoney();
-    }
-
-    private void OnDisable()
-    {
+        Debug.Log("Adding reward money");
+        _saveLoadManager.SetMoneyCount();
+        _saveLoadManager.LoadMoneyCount();
+        _managerMoney.UpdateMoney();
     }
 }

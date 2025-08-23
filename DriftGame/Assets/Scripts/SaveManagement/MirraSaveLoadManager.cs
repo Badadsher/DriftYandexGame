@@ -45,12 +45,15 @@ public class MirraSaveLoadManager : SaveLoadManager
 
   public override bool IsCarPurchased(int index)
   {
+    if (index == 0) return true; // первая машина всегда куплена
     return MirraSDK.Prefs.GetInt("PurchasedCars_" + index, 0) == 1;
   }
+  
+
 
   public override void SaveSelectedCar(int index)
   {
-    MirraSDK.Prefs.SetInt("SelectedCarIndex", index);
+    MirraSDK.Prefs.SetInt("SelectedCarIndex", index  );
     SaveProgress();
   }
 
@@ -68,6 +71,8 @@ public class MirraSaveLoadManager : SaveLoadManager
     SaveProgress();
   }
 
+  
+  
   public override void SetCarPurchased(int index)
   {
     if (index >= 0 && index < 4)
@@ -272,5 +277,7 @@ public class MirraSaveLoadManager : SaveLoadManager
      MirraSDK.Prefs.SetBool("ZombieComplete", true);
      SaveProgress();
   }
-  
+
+ 
+
 }

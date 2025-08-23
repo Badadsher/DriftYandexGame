@@ -55,6 +55,13 @@ public class ZombieSpawner : MonoBehaviour
             _saveLoadManager.SetZombieCompleteStatus();
         }
     }
+
+    [ContextMenu("TestWin")]
+    public void TestWin()
+    {
+        winBar.SetActive(true);
+        _saveLoadManager.SetZombieCompleteStatus();
+    }
     
 
     private void SpawnZombie()

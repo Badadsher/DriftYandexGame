@@ -186,6 +186,7 @@ MonoBehaviour:
   mainPage: {fileID: 740392579}
   settingsPage: {fileID: 38595521}
   garagePage: {fileID: 1787043489}
+  moneyPanel: {fileID: 878377377}
   playerModel: {fileID: 993377127}
   cars: {fileID: 1960938620}
   moneyText: {fileID: 308741516}
@@ -199,7 +200,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15015284}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5b2da079b2fcc34a81f313f0775e1ef, type: 3}
   m_Name: 
@@ -1482,7 +1483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.2917118}
-  m_AnchoredPosition: {x: -0.0012969971, y: -0.04699707}
+  m_AnchoredPosition: {x: -0.0012817383, y: -0.04699707}
   m_SizeDelta: {x: 0.5700073, y: 0.09100342}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &196559129
@@ -3375,6 +3376,7 @@ MonoBehaviour:
   _leaderboardName: leaderboard
   _topPlayersCount: 5
   _aroundPlayersCount: 2
+  nowInterAdv: 0
 --- !u!1 &577668571
 GameObject:
   m_ObjectHideFlags: 0
@@ -3411,7 +3413,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 6.3184204, y: -0.00024414062}
+  m_AnchoredPosition: {x: 6.3183594, y: -0.00024414062}
   m_SizeDelta: {x: -12.638, y: 0.00036621}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &614868808
@@ -3448,7 +3450,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.28618085}
-  m_AnchoredPosition: {x: -0.000289917, y: 0.19099426}
+  m_AnchoredPosition: {x: -0.00030517578, y: 0.190979}
   m_SizeDelta: {x: -0.45999146, y: 1.5680008}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &614868810
@@ -4007,7 +4009,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.009119673, y: 0.03326503}
   m_AnchorMax: {x: 0.32789573, y: 0.514}
-  m_AnchoredPosition: {x: 1.1306152, y: -6.2157288}
+  m_AnchoredPosition: {x: 1.1306152, y: -6.2157593}
   m_SizeDelta: {x: -3.2714233, y: -10.660553}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &708111395
@@ -4280,7 +4282,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.4063127, y: 0.34}
   m_AnchorMax: {x: 0.59168726, y: 0.611472}
-  m_AnchoredPosition: {x: 0.5, y: -3.9000015}
+  m_AnchoredPosition: {x: 0.5, y: -3.899994}
   m_SizeDelta: {x: -1, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &745045634
@@ -4393,7 +4395,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -32.369995, y: -42.100006}
+  m_AnchoredPosition: {x: -32.370117, y: -42.099976}
   m_SizeDelta: {x: 69.13, y: 58.01}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &785652847
@@ -4692,13 +4694,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 878377378}
+  - component: {fileID: 878377379}
   m_Layer: 5
   m_Name: ForMoney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &878377378
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4722,6 +4725,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &878377379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878377377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b2da079b2fcc34a81f313f0775e1ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AdID: 21
+  _managerMoney: {fileID: 15015286}
+  _rewardButton: {fileID: 1217602464}
+  _saveLoadManager: {fileID: 560841914}
 --- !u!1 &908280438
 GameObject:
   m_ObjectHideFlags: 0
@@ -5157,7 +5176,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.052, y: 0.55736893}
   m_AnchorMax: {x: 0.63600004, y: 0.5931643}
-  m_AnchoredPosition: {x: -33.5, y: 2}
+  m_AnchoredPosition: {x: -33.49994, y: 2}
   m_SizeDelta: {x: 73.109985, y: 5.919998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &946047048
@@ -5754,7 +5773,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.62187284}
   m_AnchorMax: {x: 1, y: 0.8003492}
-  m_AnchoredPosition: {x: -0.44229126, y: -1}
+  m_AnchoredPosition: {x: -0.44232178, y: -1}
   m_SizeDelta: {x: -0.14500046, y: -2.7299995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1130322298
@@ -5804,7 +5823,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.5
+  m_fontSize: 27.95
   m_fontSizeBase: 35.1
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5956,7 +5975,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.043260004, y: 0.6546607}
   m_AnchorMax: {x: 0.92587, y: 0.7903214}
-  m_AnchoredPosition: {x: -0.06478882, y: -2.1971588}
+  m_AnchoredPosition: {x: -0.0647583, y: -2.1971588}
   m_SizeDelta: {x: 13.884369, y: -0.31530762}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1139474308
@@ -6460,7 +6479,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1217602463
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6597,7 +6616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.55064136}
   m_AnchorMax: {x: 1, y: 0.84900004}
-  m_AnchoredPosition: {x: -0.18078613, y: 1.0600052}
+  m_AnchoredPosition: {x: -0.18078613, y: 1.0599976}
   m_SizeDelta: {x: 0.24700165, y: -0.20999908}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1225195151
@@ -6733,7 +6752,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.29062474}
-  m_AnchoredPosition: {x: 0.00022888184, y: -0.19999695}
+  m_AnchoredPosition: {x: 0.00024414062, y: -0.2000122}
   m_SizeDelta: {x: -0.98999023, y: 0.39900208}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1226919460
@@ -7253,6 +7272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetImage: {fileID: 1363726953}
   lockImage: {fileID: 1577747503}
+  _saveLoadManager: {fileID: 560841914}
 --- !u!114 &1363726958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8950,6 +8970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeSlider: {fileID: 946047048}
+  _saveLoadManager: {fileID: 560841914}
 --- !u!82 &1678218070
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9910,6 +9931,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22426080, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22426080, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
+      propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22428984, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}

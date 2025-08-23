@@ -18,7 +18,7 @@ public class UpperMenuButtons : MonoBehaviour
     [SerializeField] private GameObject mainPage;
     [SerializeField] private GameObject settingsPage;
     [SerializeField] private GameObject garagePage;
-    
+    [SerializeField] private GameObject moneyPanel;
     [Header("Objects")]
     [SerializeField] private GameObject playerModel;
     [SerializeField] private GameObject cars;
@@ -104,6 +104,7 @@ public class UpperMenuButtons : MonoBehaviour
             mainPage.SetActive(true);
             settingsPage.SetActive(false);
             garagePage.SetActive(false);
+            moneyPanel.SetActive(false);
             playerModel.SetActive(true);
             cars.SetActive(false);
             adButton.SetActive(false);
@@ -113,6 +114,7 @@ public class UpperMenuButtons : MonoBehaviour
             mainPage.SetActive(false);
             settingsPage.SetActive(true);
             garagePage.SetActive(false);
+            moneyPanel.SetActive(false);
             playerModel.SetActive(true);
             cars.SetActive(false);
             adButton.SetActive(false);
@@ -122,6 +124,7 @@ public class UpperMenuButtons : MonoBehaviour
             mainPage.SetActive(false);
             settingsPage.SetActive(false);
             garagePage.SetActive(true);
+            moneyPanel.SetActive(true);
             playerModel.SetActive(false);
             cars.SetActive(true);
             adButton.SetActive(true);

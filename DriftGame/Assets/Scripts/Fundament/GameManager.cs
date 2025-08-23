@@ -48,8 +48,16 @@ public class GameManager : MonoBehaviour
         InitializeCar();
         CheckPlatform();
         InitializeMode();
+        CheckFirstTimeLaunch();
     }
-
+    private void CheckFirstTimeLaunch()
+    {
+        if (!Application.isMobilePlatform)
+        {
+          //  if(_saveLoadManager.)
+            trainingUI.SetActive(true);
+        }
+    }
   
 
     private void InitializeMode()
@@ -154,6 +162,15 @@ public class GameManager : MonoBehaviour
         var particle =  cars[selectedCarIndex].transform.Find("VFX_Fire").GetComponent<ParticleSystem>();
         particle.Stop();
         hpBar.value = 100;
+        
+        GameObject[] zombies = GameObject.FindGameObjectsWithTag("Zombie");
+    
+        foreach (GameObject zombie in zombies)
+        {
+
+            zombie.transform.position = new Vector3(-11f, 0f, 78f);
+            Debug.Log($"Телепортировано {zombies.Length} зомби");
+        }
     }
     
     // Метод для удаления всех объектов с указанными тегами

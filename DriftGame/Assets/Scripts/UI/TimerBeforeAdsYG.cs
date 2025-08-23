@@ -19,15 +19,13 @@ public class TimerBeforeAdsYG : MonoBehaviour
     [SerializeField] private UnityEvent onHideTimer;
 
     [SerializeField] private float checkDelay = 60;
-    private SaveLoadManager _saveLoadManager;
+    [SerializeField] private SaveLoadManagerWrapper _saveLoadManager;
 
     [SerializeField] private bool _isCrazy = true;
 
-    [Inject]
-    private void Construct(SaveLoadManager saveLoadManager)
-    {
-        _saveLoadManager = saveLoadManager;
-    }
+    
+  
+    
 
     private int objSecCounter;
 

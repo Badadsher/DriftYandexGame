@@ -1724,7 +1724,7 @@ MonoBehaviour:
   loseBar: {fileID: 0}
   loadLevelUI: {fileID: 479381848}
   mobileUI: {fileID: 1042014769}
-  trainingUI: {fileID: 0}
+  trainingUI: {fileID: 1250189368}
   _isRace: 0
   mainAudioSource: {fileID: 733585259}
   heatClip: {fileID: 0}
@@ -6370,7 +6370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &479381849
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24878,10 +24878,10 @@ RectTransform:
   - {fileID: 1042014770}
   - {fileID: 1063360518}
   - {fileID: 479381849}
-  - {fileID: 1250189369}
   - {fileID: 1263551730}
   - {fileID: 1823390318}
   - {fileID: 602152847}
+  - {fileID: 1250189369}
   - {fileID: 782518289}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -36092,6 +36092,10 @@ PrefabInstance:
       propertyPath: checkDelay
       value: 61
       objectReference: {fileID: 0}
+    - target: {fileID: 6005612380530944439, guid: 35fa95bde1a56744eb9b514cef2e0af8, type: 3}
+      propertyPath: _saveLoadManager
+      value: 
+      objectReference: {fileID: 2031907053}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37866,6 +37870,7 @@ MonoBehaviour:
   _leaderboardName: leaderboard
   _topPlayersCount: 5
   _aroundPlayersCount: 2
+  nowInterAdv: 0
 --- !u!4 &2031907054
 Transform:
   m_ObjectHideFlags: 0
