@@ -21,7 +21,7 @@ public class ResetBt : MonoBehaviour
     private Vector3 initialPosition;
     private Quaternion initialRotation;
     private GameObject player;
-    private int level;
+    [SerializeField] private int level;
 
 
     private void Update()
@@ -111,18 +111,21 @@ public class ResetBt : MonoBehaviour
 
     private void ChanseReset()
     {
-        Debug.Log("reset car");
-        MirraSDK.Ads.InvokeRewarded(
-            onSuccess: () =>
-            {
-                _gameManager.loseBar.SetActive(false);
-                _gameManager.ResetChanseScene();
-                ResetCar();
-            },
-            onNotReady: () => {   Debug.Log("Rewarded Ad not READY"); },
-            onAnyClose: () => { return; },
-            rewardTag: "CHANSE"
-        );
+        _gameManager.loseBar.SetActive(false);
+        _gameManager.ResetChanseScene();
+        ResetCar();
+        // Debug.Log("reset car");
+        // MirraSDK.Ads.InvokeRewarded(
+        //     onSuccess: () =>
+        //     {
+        //         _gameManager.loseBar.SetActive(false);
+        //         _gameManager.ResetChanseScene();
+        //         ResetCar();
+        //     },
+        //     onNotReady: () => {   Debug.Log("Rewarded Ad not READY"); },
+        //     onAnyClose: () => { return; },
+        //     rewardTag: "CHANSE"
+        // );
     }
 
     void EnableCarController()

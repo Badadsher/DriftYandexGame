@@ -9,16 +9,12 @@ public class AudioManager : MonoBehaviour
 {
     private int volume;
     [SerializeField] private Slider volumeSlider;
-    private AudioSource[] audioSources;
+    [SerializeField] private AudioSource[] audioSources;
     [SerializeField] private SaveLoadManagerWrapper _saveLoadManager;
     
-    [Inject]
-    private void Construct(SaveLoadManager saveLoadManager)
-    {
-        Initialize();
-    }
+  
     
-    private void Initialize()
+    private void Start()
     {
         
         volume = _saveLoadManager.LoadVolume();

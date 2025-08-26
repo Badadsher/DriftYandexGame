@@ -370,8 +370,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 2.275892, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.137946, z: -4.999977}
 --- !u!4 &15003629 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -828,8 +828,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 3.456234, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.728117, z: -4.999977}
 --- !u!4 &44716378 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -8692,8 +8692,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 3.3294034, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.6647017, z: -4.999977}
 --- !u!4 &223344119 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -10459,8 +10459,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 3.3201637, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.6600819, z: -4.999977}
 --- !u!4 &356309556 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -11056,8 +11056,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 2.1680336, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.0840168, z: -4.999977}
 --- !u!4 &390602305 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -11529,8 +11529,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 2.7538986, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.3769493, z: -4.999977}
 --- !u!4 &427143760 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -12085,8 +12085,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 2.4114034, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.2057017, z: -4.999977}
 --- !u!4 &446503675 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -18210,8 +18210,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 4.385207, z: 9.999985}
+  m_Center: {x: -9.999993, y: -2.1926036, z: -4.999977}
 --- !u!4 &495905327 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -18461,6 +18461,7 @@ MonoBehaviour:
   _loadermenuUI: {fileID: 0}
   _reseterUi: {fileID: 0}
   _gameManager: {fileID: 0}
+  level: 1
 --- !u!114 &505553939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18613,7 +18614,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2245236, y: 0.65551853}
   m_AnchorMax: {x: 0.77752364, y: 0.8095555}
-  m_AnchoredPosition: {x: -0.6593628, y: -1.9420013}
+  m_AnchoredPosition: {x: -0.6593628, y: -1.9420166}
   m_SizeDelta: {x: 1.785202, y: -1.8844986}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &514425609
@@ -18979,12 +18980,12 @@ RectTransform:
   - {fileID: 1178422630}
   - {fileID: 913804576}
   - {fileID: 1380925589}
-  - {fileID: 505553936}
-  - {fileID: 187529293}
   - {fileID: 691238508}
   - {fileID: 2141676536}
+  - {fileID: 187529293}
   - {fileID: 1609812791}
   - {fileID: 606987661}
+  - {fileID: 505553936}
   - {fileID: 43672819}
   - {fileID: 1708365149}
   m_Father: {fileID: 0}
@@ -19019,6 +19020,7 @@ MonoBehaviour:
   _loadermenuUI: {fileID: 1708365148}
   _reseterUi: {fileID: 505553935}
   _gameManager: {fileID: 1257901148}
+  level: 1
 --- !u!4 &532343278 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6790040258192755194, guid: fca05fc86b15f0d4da25ed7793db4384, type: 3}
@@ -19602,8 +19604,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 3.6449242, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.8224621, z: -4.999977}
 --- !u!4 &570546343 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -19971,7 +19973,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &589841173
@@ -21257,7 +21259,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &651214086
@@ -24819,8 +24821,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 2.2879684, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.1439842, z: -4.999977}
 --- !u!4 &828827752 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -26210,8 +26212,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 3.7327418, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.8663709, z: -4.999977}
 --- !u!4 &918854784 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -26360,6 +26362,10 @@ PrefabInstance:
     - target: {fileID: 5135156708204615449, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: m_Mass
       value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135156708204615449, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8985419621332640404, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: m_IsActive
@@ -26648,8 +26654,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 1.9219346, z: 9.999985}
+  m_Center: {x: -9.999993, y: -0.9609673, z: -4.999977}
 --- !u!4 &932175469 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -26727,8 +26733,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 2.4056215, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.2028108, z: -4.999977}
 --- !u!4 &934035662 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -26758,8 +26764,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 3.0786123, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.5393062, z: -4.999977}
 --- !u!4 &939376324 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -28161,8 +28167,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 2.8321877, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.4160938, z: -4.999977}
 --- !u!4 &1016963615 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -29293,7 +29299,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &1072686244
@@ -29766,8 +29772,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 2.8206468, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.4103234, z: -4.999977}
 --- !u!4 &1130235998 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -29797,8 +29803,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 5.938223, z: 9.999985}
+  m_Center: {x: -9.999993, y: -2.9691114, z: -4.999977}
 --- !u!4 &1133671791 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -30199,8 +30205,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 2.2859023, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.1429511, z: -4.999977}
 --- !u!4 &1149195084 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -31070,8 +31076,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 3.7518487, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.8759243, z: -4.999977}
 --- !u!4 &1215386436 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -31175,8 +31181,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 3.2395458, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.6197729, z: -4.999977}
 --- !u!4 &1229038436 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -31334,8 +31340,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 2.6949222, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.3474611, z: -4.999977}
 --- !u!4 &1238439182 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -32243,8 +32249,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 3.1602168, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.5801084, z: -4.999977}
 --- !u!4 &1288522434 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -34100,7 +34106,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.74500006, y: 1}
-  m_AnchoredPosition: {x: 38.725998, y: -0.0000038146973}
+  m_AnchoredPosition: {x: 38.726013, y: 0}
   m_SizeDelta: {x: 77.453, y: 0.000030518}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1390961470
@@ -34497,8 +34503,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 3.1585803, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.5792902, z: -4.999977}
 --- !u!4 &1405686551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -34876,7 +34882,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeSlider: {fileID: 0}
-  _saveLoadManager: {fileID: 0}
+  audioSources: []
+  _saveLoadManager: {fileID: 1246388203}
 --- !u!4 &1428207252
 Transform:
   m_ObjectHideFlags: 0
@@ -35055,8 +35062,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 1.9856968, z: 9.999985}
+  m_Center: {x: -9.999993, y: -0.9928484, z: -4.999977}
 --- !u!4 &1432466635 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -36142,8 +36149,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 3.3156528, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.6578264, z: -4.999977}
 --- !u!4 &1473793041 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -36564,8 +36571,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 3.553537, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.7767684, z: -4.999977}
 --- !u!4 &1514563677 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -37152,8 +37159,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 3.245502, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.622751, z: -4.999977}
 --- !u!4 &1552327127 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -37198,7 +37205,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2245236, y: 0.65551853}
   m_AnchorMax: {x: 0.77752364, y: 0.8095555}
-  m_AnchoredPosition: {x: -0.6593628, y: -1.9420013}
+  m_AnchoredPosition: {x: -0.6593628, y: -1.9420166}
   m_SizeDelta: {x: 1.785202, y: -1.8844986}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1561938600
@@ -44018,8 +44025,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 3.5000854, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.7500427, z: -4.999977}
 --- !u!4 &1661691382 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -44698,8 +44705,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 3.212039, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.6060195, z: -4.999977}
 --- !u!4 &1689142708 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -44906,6 +44913,7 @@ MonoBehaviour:
   _loadermenuUI: {fileID: 0}
   _reseterUi: {fileID: 0}
   _gameManager: {fileID: 0}
+  level: 0
 --- !u!95 &1708365151
 Animator:
   serializedVersion: 5
@@ -45215,8 +45223,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 6.2182817, z: 9.999985}
+  m_Center: {x: -9.999993, y: -3.1091409, z: -4.999977}
 --- !u!4 &1722651891 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -46380,8 +46388,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 6.1982193, z: 9.999985}
+  m_Center: {x: -9.999993, y: -3.0991096, z: -4.999977}
 --- !u!4 &1769673659 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -46539,8 +46547,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 2.9376335, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.4688168, z: -4.999977}
 --- !u!4 &1770234033 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -46607,7 +46615,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7698749, y: 0.25833336}
   m_AnchorMax: {x: 0.957375, y: 0.34166667}
-  m_AnchoredPosition: {x: 0.5, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0.5, y: 0}
   m_SizeDelta: {x: -1, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1781207833
@@ -49004,8 +49012,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 6.198941, z: 9.999985}
+  m_Center: {x: -9.999993, y: -3.0994706, z: -4.999977}
 --- !u!4 &1882770593 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -50668,7 +50676,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.014, y: 0.25833336}
   m_AnchorMax: {x: 0.20400001, y: 0.34166667}
-  m_AnchoredPosition: {x: 0, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1946787127
@@ -53760,8 +53768,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 2.1820278, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.0910139, z: -4.999977}
 --- !u!4 &2070000669 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -53947,8 +53955,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 3.3933053, z: 9.999985}
+  m_Center: {x: -9.999993, y: -1.6966527, z: -4.999977}
 --- !u!4 &2078187216 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -54672,8 +54680,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20.000002, y: 0, z: 9.999985}
-  m_Center: {x: -9.999993, y: 0, z: -4.999977}
+  m_Size: {x: 20, y: 1.862195, z: 9.999985}
+  m_Center: {x: -9.999993, y: -0.9310975, z: -4.999977}
 --- !u!4 &2113760287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447794, guid: b5a872e4117092749ac693c865b78e6b, type: 3}
@@ -55662,7 +55670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1919148611509854114, guid: 2c5f56d61a08ae248857a07d41d82be1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 372.50006
+      value: 451.41406
       objectReference: {fileID: 0}
     - target: {fileID: 1919148611509854114, guid: 2c5f56d61a08ae248857a07d41d82be1, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -55698,7 +55706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2174629044417943567, guid: 2c5f56d61a08ae248857a07d41d82be1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -266.7
+      value: -362.20004
       objectReference: {fileID: 0}
     - target: {fileID: 2174629044417943567, guid: 2c5f56d61a08ae248857a07d41d82be1, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -55814,7 +55822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4783874183517806784, guid: 2c5f56d61a08ae248857a07d41d82be1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -385.5
+      value: -481
       objectReference: {fileID: 0}
     - target: {fileID: 4783874183517806784, guid: 2c5f56d61a08ae248857a07d41d82be1, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -55850,7 +55858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6211686305862376023, guid: 2c5f56d61a08ae248857a07d41d82be1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 271.086
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 6211686305862376023, guid: 2c5f56d61a08ae248857a07d41d82be1, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -55886,7 +55894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7430228075909712251, guid: 2c5f56d61a08ae248857a07d41d82be1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 372.30634
+      value: 451.22034
       objectReference: {fileID: 0}
     - target: {fileID: 7430228075909712251, guid: 2c5f56d61a08ae248857a07d41d82be1, type: 3}
       propertyPath: m_AnchoredPosition.y

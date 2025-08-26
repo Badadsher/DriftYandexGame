@@ -252,6 +252,7 @@ public class MirraSaveLoadManager : SaveLoadManager
   
   public override void SetLeaderboard(string boardName, int value)
   {
+    
     Debug.Log($"Set Score: {boardName} {value}");
     MirraSDK.Socials.SetScore(boardName, value);
   }

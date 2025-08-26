@@ -1159,7 +1159,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &157385564
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4009,7 +4009,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.009119673, y: 0.03326503}
   m_AnchorMax: {x: 0.32789573, y: 0.514}
-  m_AnchoredPosition: {x: 1.1306152, y: -6.2157593}
+  m_AnchoredPosition: {x: 1.1306152, y: -6.21579}
   m_SizeDelta: {x: -3.2714233, y: -10.660553}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &708111395
@@ -8970,6 +8970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeSlider: {fileID: 946047048}
+  audioSources: []
   _saveLoadManager: {fileID: 560841914}
 --- !u!82 &1678218070
 AudioSource:

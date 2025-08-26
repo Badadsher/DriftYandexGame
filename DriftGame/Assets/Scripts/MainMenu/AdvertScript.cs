@@ -52,18 +52,20 @@ public class AdvertScript : MonoBehaviour
 
     private void ShowRewardedAd()
     {
-        if (!Bootstrap.isInitialized)
-        {
-            Debug.LogWarning("SDK ещё не инициализировано, реклама недоступна");
-            return;
-        }
-
-        MirraSDK.Ads.InvokeRewarded(
-            onSuccess: AddRewardMoney,
-            onNotReady: () => Debug.Log("Реклама не готова"),
-            onAnyClose: () => Debug.Log("Реклама закрыта"),
-            rewardTag: ADD_MONEY_REWARD_ID
-        );
+        // if (!Bootstrap.isInitialized)
+        // {
+        //     Debug.LogWarning("SDK ещё не инициализировано, реклама недоступна");
+        //     return;
+        // }
+        //
+        // MirraSDK.Ads.InvokeRewarded(
+        //     onSuccess: AddRewardMoney,
+        //     onNotReady: () => {   return; },
+        //     onAnyClose: () => { return; },
+        //     rewardTag: ADD_MONEY_REWARD_ID
+        // );
+        
+        AddRewardMoney();
     }
 
     public void AddRewardMoney()
