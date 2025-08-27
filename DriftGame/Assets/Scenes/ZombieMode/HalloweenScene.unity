@@ -18894,6 +18894,7 @@ GameObject:
   - component: {fileID: 525350811}
   - component: {fileID: 525350810}
   - component: {fileID: 525350814}
+  - component: {fileID: 525350815}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -19021,6 +19022,32 @@ MonoBehaviour:
   _reseterUi: {fileID: 505553935}
   _gameManager: {fileID: 1257901148}
   level: 1
+--- !u!114 &525350815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525350809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0953647f3567b9458bff595a447216b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wasd: {fileID: 905915415}
+  drift: {fileID: 2023814947}
+  reset: {fileID: 1946787127}
+  menu: {fileID: 1781207833}
+  tab: {fileID: 107212358}
+  health: {fileID: 913804577}
+  killed: {fileID: 1140048698}
+  carKilled: {fileID: 514425609}
+  chanse: {fileID: 1390961470}
+  startAgain: {fileID: 1945989238}
+  exitMenu: {fileID: 90203863}
+  winMenu: {fileID: 1561938600}
+  winAgain: {fileID: 660415798}
+  winExit: {fileID: 2120924932}
 --- !u!4 &532343278 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6790040258192755194, guid: fca05fc86b15f0d4da25ed7793db4384, type: 3}

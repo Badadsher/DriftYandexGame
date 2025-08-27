@@ -146,7 +146,7 @@ public class MirraSaveLoadManager : SaveLoadManager
   public override void SetMoneyCount()
   {
     int currentMoney = LoadMoneyCount();
-    currentMoney += 500;
+    currentMoney += 250;
     MirraSDK.Prefs.SetInt("Money", currentMoney);
     SaveProgress();
   }

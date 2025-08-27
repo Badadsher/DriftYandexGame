@@ -1,3 +1,5 @@
+using romanlee17.MirraGames;
+using romanlee17.MirraGames.Interfaces;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,10 +27,22 @@ public class DriftScoreUI : MonoBehaviour
     // Публичный метод для обновления текста очков
     public void UpdateScore(float score)
     {
-        
+        LanguageType  languageType = MirraSDK.Language.Current;
+        Debug.Log(languageType);
         if (driftScoreText != null)
         {
-            driftScoreText.text = "Очки дрифта: " + Mathf.RoundToInt(score).ToString();
+            if (languageType == LanguageType.Russian)
+            {
+                driftScoreText.text = "Очки дрифта: " + Mathf.RoundToInt(score).ToString();
+            }
+       else if (languageType == LanguageType.Turkish)
+       {
+           driftScoreText.text = "Drift gözlükleri: " + Mathf.RoundToInt(score).ToString();
+       }
+       else
+       {
+           driftScoreText.text = "Drift score: " + Mathf.RoundToInt(score).ToString();
+       }
         }
         else
         {

@@ -47,7 +47,10 @@ public class AdvertScript : MonoBehaviour
     private void OnRewardButtonClicked()
     {
         Debug.Log("Reward Button Pressed");
-        ShowRewardedAd();
+        Debug.Log("Adding reward money");
+        _saveLoadManager.SetMoneyCount();
+        _saveLoadManager.LoadMoneyCount();
+        _managerMoney.UpdateMoney();
     }
 
     private void ShowRewardedAd()

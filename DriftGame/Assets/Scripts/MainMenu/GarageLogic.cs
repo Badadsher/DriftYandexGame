@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using romanlee17.MirraGames;
+using romanlee17.MirraGames.Interfaces;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -50,6 +52,7 @@ public class GarageLogic : MonoBehaviour
     
     void Start()
     {
+     
         UpdateCarStates();  
         
         // Устанавливаем обработчики событий для каждого переключателя
@@ -181,23 +184,65 @@ public class GarageLogic : MonoBehaviour
 
     private void UpdateButtonTexts()
     {
+        LanguageType languageType = MirraSDK.Language.Current;
+        Debug.Log(languageType);
         for (int i = 0; i < carButtons.Length; i++)
         {
             TextMeshProUGUI buttonText = carButtons[i].GetComponentInChildren<TextMeshProUGUI>();
             if (i == selectedCarIndex)
             {
-                buttonText.text = "Выбрано"; // Текст для выбранной машины
-                carTextDesk[i].text = "ВЫБРАНА";
+                if (languageType == LanguageType.Russian)
+                {
+                    buttonText.text = "Выбрано"; // Текст для выбранной машины
+                    carTextDesk[i].text = "ВЫБРАНА";
+                }
+              else if (languageType == LanguageType.Turkish)
+              {
+                  buttonText.text = "SEÇME"; // Текст для выбранной машины
+                  carTextDesk[i].text = "SEÇME";
+              }
+              else
+              {
+                  buttonText.text = "SELECTED"; // Текст для выбранной машины
+                  carTextDesk[i].text = "SELECTED";
+              }
             }
             else if (_saveLoadManager.IsCarPurchased(i))
             {
-                buttonText.text = "Выбрать"; // Текст для доступных машин
-                carTextDesk[i].text = "Доступно";
+                if (languageType == LanguageType.Russian)
+                {
+                    buttonText.text = "Выбрать"; // Текст для доступных машин
+                    carTextDesk[i].text = "Доступно";
+                }
+                else if (languageType == LanguageType.Turkish)
+                {
+                    buttonText.text = "SEÇMEK"; // Текст для выбранной машины
+                    carTextDesk[i].text = "MEVCUT";
+                }
+                else
+                {
+                    buttonText.text = "SELECT"; // Текст для выбранной машины
+                    carTextDesk[i].text = "SELECT";
+                }
             }
             else
             {
-                buttonText.text = "Купить";
-                carTextDesk[i].text = $"Цена: {carPrices[i]}"; 
+              
+                
+                if (languageType == LanguageType.Russian)
+                {
+                    buttonText.text = "Купить";
+                    carTextDesk[i].text = $"Цена: {carPrices[i]}"; 
+                }
+                else if (languageType == LanguageType.Turkish)
+                {
+                    buttonText.text = "ALMAK"; // Текст для выбранной машины
+                    carTextDesk[i].text = $"FİYAT: {carPrices[i]}";                 }
+                else
+                {
+                    buttonText.text = "BUY"; // Текст для выбранной машины
+                    carTextDesk[i].text = $"PRICE: {carPrices[i]}";      
+                }
             }
         }
     }
